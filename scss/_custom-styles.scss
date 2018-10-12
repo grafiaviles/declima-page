@@ -1,0 +1,116 @@
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+    /* SETTINGS */
+    
+    html,
+    body,
+    .views {
+        font-family: 'Raleway', sans-serif!important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        height: 100%;
+    }
+    /* NAVAR MENU */
+    
+    .navbar {
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+    }
+    
+    .top-nav-collapse {
+        background-color: $primary-color !important;
+    }
+    
+    .navbar:not(.top-nav-collapse) {
+        background: transparent !important;
+        box-shadow: none;
+    }
+    
+    @media (min-width: 600px) {
+        .navbar.scrolling-navbar.top-nav-collapse {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-shadow: none;
+        }
+    }
+    
+    @media (max-width: 991px) {
+        .navbar:not(.top-nav-collapse) {
+            background: $primary-color !important;
+        }
+    }
+    
+    .nav-item {
+        font-weight: 500;
+        & .nav-link {
+            border-radius: 5px;
+        }
+    }
+    
+    .active-cotizar {
+        border-radius: 5px;
+        background: $third-color;
+        margin-right: 1rem;
+        & .nav-link {
+            padding-right: .7rem!important;
+            padding-left: .7rem!important;
+            width: 100%;
+        }
+    }
+    /* CARRUSEL */
+    
+    .carousel,
+    .carousel-item,
+    .carousel-item.active {
+        height: 100%;
+    }
+    
+    .carousel-inner {
+        height: 100%;
+    }
+    
+    .carousel-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .carousel-item:nth-child(1) {
+        background-image: url("../img/slider-1.jpg");
+    }
+    
+    .carousel-item:nth-child(2) {
+        background-image: url("../img/slider-2.jpg");
+    }
+    
+    .carousel-item:nth-child(3) {
+        background-image: url("../img/slider-3.jpg");
+    }
+    
+    .carousel .carousel-control-next-icon,
+    .carousel .carousel-control-prev-icon {
+        width: 30px;
+        height: 30px;
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
+    }
+    
+    //BACKGROUND
+    .declima-blue-bg {
+        background: $primary-color!important;
+    }
+    
+    .declima-cian-bg {
+        background: $secondary-color!important;
+    }
+    
+    .declima-green-bg {
+        background: $third-color!important;
+    }
+    
+    //Close
+    .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
