@@ -104,6 +104,110 @@
 
 <body>
 
+    <!-- Modal Cotizador -->
+    <div class="modal fade" id="ModalCotizador" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Modal cascading tabs-->
+                <div class="modal-c-tabs">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs md-tabs tabs-2 bg-secondary" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Persona</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fa fa-group mr-1"></i> Empresa</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panels -->
+                    <div class="tab-content py-0">
+                        <!--Panel 7 Persona-->
+                        <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                            <!--Body-->
+                            <div class="modal-body mb-1">
+                                <div class="md-form form-sm mb-4">
+                                    <input type="text" id="nombre" class="form-control form-control-sm validate">
+                                    <label data-error="Error" data-success="Correcto" for="nombre">Nombre y Apellido</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-4">
+                                    <input type="email" id="email" class="form-control form-control-sm validate">
+                                    <label data-error="Error" data-success="Correcto" for="email">Email</label>
+                                </div>
+
+                                <div class="md-form form-sm mb-4">
+                                    <input type="tel" id="telefono" class="form-control form-control-sm validate">
+                                    <label data-error="Error" data-success="Correcto" for="telefono">Teléfono</label>
+                                </div>
+                                <div class="md-form form-sm mb-4">
+                                    <input type="text" id="direccion" class="form-control form-control-sm validate">
+                                    <label data-error="Error" data-success="Correcto" for="direccion">Dirección</label>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <button class="btn bg-third btn-rounded disabled z-depth-0 font-weight-bold">Siguiente</button>
+                                </div>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <a class="waves-effect ml-auto font-small grey-text" data-dismiss="modal">Cerrar</a>
+                            </div>
+
+                        </div>
+                        <!--/.Panel 7-->
+
+                        <!--Panel 8 Empresa-->
+                        <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                            <!--Body-->
+                            <div class="modal-body mb-1">
+                                <div class="md-form form-sm mb-4">
+                                    <input type="text" id="nombreEmpresa" class="form-control form-control-sm validate">
+                                    <label data-error="Error" data-success="Correcto" for="nombreEmpresa">Nombre o Razón Social</label>
+                                </div>
+                                <div class="md-form form-sm mb-4">
+                                    <input type="text" id="nombreUser" class="form-control form-control-sm validate">
+                                    <label data-error="Error" data-success="Correcto" for="nombreUser">Nombre y Apellido</label>
+                                </div>
+                                <div class="md-form form-sm mb-4">
+                                    <input type="email" id="emailEmpreso" class="form-control form-control-sm validate">
+                                    <label data-error="Error" data-success="Correcto" for="emailEmpreso">Email Corporativo</label>
+                                </div>
+                                <div class="md-form form-sm mb-4">
+                                    <input type="url" id="url" class="form-control form-control-sm">
+                                    <label for="url">Sitio Web (opcional)</label>
+                                </div>
+                                <div class="md-form form-sm mb-4">
+                                    <input type="tel" id="telefonoEmpresa" class="form-control form-control-sm validate">
+                                    <label data-error="Error" data-success="Correcto" for="telefonoEmpresa">Teléfono</label>
+                                </div>
+                                <div class="md-form form-sm mb-4">
+                                    <input type="text" id="direccionEmpresa" class="form-control form-control-sm validate">
+                                    <label data-error="Error" data-success="Correcto" for="direccionEmpresa">Dirección</label>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <button class="btn bg-third btn-rounded disabled z-depth-0 font-weight-bold">Siguiente</button>
+                                </div>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <a class="waves-effect ml-auto font-small grey-text" data-dismiss="modal">Cerrar</a>
+                            </div>
+                        </div>
+                        <!--/.Panel 8-->
+                    </div>
+
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Modal Cotizador -->
+
     <header>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
@@ -112,53 +216,114 @@
 
                 <a class="navbar-brand" href="#"><img class="d-none d-md-block d-lg-block" src="img/logo-declima.svg" width="120"><img class="d-md-none d-sm-block" src="img/logo-declima-mobile.svg" width="120"></a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <div class="collapse navbar-collapse" id="mainMenu">
 
                     <ul class="navbar-nav mr-auto smooth-scroll">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#carousel-home">Inicio<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#proyectos" data-offset="90">Proyectos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#features" data-offset="90">Servicios</a>
+                            <a class="nav-link" href="#servicios" data-offset="90">Servicios</a>
+                        </li>
+                        <!-- Productos Desktop-->
+                        <li class="nav-item dropdown mega-dropdown d-none d-md-block d-lg-block">
+                            <a class="nav-link dropdown-toggle" id="navProductos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos
+                                <span class="sr-only">(current)</span>
+                            </a>
+                            <div class="dropdown-menu mega-menu v-1 z-depth-1 white py-5 px-5" aria-labelledby="navProductos">
+                                <div class="row">
+                                    <div class="col-md-3 sub-menu mb-xl-0">
+                                        <h6 class="sub-title pb-3 font-weight-bold text-primary">Split Muro Inverter</h6>
+                                        <!--Featured Split Muro-->
+                                        <a href="#!" class="view overlay z-depth-1 p-0 my-3">
+                                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(42).jpg" class="img-fluid" alt="First sample image">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                        <a class="news-title pl-0" href="#!">Lorem ipsum dolor sit amet, consectetur isum adipisicing elit.</a>
+                                        <p class="font-small text-uppercase text-muted mb-0"><a class="p-0 m-sm font-weight-bold" href="#!">VER MÁS</a></p>
+                                    </div>
+                                    <div class="col-md-3 sub-menu mb-xl-0">
+                                        <h6 class="sub-title pb-3 font-weight-bold text-primary">Split Ducto Inverter</h6>
+                                        <!--Featured Split Ducto-->
+                                        <a href="#!" class="view overlay z-depth-1 p-0 my-3">
+                                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(42).jpg" class="img-fluid" alt="First sample image">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                        <a class="news-title pl-0" href="#!">Lorem ipsum dolor sit amet, consectetur isum adipisicing elit.</a>
+                                        <p class="font-small text-uppercase text-muted mb-0"><a class="p-0 m-sm font-weight-bold" href="#!">VER MÁS</a></p>
+                                    </div>
+                                    <div class="col-md-3 sub-menu mb-xl-0">
+                                        <h6 class="sub-title pb-3 font-weight-bold text-primary">Split Cassette Inverter</h6>
+                                        <!--Featured Cassete-->
+                                        <a href="#!" class="view overlay z-depth-1 p-0 my-3">
+                                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(42).jpg" class="img-fluid" alt="First sample image">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                        <a class="news-title pl-0" href="#!">Lorem ipsum dolor sit amet, consectetur isum adipisicing elit.</a>
+                                        <p class="font-small text-uppercase text-muted mb-0"><a class="p-0 m-sm font-weight-bold" href="#!">VER MÁS</a></p>
+                                    </div>
+                                    <div class="col-md-3 sub-menu mb-xl-0">
+                                        <h6 class="sub-title pb-3 font-weight-bold text-primary">Piso Cielo Inverter</h6>
+                                        <!--Featured Piso Cielo-->
+                                        <a href="#!" class="view overlay z-depth-1 p-0 my-3">
+                                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(42).jpg" class="img-fluid" alt="First sample image">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                        <a class="news-title pl-0" href="#!">Lorem ipsum dolor sit amet, consectetur isum adipisicing elit.</a>
+                                        <p class="font-small text-uppercase text-muted mb-0"><a class="p-0 m-sm font-weight-bold" href="#!">VER MÁS</a></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Productos Desktop -->
+                        <!-- Productos Mobile -->
+                        <li class="nav-item dropdown d-md-none d-sm-block">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
+                            <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item text-primary" href="#">Split Muro Inverter</a>
+                                <a class="dropdown-item text-primary" href="#">Split Ducto Inverter</a>
+                                <a class="dropdown-item text-primary" href="#">Split Cassette Inverter</a>
+                                <a class="dropdown-item text-primary" href="#">Piso Cielo Inverter</a>
+                            </div>
+                        </li>
+                        <!-- Productos Mobile -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros" data-offset="30">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#services" data-offset="90">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#opinions" data-offset="30">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact" data-offset="90">Contacto</a>
+                            <a class="nav-link" href="#contacto" data-offset="90">Contacto</a>
                         </li>
                     </ul>
 
                     <!-- cotizar  -->
                     <ul class="navbar-nav nav-flex-icons">
-                        <li class="nav-item active-cotizar">
-                            <a class="nav-link btn-rounded" href="#!" data-offset="90">Cotizar <i class="fa fa-file-text"></i></a>
+                        <li class="nav-item active-cotizar btn-rounded">
+                            <a class="nav-link btn-rounded" href="#ModalCotizador" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">Cotizar <i class="fa fa-file-text"></i></a>
                         </li>
                     </ul>
                     <!-- Social Icon  -->
                     <ul class="navbar-nav nav-flex-icons">
                         <li class="nav-item">
-                            <a class="nav-link">
+                            <a href="https://www.facebook.com/declimachile" target="_blank" class="nav-link">
                                 <i class="fa fa-facebook light-green-text-2"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">
+                            <a href="https://www.linkedin.com/company/declima/" target="_blank" class="nav-link">
                                 <i class="fa fa-linkedin light-green-text-2"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">
+                            <a href="https://www.instagram.com/declima/" target="_blank" class="nav-link">
                                 <i class="fa fa-instagram light-green-text-2"></i>
                             </a>
                         </li>
@@ -173,14 +338,13 @@
     </header>
 
     <!-- CARRUSEL -->
-    <!--Carousel Wrapper-->
-    <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+    <div id="carousel-home" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
 
         <!--Indicators-->
         <ol class="carousel-indicators">
-            <li data-target="#carousel-example-1" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-1" data-slide-to="1"></li>
-            <li data-target="#carousel-example-1" data-slide-to="2"></li>
+            <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-home" data-slide-to="1"></li>
+            <li data-target="#carousel-home" data-slide-to="2"></li>
         </ol>
         <!--/.Indicators-->
 
@@ -188,19 +352,19 @@
         <div class="carousel-inner" role="listbox">
 
             <!--First slide-->
-            <div class="carousel-item active">
+            <div class="carousel-item carousel-item-home active">
                 <!--Mask-->
                 <div class="views">
-                    <div class="full-bg-img flex-center mask white-text">
-                        <ul class="animated fadeInUp col-md-12 list-unstyled list-inline">
+                    <div class="full-bg-img flex-center mask white-text smooth-scroll">
+                        <ul class="animated fadeInUp col-md-12 list-unstyled list-inline ">
                             <li>
-                                <h1 class="font-weight-bold text-uppercase">Ingeniería y Proyectos en Climatización</h1>
+                                <h1 class="h1-responsive font-weight-bold">Proyectos de Ingeniería en Climatización</h1>
                             </li>
                             <li>
-                                <p class="font-weight-bold text-uppercase py-4">Más 20 casos de éxito a lo largo de todo Chile</p>
+                                <p class="font-weight-bold text-uppercase py-4">Más <span class="number-type">20</span> casos de éxito a lo largo de todo Chile</p>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!" class="btn btn-secondary btn-lg btn-rounded mr-0">VER PROYECTOS</a>
+                                <a href="#proyectos" class="btn btn-secondary btn-lg btn-rounded mr-0">VER PROYECTOS</a>
                             </li>
                         </ul>
                     </div>
@@ -210,19 +374,20 @@
             <!--/.First slide-->
 
             <!--Second slide -->
-            <div class="carousel-item">
+            <div class="carousel-item carousel-item-home">
                 <!--Mask-->
                 <div class="views">
-                    <div class="full-bg-img flex-center mask white-text">
+                    <div class="full-bg-img flex-center mask white-text smooth-scroll">
                         <ul class="animated fadeInUp col-md-12 list-unstyled">
                             <li>
-                                <h1 class="font-weight-bold text-uppercase">SPLIT MURO DESDE $ 166.990</h1>
+                                <h1 class="h1-responsive font-weight-bold">Hasta <span class="number-type">30%</span> DCTO. en Split Muro Inverter</h1>
                             </li>
                             <li>
-                                <p class="font-weight-bold text-uppercase py-4"> BTU • 9.000 • 12.000 • 18.000 • 24.000</p>
+                                <p class="font-weight-bold text-uppercase py-4 number-type"> BTU • 9.000 • 12.000 • 18.000 • 24.000 • c/s Instalación</p>
                             </li>
                             <li>
-                                <a href="#!" class="btn btn-secondary btn-rounded btn-lg">VER EQUIPOS</a>
+                                <a href="#!" class="btn btn-secondary btn-rounded btn-lg">VER OFERTA</a>
+                                <a href="#equipos" class="btn btn-primary btn-rounded btn-lg">VER TODOS LOS EQUIPOS</a>
                             </li>
                         </ul>
                     </div>
@@ -232,19 +397,19 @@
             <!--/.Second slide -->
 
             <!--Third slide-->
-            <div class="carousel-item">
+            <div class="carousel-item carousel-item-home">
                 <!--Mask-->
                 <div class="views">
-                    <div class="full-bg-img flex-center mask white-text">
+                    <div class="full-bg-img flex-center mask white-text smooth-scroll">
                         <ul class="animated fadeInUp col-md-12 list-unstyled">
                             <li>
-                                <h1 class="font-weight-bold text-uppercase">COMPROMETIDOS CON EL MEDIO AMBIENTE</h1>
+                                <h1 class="h1-responsive font-weight-bold">Contrato de Mantención y Reparación</h1>
                             </li>
                             <li>
-                                <p class="font-weight-bold text-uppercase py-4">TODOS NUESTROS EQUIPOS SON ECOLÓGICOS</p>
+                                <p class="font-weight-bold text-uppercase py-4">Manten tus equipos de acondicionado en perfectas condiciones</p>
                             </li>
                             <li>
-                                <a href="#!" class="btn btn-lg btn-secondary btn-rounded">Support forum</a>
+                                <a href="#servicios" class="btn btn-lg btn-secondary btn-rounded">VER SERVICIOS</a>
                             </li>
                         </ul>
                     </div>
@@ -257,97 +422,637 @@
         <!--/.Slides-->
 
         <!--Controls-->
-        <a class="carousel-control-prev" href="#carousel-example-1" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carousel-home" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carousel-example-1" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carousel-home" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
         <!--/.Controls-->
     </div>
-    <!--/.CARRUSEL-->
+    <!--CARRUSEL-->
 
 
-    <main class="container-fluid">
+    <main class="container-fluid px-0">
+
         <div class="container">
-            <!-- PROYECTS -->
-            <section id="proyectos" class="text-center my-5 py-2">
+
+            <section id="equipos" class="py-5 mt-4 mb-5">
 
                 <!-- Section heading -->
-                <h2 class="h1-responsive font-weight-bold my-5 text-primary">Our best projects</h2>
+                <h2 class="h1-responsive font-weight-bold text-center my-5 text-primary">Equipos de Aire Acondicionado</h2>
                 <!-- Section description -->
-                <p class="grey-text w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit est laborum.</p>
+                <p class="lead grey-text text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 
-                <!--First row-->
+
                 <div class="row">
 
-                    <!--First column-->
-                    <div class="col-md-12">
-
-                        <div id="mdb-lightbox-ui"></div>
-
-                        <!--Full width lightbox-->
-                        <div class="mdb-lightbox">
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(63).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(63).jpg" class="img-fluid z-depth-1">
+                    <!-- Grid column 3 -->
+                    <div class="col-lg-3 col-md-6 mb-md-0 mb-4">
+                        <!-- Card -->
+                        <div class="card card-cascade narrower card-ecommerce">
+                            <!--Card image-->
+                            <div class="view view-cascade overlay z-depth-0">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" alt="">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
                                 </a>
-                                <p class="text-uppercase font-weight-bold blue-grey-text mt-4">Lorem ipsum dolor sit amet</p>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(66).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(66).jpg" class="img-fluid z-depth-1">
+                            </div>
+                            <!--/.Card image-->
+                            <!-- Button -->
+                            <a class="btn-floating dcto-card font-weight-bold number-type d-flex justify-content-center align-item-center btn-action ml-auto mr-4 mdb-color bg-secondary text-white z-depth-0 small">-30%</a>
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-left">
+                                <!-- Category & Title -->
+                                <a href="" class="grey-text">
+                                    <h6>Midea</h6>
                                 </a>
-                                <p class="text-uppercase font-weight-bold blue-grey-text mt-4">Lorem ipsum dolor sit amet</p>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(65).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(65).jpg" class="img-fluid z-depth-1">
-                                </a>
-                                <p class="text-uppercase font-weight-bold blue-grey-text mt-4">Lorem ipsum dolor sit amet</p>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(67).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" class="img-fluid z-depth-1">
-                                </a>
-                                <p class="text-uppercase font-weight-bold blue-grey-text mt-4">Lorem ipsum dolor sit amet</p>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(68).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(68).jpg" class="img-fluid z-depth-1">
-                                </a>
-                                <p class="text-uppercase font-weight-bold blue-grey-text mt-4">Lorem ipsum dolor sit amet</p>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(64).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(64).jpg" class="img-fluid z-depth-1">
-                                </a>
-                                <p class="text-uppercase font-weight-bold blue-grey-text mt-4">Lorem ipsum dolor sit amet</p>
-                            </figure>
+                                <h4 class="card-title">
+                                    <strong>
+                                        <a class="grey-text h6 font-weight-bold" href="">Split Muro Inverter</a>
+                                    </strong>
+                                </h4>
+                                <!-- Description -->
+                                <p class="grey-text small font-weight-bold number-type">9.000 - 12.000 - 18.000 - 24.000 BTU</p>
+                                <!-- Card footer -->
+                                <div class="card-footer px-1">
+                                    <a href="#!" class="float-left font-weight-bold small">
+                                        <strong class="text-secondary">VER MÁS</strong>
+                                    </a>
+                                    <a href="#!" class="float-right font-weight-bold small">
+                                        <strong class="text-third">COTIZAR</strong>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card content -->
                         </div>
-                        <!--/Full width lightbox-->
-
+                        <!-- Card -->
                     </div>
-                    <!--/First column-->
+                    <!-- Grid column 3-->
+
+                    <!-- Grid column 3 -->
+                    <div class="col-lg-3 col-md-6 mb-md-0 mb-4">
+                        <!-- Card -->
+                        <div class="card card-cascade narrower card-ecommerce">
+                            <!--Card image-->
+                            <div class="view view-cascade overlay z-depth-0">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" alt="">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--/.Card image-->
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-left">
+                                <!-- Category & Title -->
+                                <a href="" class="grey-text">
+                                    <h6>Toshiba</h6>
+                                </a>
+                                <h4 class="card-title">
+                                    <strong>
+                                        <a class="grey-text h6 font-weight-bold" href="">Split Ducto Inverter</a>
+                                    </strong>
+                                </h4>
+                                <!-- Description -->
+                                <p class="grey-text small font-weight-bold number-type">9.000 - 12.000 - 18.000 - 24.000 BTU</p>
+                                <!-- Card footer -->
+                                <div class="card-footer px-1">
+                                    <a href="#!" class="float-left font-weight-bold small">
+                                        <strong class="text-secondary">VER MÁS</strong>
+                                    </a>
+                                    <a href="#!" class="float-right font-weight-bold small">
+                                        <strong class="text-third">COTIZAR</strong>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card content -->
+                        </div>
+                        <!-- Card -->
+                    </div>
+                    <!-- Grid column 3-->
+
+                    <!-- Grid column 3 -->
+                    <div class="col-lg-3 col-md-6 mb-md-0 mb-4">
+                        <!-- Card -->
+                        <div class="card card-cascade narrower card-ecommerce">
+                            <!--Card image-->
+                            <div class="view view-cascade overlay z-depth-0">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" alt="">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--/.Card image-->
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-left">
+                                <!-- Category & Title -->
+                                <a href="" class="grey-text">
+                                    <h6>Carrier</h6>
+                                </a>
+                                <h4 class="card-title">
+                                    <strong>
+                                        <a class="grey-text h6 font-weight-bold" href="">Split Cassette Inverter</a>
+                                    </strong>
+                                </h4>
+                                <!-- Description -->
+                                <p class="grey-text small font-weight-bold number-type">9.000 - 12.000 - 18.000 - 24.000 BTU</p>
+                                <!-- Card footer -->
+                                <div class="card-footer px-1">
+                                    <a href="#!" class="float-left font-weight-bold small">
+                                        <strong class="text-secondary">VER MÁS</strong>
+                                    </a>
+                                    <a href="#!" class="float-right font-weight-bold small">
+                                        <strong class="text-third">COTIZAR</strong>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card content -->
+                        </div>
+                        <!-- Card -->
+                    </div>
+                    <!-- Grid column 3-->
+                    <!-- Grid column 3 -->
+                    <div class="col-lg-3 col-md-6 mb-md-0 mb-4">
+                        <!-- Card -->
+                        <div class="card card-cascade narrower card-ecommerce">
+                            <!--Card image-->
+                            <div class="view view-cascade overlay z-depth-0">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" alt="">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--/.Card image-->
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-left">
+                                <!-- Category & Title -->
+                                <a href="" class="grey-text">
+                                    <h6>Midea</h6>
+                                </a>
+                                <h4 class="card-title">
+                                    <strong>
+                                        <a class="grey-text h6 font-weight-bold" href="">Piso Cielo Inverter</a>
+                                    </strong>
+                                </h4>
+                                <!-- Description -->
+                                <p class="grey-text small font-weight-bold number-type">9.000 - 12.000 - 18.000 - 24.000 BTU</p>
+                                <!-- Card footer -->
+                                <div class="card-footer px-1">
+                                    <a href="#!" class="float-left font-weight-bold small">
+                                        <strong class="text-secondary">VER MÁS</strong>
+                                    </a>
+                                    <a href="#!" class="float-right font-weight-bold small">
+                                        <strong class="text-third">COTIZAR</strong>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card content -->
+                        </div>
+                        <!-- Card -->
+                    </div>
+                    <!-- Grid column 3-->
 
                 </div>
-                <!--First row-->
+            </section>
+
+            <!--PROYECTOS-->
+            <section id="proyectos" class="py-5 my-5">
+
+
+                <!-- Section heading -->
+                <h2 class="h1-responsive font-weight-bold text-center mb-5 text-primary">Proyectos</h2>
+                <!-- Section description -->
+                <p class="lead grey-text text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+                <ul class="nav md-pills pills-default d-flex justify-content-sm-start justify-content-lg-center">
+                    <li class="nav-item" id="nameProyect">
+                        <a class="nav-link grey-text active" data-toggle="tab" href="#panel1" role="tab">
+                            <strong>Proyecto 1 Climatizacion</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link grey-text" data-toggle="tab" href="#panel2" role="tab">
+                            <strong>Proyecto 2</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link grey-text" data-toggle="tab" href="#panel3" role="tab">
+                            <strong>Proyecto 3</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link grey-text" data-toggle="tab" href="#panel4" role="tab">
+                            <strong>Proyecto 4</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link grey-text" data-toggle="tab" href="#panel5" role="tab">
+                            <strong>Proyecto 5</strong>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Tab panels -->
+                <div class="tab-content">
+
+                    <!--Panel 1-->
+                    <div class="tab-pane fade show active" id="panel1" role="tabpanel">
+                        <br>
+
+                        <div class="row d-flex justify-content-center">
+
+                            <!-- Description Proyecto -->
+                            <div class="col-lg-12 col-md-12 mb-4 px-2">
+
+                                <div class="col-md-2 float-left p-0">
+                                    <div class="avatar mx-auto mb-md-0 mb-3">
+                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" class="rounded-circle" width="150" alt="First sample avatar image">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-10 float-right">
+                                    <h4><strong class="text-primary">Nombre Empresa</strong></h4>
+                                    <h6 class="font-weight-bold grey-text mb-2">Tipo Proyecto</h6>
+                                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Quod eos id officiis hic tenetur quod eos id officiis hic tenetur.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <!-- Description Proyecto -->
+
+                            <div class="col-md-12 p-0 active">
+
+                                <div id="mdb-lightbox-ui"></div>
+
+                                <div class="mdb-lightbox no-gutters">
+
+                                    <figure class="col-md-4">
+                                        <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(71).jpg" data-size="1600x1067">
+                                            <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(71).jpg" class="img-fluid">
+                                        </a>
+                                    </figure>
+
+                                    <figure class="col-md-4">
+                                        <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(65).jpg" data-size="1600x1067">
+                                            <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(65).jpg" class="img-fluid" />
+                                        </a>
+                                    </figure>
+
+                                    <figure class="col-md-4">
+                                        <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(84).jpg" data-size="1600x1067">
+                                            <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(84).jpg" class="img-fluid" />
+                                        </a>
+                                    </figure>
+
+                                    <figure class="col-md-4">
+                                        <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(88).jpg" data-size="1600x1067">
+                                            <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(88).jpg" class="img-fluid" />
+                                        </a>
+                                    </figure>
+
+                                    <figure class="col-md-4">
+                                        <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(79).jpg" data-size="1600x1067">
+                                            <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(79).jpg" class="img-fluid" />
+                                        </a>
+                                    </figure>
+
+                                    <figure class="col-md-4">
+                                        <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(81).jpg" data-size="1600x1067">
+                                            <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(81).jpg" class="img-fluid" />
+                                        </a>
+                                    </figure>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Panel 1-->
+
+                </div>
 
             </section>
             <!-- PROYECTS -->
+
+
+            <!-- SERVICES -->
+            <section id="servicios" class="my-5 py-5">
+
+                <!-- Section heading -->
+                <h2 class="h1-responsive font-weight-bold text-center my-5 text-primary">Servicios</h2>
+                <!-- Section description -->
+                <p class="lead grey-text text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-4">
+
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+
+                            <!-- Grid column -->
+                            <div class="col-2">
+                                <i class="fa fa-2x fa-flag-checkered text-secondary"></i>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-10">
+                                <h5 class="font-weight-bold mb-3 text-primary">Servicio 1</h5>
+                                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+
+                            <!-- Grid column -->
+                            <div class="col-2">
+                                <i class="fa fa-2x fa-flask text-secondary"></i>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-10">
+                                <h5 class="font-weight-bold mb-3 text-primary">Servicio 2</h5>
+                                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                        <!-- Grid row -->
+                        <div class="row mb-md-0 mb-3">
+
+                            <!-- Grid column -->
+                            <div class="col-2">
+                                <i class="fa fa-2x fa-glass text-secondary"></i>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-10">
+                                <h5 class="font-weight-bold mb-3 text-primary">Servicio 3</h5>
+                                <p class="grey-text mb-md-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 text-center">
+                        <img class="img-fluid" src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="Sample image">
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4">
+
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+
+                            <!-- Grid column -->
+                            <div class="col-2">
+                                <i class="fa fa-2x fa-heart text-secondary"></i>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-10">
+                                <h5 class="font-weight-bold mb-3 text-primary">Servicio 4</h5>
+                                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+
+                            <!-- Grid column -->
+                            <div class="col-2">
+                                <i class="fa fa-2x fa-flash text-secondary"></i>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-10">
+                                <h5 class="font-weight-bold mb-3 text-primary">Servicio 5</h5>
+                                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                        <!-- Grid row -->
+                        <div class="row">
+
+                            <!-- Grid column -->
+                            <div class="col-2">
+                                <i class="fa fa-2x fa-magic text-secondary"></i>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-10">
+                                <h5 class="font-weight-bold mb-3 text-primary">Servicio 6</h5>
+                                <p class="grey-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </section>
+            <!-- SERVICES -->
+
+
+            <!-- NOSOTROS -->
+            <section id="nosotros" class="team-section text-center my-5 py-5">
+
+                <!-- Section heading -->
+                <h2 class="h1-responsive font-weight-bold mb-5 pt-5 text-primary">Nosotros</h2>
+                <!-- Section description -->
+                <p class="grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p>
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="avatar mx-auto">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle" alt="Sample avatar">
+                        </div>
+                        <h5 class="font-weight-bold mt-4 mb-3 text-primary">Domingo Venegas</h5>
+                        <p class="text-uppercase blue-text"><strong>CEO FOUNDER</strong></p>
+                        <p class="grey-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci sed quia non numquam.</p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="avatar mx-auto">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle" alt="Sample avatar">
+                        </div>
+                        <h5 class="font-weight-bold mt-4 mb-3 text-primary">John Doe</h5>
+                        <p class="text-uppercase blue-text"><strong>MARKETING MANAGER</strong></p>
+                        <p class="grey-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem ipsa accusantium doloremque rem laudantium totam aperiam.</p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-lg-3 col-md-6 mb-md-0 mb-5">
+                        <div class="avatar mx-auto">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" class="rounded-circle" alt="Sample avatar">
+                        </div>
+                        <h5 class="font-weight-bold mt-4 mb-3 text-primary">Maria Smith</h5>
+                        <p class="text-uppercase blue-text"><strong>COMMERCIAL MANAGER</strong></p>
+                        <p class="grey-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim est fugiat nulla id eu laborum.</p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="avatar mx-auto">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle" alt="Sample avatar">
+                        </div>
+                        <h5 class="font-weight-bold mt-4 mb-3 text-primary">Tom Adams</h5>
+                        <p class="text-uppercase blue-text"><strong>TI MANAGER</strong></p>
+                        <p class="grey-text">Perspiciatis repellendus ad odit consequuntur, eveniet earum nisi qui consectetur totam officia voluptates.</p>
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+                <!-- Testimonials -->
+                <section class="text-center">
+
+                    <!-- Section heading -->
+                    <h4 class="h4-responsive font-weight-bold my-5 text-primary">Lo que dicen nuestros Clientes</h4>
+
+                    <!-- Carousel Wrapper -->
+                    <div id="testimonials" class="carousel no-flex testimonial-carousel slide carousel-fade pb-5" data-ride="carousel" data-interval="false">
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+                            <!--First slide-->
+                            <div class="carousel-item active">
+                                <div class="testimonial">
+                                    <!--Avatar-->
+                                    <div class="avatar mx-auto mb-4">
+                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" class="rounded-circle z-depth-0 img-fluid" alt="First sample avatar image">
+                                    </div>
+                                    <!--Content-->
+                                    <p class="grey-text">
+                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
+                                        cum accusamus eveniet molestias voluptatum inventore laboriosam labore sit, aspernatur praesentium iste impedit quidem dolor veniam.
+                                    </p>
+                                    <h4 class="font-weight-bold text-primary">Anna Deynah</h4>
+                                    <h6 class="font-weight-bold my-3 text-secondary">Founder at ET Company</h6>
+                                    <!--Review-->
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star-half-full blue-text"> </i>
+                                </div>
+                            </div>
+                            <!--First slide-->
+                            <!--Second slide-->
+                            <div class="carousel-item">
+                                <div class="testimonial">
+                                    <!--Avatar-->
+                                    <div class="avatar mx-auto mb-4">
+                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="rounded-circle z-depth-0 img-fluid" alt="Second sample avatar image">
+                                    </div>
+                                    <!--Content-->
+                                    <p class="grey-text">
+                                        <i class="fa fa-quote-left"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                                        qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore. </p>
+                                    <h4 class="font-weight-bold text-primary">Maria Kate</h4>
+                                    <h6 class="font-weight-bold my-3 text-secondary">Photographer at Studio LA</h6>
+                                    <!--Review-->
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star blue-text"> </i>
+                                </div>
+                            </div>
+                            <!--Second slide-->
+                            <!--Third slide-->
+                            <div class="carousel-item">
+                                <div class="testimonial">
+                                    <!--Avatar-->
+                                    <div class="avatar mx-auto mb-4">
+                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle z-depth-0 img-fluid" alt="Third sample avatar image">
+                                    </div>
+                                    <!--Content-->
+                                    <p class="grey-text">
+                                        <i class="fa fa-quote-left"></i> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                                    <h4 class="font-weight-bold text-primary">John Doe</h4>
+                                    <h6 class="font-weight-bold my-3 text-secondary">Front-end Developer in NY</h6>
+                                    <!--Review-->
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star blue-text"> </i>
+                                    <i class="fa fa-star-o blue-text"> </i>
+                                </div>
+                            </div>
+                            <!--Third slide-->
+                        </div>
+                        <!--Slides-->
+                        <!--Controls-->
+                        <a class="carousel-item-prev left carousel-control" href="#testimonials" role="button" data-slide="prev">
+                            <span class="icon-prev" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-item-next right carousel-control" href="#testimonials" role="button" data-slide="next">
+                            <span class="icon-next" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <!--Controls-->
+                    </div>
+                    <!-- Carousel Wrapper -->
+
+                </section>
+                <!-- Testimonials -->
+
+            </section>
+            <!-- NOSOTROS -->
+
         </div>
+        <!-- CONTAINER -->
+
     </main>
+    <!-- CONTAINER FLUID -->
 
     <!-- Footer -->
-    <footer class="page-footer font-small stylish-color-dark pt-4">
+    <footer class="page-footer font-small elegant-color pt-4">
 
         <!-- Footer Links -->
         <div class="container text-center text-md-left">
@@ -516,6 +1221,18 @@
         $(function() {
             $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
         });
+        $(document).ready(function() {
+            $('#carousel-home, #testimonials').hammer().on('swipeleft', function() {
+                $(this).carousel('next');
+            })
+            $('#carousel-home, #testimonials').hammer().on('swiperight', function() {
+                $(this).carousel('prev');
+            })
+        });
+        // Tooltips Initialization
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
 </body>
 

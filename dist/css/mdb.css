@@ -26,6 +26,7 @@
  *
  */
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+@import url("https://fonts.googleapis.com/css?family=Questrial");
 .mdb-color.lighten-5 {
   background-color: #d0d6e2 !important; }
 
@@ -16539,11 +16540,17 @@ section.team-section .avatar img {
 html,
 body,
 .views {
-  font-family: "Raleway", sans-serif !important;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   height: 100%; }
+
+.number-type {
+  font-family: "Questrial", sans-serif !important; }
+  .number-type .signo-peso {
+    top: -2px;
+    vertical-align: middle; }
 
 /* NAVAR MENU */
 .navbar {
@@ -16575,14 +16582,20 @@ body,
     border-radius: 5px; }
 
 .active-cotizar {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   background: #80c80e;
-  margin-right: 1rem; }
+  margin-right: .5rem;
+  overflow: hidden; }
   .active-cotizar .nav-link {
-    padding-right: 0.7rem !important;
-    padding-left: 0.7rem !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
     width: 100%; }
+
+.dropdown-menu {
+  -webkit-box-shadow: 0 400px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: 0 400px 0 rgba(0, 0, 0, 0.7); }
+
+.news-title {
+  font-size: 1rem !important; }
 
 /* CARRUSEL */
 .carousel,
@@ -16599,13 +16612,13 @@ body,
   background-size: cover;
   background-position: center center; }
 
-.carousel-item:nth-child(1) {
+.carousel-item-home:nth-child(1) {
   background-image: url("../img/slider-1.jpg"); }
 
-.carousel-item:nth-child(2) {
+.carousel-item-home:nth-child(2) {
   background-image: url("../img/slider-2.jpg"); }
 
-.carousel-item:nth-child(3) {
+.carousel-item-home:nth-child(3) {
   background-image: url("../img/slider-3.jpg"); }
 
 .carousel .carousel-control-next-icon,
@@ -16617,6 +16630,38 @@ body,
     .carousel .carousel-control-prev-icon {
       display: none; } }
 
+.md-pills {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%; }
+  @media screen and (max-width: 480px) {
+    .md-pills {
+      -webkit-flex-flow: nowrap;
+      -ms-flex-flow: nowrap;
+      flex-flow: nowrap; } }
+
+.pills-default li {
+  padding: 1rem 0.6rem !important; }
+  .pills-default li .nav-link {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
+    @media screen and (max-width: 480px) {
+      .pills-default li .nav-link {
+        padding: .5rem;
+        width: 100px;
+        min-width: 100px;
+        max-width: 100px; } }
+
+.pills-default .nav-link.active {
+  background-color: #48a5f9 !important;
+  color: white !important; }
+
 .declima-blue-bg {
   background: #00587A !important; }
 
@@ -16626,7 +16671,63 @@ body,
 .declima-green-bg {
   background: #80c80e !important; }
 
+.text-third {
+  color: #80c80e; }
+
 .close {
   position: absolute;
   right: 10px;
   top: 10px; }
+
+::-moz-selection {
+  background: #3fa7f3;
+  color: #fff; }
+
+::selection {
+  background: #3fa7f3;
+  color: #fff; }
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #00587a; }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 2px; }
+
+.dcto-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 1rem !important; }
+
+.md-form input[type=text].valid,
+.md-form input[type=email].valid,
+.md-form input[type=tel].valid,
+.md-form input[type=password].valid,
+.md-form input[type=url].valid {
+  border-bottom: 1px solid #80c80e;
+  -webkit-box-shadow: 0 1px 0 0 #80c80e;
+  box-shadow: 0 1px 0 0 #80c80e; }
+
+.md-form input[type=text].valid + label:after,
+.md-form input[type=email].valid + label:after,
+.md-form input[type=tel].valid + label:after,
+.md-form input[type=password].valid + label:after,
+.md-form input[type=url].valid + label:after {
+  color: #80c80e; }
+
+.bg-third {
+  background: #80c80e;
+  background-color: #80c80e; }
