@@ -7,8 +7,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Declima | Buenas Experiencias</title>
     <meta name="description" content="Servicios de Climatización">
-    <!-- Font Awesome -->
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
@@ -105,8 +106,8 @@
 <body>
 
     <!-- Modal Cotizador -->
-    <div class="modal fade" id="ModalCotizador" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog cascading-modal" role="document">
+    <div class="modal fade left" id="ModalCotizador" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-full-height modal-left" role="document">
             <!--Content-->
             <div class="modal-content">
 
@@ -114,70 +115,29 @@
                 <div class="modal-c-tabs">
 
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs md-tabs tabs-2 bg-secondary" role="tablist">
+                    <ul class="nav nav-tabs md-tabs tabs-2 bg-secondary mx-0 z-depth-0 rounded-0" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Persona</a>
+                            <a class="nav-link active d-flex align-items-center" data-toggle="tab" href="#persona" role="tab"><i class="material-icons mr-2">person</i>Persona</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fa fa-group mr-1"></i> Empresa</a>
+                            <a class="nav-link d-flex align-items-center" data-toggle="tab" href="#empresa" role="tab"><i class="material-icons mr-2">people</i>Empresa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" data-toggle="tab" href="#step" role="tab"><i class="material-icons mr-2">add</i>Step</a>
+                        </li>
+                        <li>
+                            <a class="close" data-dismiss="modal" aria-label="Close"><i class="material-icons text-white">close</i></a>
                         </li>
                     </ul>
 
                     <!-- Tab panels -->
                     <div class="tab-content py-0">
-                        <!--Panel 7 Persona-->
-                        <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
 
-                            <div class="card">
-                                <div class="card-body">
-                                    <ul class="stepper" id="feedback-step">
-                                        <li class="step active">
-                                            <div data-step-label="It's just a second..." class="step-title waves-effect waves-dark">Step 1</div>
-                                            <div class="step-new-content">
-                                                <div class="row">
-                                                    <div class="md-form col-12 ml-auto">
-                                                        <input id="email-feedback" type="email" class="validate form-control" required>
-                                                        <label for="email-feedback">Your e-mail</label>
-                                                    </div>
-                                                </div>
-                                                <div class="step-actions">
-                                                    <button class="waves-effect waves-dark btn btn-sm btn-primary next-step" data-feedback="someFunction">CONTINUE</button>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="step">
-                                            <div class="step-title waves-effect waves-dark">Step 2</div>
-                                            <div class="step-new-content">
-                                                <div class="row">
-                                                    <div class="md-form col-12 ml-auto">
-                                                        <input id="password-feedback" type="password" class="form-control validate" required>
-                                                        <label for="password-feedback">Your password</label>
-                                                    </div>
-                                                </div>
-                                                <div class="step-actions">
-                                                    <button class="waves-effect waves-dark btn btn-sm btn-primary next-step" data-feedback="someFunction">CONTINUE</button>
-                                                    <button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step">BACK</button>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="step">
-                                            <div class="step-title waves-effect waves-dark">Step 3</div>
-                                            <div class="step-new-content">
-                                                Finish!
-                                                <div class="step-actions">
-                                                    <button class="waves-effect waves-dark btn btn-sm btn-primary m-0 mt-4" type="button">SUBMIT</button>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="step-actions">
-                                <button class="btn btn-primary next-step" data-feedback="someFunction">CONTINUE</button>
-                            </div>
+                        <!--Panel Persona-->
+                        <div class="tab-pane fade in show active mt-2" id="persona" role="tabpanel">
 
                             <!--Body-->
-                            <div class="modal-body mb-1 d-none">
+                            <div class="modal-body mb-1">
                                 <div class="md-form form-sm mb-4">
                                     <input type="text" id="nombre" class="form-control form-control-sm validate">
                                     <label data-error="Error" data-success="Correcto" for="nombre">Nombre y Apellido</label>
@@ -196,25 +156,17 @@
                                     <input type="text" id="direccion" class="form-control form-control-sm validate">
                                     <label data-error="Error" data-success="Correcto" for="direccion">Dirección</label>
                                 </div>
-                                <div class="text-center mt-2">
-                                    <button class="btn bg-third btn-rounded disabled z-depth-0 font-weight-bold">Siguiente</button>
-                                </div>
                             </div>
-                            <!--Footer-->
-                            <div class="modal-footer">
-                                <a class="waves-effect ml-auto font-small grey-text" data-dismiss="modal">Cerrar</a>
-                            </div>
-
                         </div>
-                        <!--/.Panel 7-->
+                        <!--/.Panel Persona-->
 
-                        <!--Panel 8 Empresa-->
-                        <div class="tab-pane fade" id="panel8" role="tabpanel">
+                        <!--Panel Empresa-->
+                        <div class="tab-pane fade mt-2" id="empresa" role="tabpanel">
 
                             <!--Body-->
                             <div class="modal-body mb-1">
                                 <div class="md-form form-sm mb-4">
-                                    <input type="text" id="nombreEmpresa" class="form-control form-control-sm validate">
+                                    <input type="text" id="nombreEmpresa" class="form-control form-control-sm">
                                     <label data-error="Error" data-success="Correcto" for="nombreEmpresa">Nombre o Razón Social</label>
                                 </div>
                                 <div class="md-form form-sm mb-4">
@@ -237,18 +189,206 @@
                                     <input type="text" id="direccionEmpresa" class="form-control form-control-sm validate">
                                     <label data-error="Error" data-success="Correcto" for="direccionEmpresa">Dirección</label>
                                 </div>
-                                <div class="text-center mt-2">
-                                    <button class="btn bg-third btn-rounded disabled z-depth-0 font-weight-bold">Siguiente</button>
-                                </div>
-                            </div>
-                            <!--Footer-->
-                            <div class="modal-footer">
-                                <a class="waves-effect ml-auto font-small grey-text" data-dismiss="modal">Cerrar</a>
                             </div>
                         </div>
-                        <!--/.Panel 8-->
+                        <!--/.Panel Empresa-->
+
+                        <!--Panel Step-->
+                        <div class="tab-pane fade mt-2" id="step" role="tabpanel">
+
+                            <!--Body-->
+                            <div class="mb-1">
+                                <div class="card z-depth-0">
+                                    <div class="card-body">
+                                        <ul class="stepper linear py-0 px-2" id="feedback-step">
+                                            <!-- Step 1 Tipo -->
+                                            <li class="step active">
+                                                <div class="step-title waves-effect waves-dark text-primary">Selecciona un tipo de servicio</div>
+                                                <div class="step-new-content">
+                                                    <div class="row">
+
+                                                        <!-- Group of material radios - option 1 -->
+                                                        <div class="form-check col-12 ml-auto mb-1">
+                                                            <input type="radio" class="form-check-input" id="equipos" name="servicio">
+                                                            <label class="form-check-label dark-grey-text font-small" for="equipos">Venta de Aire Acondicionado</label>
+                                                        </div>
+
+                                                        <!-- Group of material radios - option 2 -->
+                                                        <div class="form-check col-12 ml-auto mb-1">
+                                                            <input type="radio" class="form-check-input" id="proyectos" name="servicio">
+                                                            <label class="form-check-label dark-grey-text font-small" for="proyectos">Proyectos de Climatizacion</label>
+                                                        </div>
+
+                                                        <!-- Group of material radios - option 3 -->
+                                                        <div class="form-check col-12 ml-auto mb-1">
+                                                            <input type="radio" class="form-check-input" id="mantenciones" name="servicio">
+                                                            <label class="form-check-label dark-grey-text font-small" for="mantenciones">Mantención y Reparaciones</label>
+                                                        </div>
+
+                                                        <!-- Group of material radios - option 4 -->
+                                                        <div class="form-check col-12 ml-auto">
+                                                            <input type="radio" class="form-check-input" id="instalacion" name="servicio">
+                                                            <label class="form-check-label dark-grey-text font-small" for="instalacion">Instalaciones (solo RM)</label>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="step-actions pt-2">
+                                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="someFunction">CONTINUAR</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!-- Step 2 Equipos -->
+                                            <li class="step">
+                                                <div class="step-title waves-effect waves-dark text-primary">Selecciona tipos de productos</div>
+                                                <div class="step-new-content">
+
+
+                                                    <!-- MODELO -->
+                                                    <div class="row ml-1 mb-4">
+                                                        <!-- Capacidad -->
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2">
+                                                            <input type="radio" class="form-check-input" id="splitmuro" name="producto">
+                                                            <label class="form-check-label font-small dark-grey-text" for="splitmuro">Split Muro Inverter</label>
+                                                        </div>
+
+                                                        <!-- Capacidad -->
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2">
+                                                            <input type="radio" class="form-check-input" id="splitducto" name="producto">
+                                                            <label class="form-check-label font-small dark-grey-text" for="splitducto">Split Ducto Inverter</label>
+                                                        </div>
+
+                                                        <!-- Capacidad -->
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2">
+                                                            <input type="radio" class="form-check-input" id="splitcassette" name="producto">
+                                                            <label class="form-check-label font-small dark-grey-text" for="splitcassette">Split Cassette Inverter</label>
+                                                        </div>
+
+                                                        <!-- Capacidad -->
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2">
+                                                            <input type="radio" class="form-check-input" id="pisocielo" name="producto">
+                                                            <label class="form-check-label font-small dark-grey-text" for="pisocielo">Piso Cielo Inverter</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="step-actions">
+                                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="someFunction">CONTINUAR</button>
+                                                        <button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step font-weight-bold">VOLVER</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!-- Step 3 Capacidad y Cantidad-->
+                                            <li class="step">
+                                                <div class="step-title waves-effect waves-dark text-primary">Selecciona capacidad y cantidad</div>
+                                                <div class="step-new-content">
+
+                                                    <!-- CAPACIDAD -->
+                                                    <div class="row ml-1 mb-4">
+                                                        <!-- Capacidad 9000 BTU -->
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
+                                                            <div class="col-8 p-0">
+                                                                <input type="checkbox" class="form-check-input" id="9000" name="9000">
+                                                                <label class="form-check-label font-small dark-grey-text number-type" for="9000">9.000 BTU</label>
+                                                            </div>
+                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0">
+                                                                <span class="dark-grey-text waves-effect waves-circle restar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">remove</i></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text waves-effect waves-circle sumar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">add</i></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Capacidad 12000 BTU -->
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
+                                                            <div class="col-8 p-0">
+                                                                <input type="checkbox" class="form-check-input" id="12000" name="12000">
+                                                                <label class="form-check-label font-small dark-grey-text number-type" for="12000">12.000 BTU</label>
+                                                            </div>
+                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0">
+                                                                <span class="dark-grey-text waves-effect waves-circle restar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">remove</i></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text waves-effect waves-circle sumar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">add</i></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Capacidad Capacidad 18000 BTU -->
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
+                                                            <div class="col-8 p-0">
+                                                                <input type="checkbox" class="form-check-input" id="18000" name="18000">
+                                                                <label class="form-check-label font-small dark-grey-text number-type" for="18000">18.000 BTU</label>
+                                                            </div>
+                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0">
+                                                                <span class="dark-grey-text waves-effect waves-circle restar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">remove</i></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text waves-effect waves-circle sumar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">add</i></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Capacidad 24000 BTU -->
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
+                                                            <div class="col-8 p-0">
+                                                                <input type="checkbox" class="form-check-input" id="24000" name="24000">
+                                                                <label class="form-check-label font-small dark-grey-text number-type" for="24000">24.000 BTU</label>
+                                                            </div>
+                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0">
+                                                                <span class="dark-grey-text waves-effect waves-circle restar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">remove</i></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text waves-effect waves-circle sumar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">add</i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- INSTALACION -->
+                                                    <div class="row ml-0 mb-4">
+                                                        <!-- Con Instalacion -->
+                                                        <div class="form-check form-check-inline col-12 mb-1">
+                                                            <input type="radio" class="form-check-input" id="conInstalacion" name="instalacion">
+                                                            <label class="form-check-label dark-grey-text font-small" for="conInstalacion">Con Instalación (solo RM)</label>
+                                                        </div>
+
+                                                        <!-- Sin Instalacion -->
+                                                        <div class="form-check form-check-inline col-12 mb-1">
+                                                            <input type="radio" class="form-check-input" id="sinInstalacion" name="instalacion">
+                                                            <label class="form-check-label dark-grey-text font-small" for="sinInstalacion">Sin Instalación</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="step-actions">
+                                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="someFunction">CONTINUAR</button>
+                                                        <button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step font-weight-bold">VOLVER</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!-- Step 4 Commit Optional -->
+                                            <li class="step">
+                                                <div class="step-title waves-effect waves-dark text-primary">¿Algún comentario?</div>
+                                                <div class="step-new-content">
+                                                    <div class="row">
+
+                                                        <!-- Text Area -->
+                                                        <div class="md-form col-lg-12 mr-0 mb-2">
+                                                            <textarea type="text" id="comentario" class="md-textarea form-control" rows="3" name="comentario"></textarea>
+                                                            <label class="font-small dark-grey-text" for="comentario">Escríbe aquí tu comentario...</label>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="step-actions">
+                                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="someFunction">OMITIR</button>
+                                                        <button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step font-weight-bold">VOLVER</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.Panel Step-->
                     </div>
 
+                </div>
+
+                <div class="modal-footer white">
+                    <button type="button" class="btn-rounded btn-outline-grey btn z-depth-0 font-weight-bold d-none" data-dismiss="modal">Atrás</button>
+                    <button class="btn bg-third btn-rounded disabled z-depth-0 font-weight-bold">Enviar</button>
                 </div>
             </div>
             <!--/.Content-->
@@ -1280,12 +1420,18 @@
         });
         // Tooltips Initialization
         $(function() {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
-            //Stepper
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+        //Stepper
         $(document).ready(function() {
             $('.stepper').mdbStepper();
-        })
+        });
+        //Feedback
+        function someFunction() {
+            setTimeout(function() {
+                $('#feedback-step').nextStep();
+            }, 2000);
+        }
     </script>
 </body>
 

@@ -1,6 +1,7 @@
 // Your custom styles
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
 @import url('https://fonts.googleapis.com/css?family=Questrial');
+
 /* SETTINGS */
 
 html,
@@ -20,6 +21,8 @@ body,
         vertical-align: middle;
     }
 }
+
+
 /* NAVAR MENU */
 
 .navbar {
@@ -74,6 +77,8 @@ body,
 .news-title {
     font-size: 1rem!important;
 }
+
+
 /* CARRUSEL */
 
 .carousel,
@@ -198,12 +203,15 @@ body,
     font-size: 1rem!important;
 }
 
-//MODAL COTIZADOR
+
+/* MODAL COTIZADOR */
+
 .md-form input[type=text].valid,
 .md-form input[type=email].valid,
 .md-form input[type=tel].valid,
 .md-form input[type=password].valid,
-.md-form input[type=url].valid {
+.md-form input[type=url].valid,
+.md-form textarea.md-textarea.valid {
     border-bottom: 1px solid $third-color;
     -webkit-box-shadow: 0 1px 0 0 $third-color;
     box-shadow: 0 1px 0 0 $third-color;
@@ -221,4 +229,40 @@ body,
 .bg-third {
     background: $third-color;
     background-color: $third-color;
+}
+
+//STEP
+.success-color,
+ul.stepper .step.done:before {
+    background-color: $third-color!important;
+}
+
+ul.stepper .step:before {
+    font-family: 'Questrial', sans-serif;
+    font-weight: bold!important;
+}
+
+.select-wrapper input.select-dropdown {
+    font-size: .9rem;
+    color: #4f4f4f!important;
+}
+
+.form-check-input[type=checkbox]+label,
+label.btn input[type=checkbox]+label {
+    padding-left: 30px;
+}
+
+.md-form label {
+    font-size: .9rem;
+}
+
+.form-check-input label {
+    font-size: .9rem;
+}
+
+.form-check-input[type=radio]:not(:checked)+label:after,
+.form-check-input[type=radio]:not(:checked)+label:before,
+label.btn input[type=radio]:not(:checked)+label:after,
+label.btn input[type=radio]:not(:checked)+label:before {
+    border: 2px solid #8a8a8a!important;
 }
