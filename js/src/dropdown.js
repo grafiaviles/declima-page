@@ -100,11 +100,11 @@
 
         if (offsetLeft + activates.innerWidth() > $(window).width()) {
 
-        // Dropdown goes past screen on right, force right alignment
+          // Dropdown goes past screen on right, force right alignment
           currAlignment = 'right';
         } else if (offsetLeft - activates.innerWidth() + origin.innerWidth() < 0) {
 
-        // Dropdown goes past screen on left, force left alignment
+          // Dropdown goes past screen on left, force left alignment
           currAlignment = 'left';
         }
         // Vertical bottom offscreen detection
@@ -134,7 +134,7 @@
 
           const offsetRight = origin.position().left + origin.outerWidth() - activates.outerWidth();
           gutterSpacing = -options.gutter;
-          leftPosition =  offsetRight + gutterSpacing;
+          leftPosition = offsetRight + gutterSpacing;
         }
 
         // Position dropdown
@@ -270,6 +270,58 @@
 
   $('.dropdown-button').dropdown();
 
+  $.fn.mdbDropSearch = function (options) {
+
+    var $mdbInput = $(this).find('input');
+
+    this.filter(function (value) {
+
+      $(this).on('keyup', value, function () {
+
+        var $linksInDropMenu = $mdbInput.closest('div[id]').find('a, li');
+
+        for (var i = 0; i < $linksInDropMenu.length; i++) {
+
+          if ($linksInDropMenu.eq(i).html().toUpperCase().indexOf($mdbInput.val().toUpperCase()) > -1) {
+
+            $linksInDropMenu.eq(i).css({
+              display: ''
+            });
+
+          } else {
+
+            $linksInDropMenu.eq(i).css({
+              display: 'none'
+            });
+          }
+        };
+
+      })
+    })
+
+    var settings = $.extend({
+
+      color: '#000',
+      backgroundColor: '',
+      fontSize: '.9rem',
+      fontWeight: '400',
+      borderRadius: '',
+      borderColor: ''
+
+    }, options);
+
+    return this.css({
+
+      color: settings.color,
+      backgroundColor: settings.backgroundColor,
+      fontSize: settings.fontSize,
+      fontWeight: settings.fontWeight,
+      borderRadius: settings.borderRadius,
+      border: settings.border,
+      margin: settings.margin,
+    });
+  }
+
 }(jQuery));
 
 
@@ -356,4 +408,6 @@ dropdownSelectors.on({
       });
     }
   }
+
+
 });

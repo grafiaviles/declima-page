@@ -30,6 +30,17 @@
         arrowUp: 38,
         arrowDown: 40
       };
+
+      MaterialSelect.mutationObservers = [];
+    }
+
+    static clearMutationObservers() {
+
+      MaterialSelect.mutationObservers.forEach((observer) => {
+
+        observer.disconnect();
+        observer.customStatus = 'stopped';
+      });
     }
 
     init() {
@@ -167,9 +178,8 @@
 
     appendSaveSelectButton() {
 
-     this.$selectWrapper.parent().find('button.btn-save').appendTo(this.$materialOptionsList);
-   }
-
+      this.$selectWrapper.parent().find('button.btn-save').appendTo(this.$materialOptionsList);
+    }
     buildMaterialOptions() {
 
       this.$nativeSelectChildren.each((index, option) => {
@@ -220,7 +230,12 @@
         padding: '0',
         'pointer-events': 'none'
       });
-      this.$nativeSelect.attr('style', `${this.$nativeSelect.attr('style')} display: inline!important;`);
+
+      if (this.$nativeSelect.attr('style').indexOf('inline!important') === -1) {
+
+        this.$nativeSelect.attr('style', `${this.$nativeSelect.attr('style')} display: inline!important;`);
+      }
+
       this.$nativeSelect.attr('tabindex', -1);
       this.$nativeSelect.data('inherit-tabindex', false);
     }
@@ -235,6 +250,11 @@
       };
       const observer = new MutationObserver(this._onMutationObserverChange.bind(this));
       observer.observe(this.$nativeSelect.get(0), config);
+      observer.customId = this.uuid;
+      observer.customStatus = 'observing';
+
+      MaterialSelect.clearMutationObservers();
+      MaterialSelect.mutationObservers.push(observer);
 
       const $saveSelectBtn = this.$nativeSelect.parent().find('button.btn-save');
       $saveSelectBtn.on('click', this._onSaveSelectBtnClick);
@@ -271,6 +291,8 @@
 
         const $select = $(mutation.target).closest('select');
         if ($select.data('stop-refresh') !== true && (mutation.type === 'childList' || mutation.type === 'attributes' && $(mutation.target).is('option'))) {
+
+          MaterialSelect.clearMutationObservers();
 
           $select.materialSelect('destroy');
           $select.materialSelect();
@@ -466,7 +488,6 @@
         });
 
       this.$nativeSelect.data('stop-refresh', true);
-      this.$nativeSelect.val(this.valuesSelected);
       this._triggerChangeOnNativeSelect();
       this.$nativeSelect.removeData('stop-refresh');
     }
@@ -747,6 +768,8 @@
         !this.hasClass('browser-default') &&
         !this.hasClass('custom-select')
       ) {
+
+        MaterialSelect.clearMutationObservers();
 
         this.materialSelect('destroy');
         const ret = originalVal.call(this, value);

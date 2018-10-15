@@ -1,7 +1,7 @@
 (function ($) {
 
   const rangeWrapper = '.range-field';
-  const rangeType    = 'input[type=range]';
+  const rangeType    = 'input[type=range]:not(.custom-range)';
   const thumbHtml    = '<span class="thumb"><span class="value"></span></span>';
   let rangeMousedown = false;
   let left;

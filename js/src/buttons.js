@@ -2,24 +2,24 @@
 
   $(document).ready(() => {
 
-    $.fn.reverse = [].reverse;
-
-    $(document).on('mouseenter.fixedActionBtn', '.fixed-action-btn:not(.click-to-toggle)', function () {
+    $(document).on('mouseenter', '.fixed-action-btn', function () {
 
       const $this = $(this);
       openFABMenu($this);
     });
 
-    $(document).on('mouseleave.fixedActionBtn', '.fixed-action-btn:not(.click-to-toggle)', function () {
+    $(document).on('mouseleave', '.fixed-action-btn', function () {
 
       const $this = $(this);
       closeFABMenu($this);
     });
 
-    $(document).on('click.fixedActionBtn', '.fixed-action-btn.click-to-toggle > a', function () {
+    $(document).on('click', '.fixed-action-btn > a', function () {
 
       const $this = $(this);
       const $menu = $this.parent();
+
+      $menu.hasClass('active') ? openFABMenu($menu) : closeFABMenu($menu);
 
       if ($menu.hasClass('active')) {
 
@@ -28,6 +28,7 @@
 
         openFABMenu($menu);
       }
+
     });
   });
 
@@ -69,12 +70,15 @@
     });
   };
 
-  $('.fixed-action-btn').on('click', (e) => {
+  $('.fixed-action-btn:not(.smooth-scroll) > .btn-floating').on('click', (e) => {
 
-    e.preventDefault();
-    toggleFABMenu($('.fixed-action-btn'));
+    if(!$(this).hasClass('smooth-scroll')) {
 
-    return false;
+      e.preventDefault();
+      toggleFABMenu($('.fixed-action-btn'));
+      return false;
+    }
+
   });
 
   function toggleFABMenu(btn) {

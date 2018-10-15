@@ -1,5 +1,5 @@
 exports.modules = [
-  'js/_intro-mdb-pro.js',
+  './js/_intro-mdb-pro.js',
   './js/vendor/jquery.easing.js',
   './js/vendor/velocity.js',
   './js/vendor/chart.js',
@@ -29,9 +29,10 @@ exports.modules = [
   './js/vendor/jquery.sticky.js',
   './js/vendor/scrollbar.js',
   './js/dist/chips.js',
+  './js/vendor/ofi.js',
   './js/vendor/jarallax.js',
   './js/vendor/jarallax-video.js',
   './js/dist/mdb-autocomplete.js',
   './js/vendor/enhanced-modals.js',
-// './js/vendor/addons/datatables.js'
+  // './js/vendor/addons/datatables.js'
 ];

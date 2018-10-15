@@ -1,6 +1,6 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB PRO 4.5.9
+ * Version: MDB Pro 4.5.12
  *
  *
  * Copyright: Material Design for Bootstrap
@@ -29,7 +29,7 @@
 /*
 
   jquery.easing.js
-  velocity.min.js
+  velocity.js
   chart.js
   wow.js
   scrolling-navbar.js
@@ -57,9 +57,11 @@
   jquery.sticky.js
   scrollbar.js
   chips.js
+  ofi.js
   jarallax.js
   jarallax-video.js
   mdb-autocomplete.js
   enhanced-modals.js
 
 */
+

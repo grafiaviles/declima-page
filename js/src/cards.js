@@ -14,10 +14,31 @@
 
       if (isTitle || isTitleIcon) {
 
-        $reveal.removeClass('show');
+        // down
+        $(this).find('.card-reveal').velocity({
+          translateY: 0
+        }, {
+          duration: 225,
+          queue: false,
+          easing: 'easeInOutQuad',
+          complete: function complete() {
+            $(this).css({
+              display: 'none'
+            });
+          }
+        });
       } else if (isActivator || isActivatorIcon) {
 
-        $reveal.addClass('show');
+        // up
+        $(this).find('.card-reveal').css({
+          display: 'block'
+        }).velocity('stop', false).velocity({
+          translateY: '-100%'
+        }, {
+          duration: 300,
+          queue: false,
+          easing: 'easeInOutQuad'
+        });
       }
     }
   });
@@ -26,7 +47,21 @@
 
     const cardId = $(this).attr('data-card');
     $(`#${cardId}`).toggleClass('flipped');
+
   });
+
+  var frontHeight = $('.front').outerHeight();
+  var backHeight = $('.back').outerHeight();
+
+  if (frontHeight > backHeight) {
+    $('.card-wrapper, .back').height(frontHeight);
+  }
+  else if (frontHeight > backHeight) {
+    $('.card-wrapper, .front').height(backHeight);
+  }
+  else {
+    $('.card-wrapper').height(backHeight);
+  }
 
   $('.card-share > a').on('click', function (e) {
 
