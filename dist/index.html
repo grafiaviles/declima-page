@@ -34,8 +34,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/iconos/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <!--ANALYTICS-->
+	<!--ANALYTICS-->
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -116,14 +115,14 @@
 
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs md-tabs tabs-2 bg-secondary mx-0 z-depth-0 rounded-0" role="tablist">
-                        <li class="nav-item">
+                    	<li class="nav-item" id="stepTag">
+                            <a class="nav-link d-flex align-items-center" data-toggle="tab" href="#step" role="tab"><i class="material-icons mr-2">add</i>Step</a>
+                        </li>
+                        <li class="nav-item invisible" id="personaTag">
                             <a class="nav-link active d-flex align-items-center" data-toggle="tab" href="#persona" role="tab"><i class="material-icons mr-2">person</i>Persona</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item invisible" id="empresaTag">
                             <a class="nav-link d-flex align-items-center" data-toggle="tab" href="#empresa" role="tab"><i class="material-icons mr-2">people</i>Empresa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex align-items-center" data-toggle="tab" href="#step" role="tab"><i class="material-icons mr-2">add</i>Step</a>
                         </li>
                         <li>
                             <a class="close" data-dismiss="modal" aria-label="Close"><i class="material-icons text-white">close</i></a>
@@ -134,26 +133,26 @@
                     <div class="tab-content py-0">
 
                         <!--Panel Persona-->
-                        <div class="tab-pane fade in show active mt-2" id="persona" role="tabpanel">
+                        <div class="tab-pane fade in show mt-2 personaContent" id="persona" role="tabpanel">
 
                             <!--Body-->
                             <div class="modal-body mb-1">
                                 <div class="md-form form-sm mb-4">
-                                    <input type="text" id="nombre" class="form-control form-control-sm validate">
+                                    <input type="text" id="nombre" class="form-control form-control-sm validate" required>
                                     <label data-error="Error" data-success="Correcto" for="nombre">Nombre y Apellido</label>
                                 </div>
 
                                 <div class="md-form form-sm mb-4">
-                                    <input type="email" id="email" class="form-control form-control-sm validate">
+                                    <input type="email" id="email" class="form-control form-control-sm validate" required>
                                     <label data-error="Error" data-success="Correcto" for="email">Email</label>
                                 </div>
 
                                 <div class="md-form form-sm mb-4">
-                                    <input type="tel" id="telefono" class="form-control form-control-sm validate">
+                                    <input type="tel" id="telefono" class="form-control form-control-sm validate" required>
                                     <label data-error="Error" data-success="Correcto" for="telefono">Teléfono</label>
                                 </div>
                                 <div class="md-form form-sm mb-4">
-                                    <input type="text" id="direccion" class="form-control form-control-sm validate">
+                                    <input type="text" id="direccion" class="form-control form-control-sm validate" required>
                                     <label data-error="Error" data-success="Correcto" for="direccion">Dirección</label>
                                 </div>
                             </div>
@@ -161,20 +160,20 @@
                         <!--/.Panel Persona-->
 
                         <!--Panel Empresa-->
-                        <div class="tab-pane fade mt-2" id="empresa" role="tabpanel">
+                        <div class="tab-pane fade mt-2 empresaContent" id="empresa" role="tabpanel">
 
                             <!--Body-->
                             <div class="modal-body mb-1">
                                 <div class="md-form form-sm mb-4">
-                                    <input type="text" id="nombreEmpresa" class="form-control form-control-sm">
+                                    <input type="text" id="nombreEmpresa" class="form-control form-control-sm validate" required>
                                     <label data-error="Error" data-success="Correcto" for="nombreEmpresa">Nombre o Razón Social</label>
                                 </div>
                                 <div class="md-form form-sm mb-4">
-                                    <input type="text" id="nombreUser" class="form-control form-control-sm validate">
+                                    <input type="text" id="nombreUser" class="form-control form-control-sm validate" required>
                                     <label data-error="Error" data-success="Correcto" for="nombreUser">Nombre y Apellido</label>
                                 </div>
                                 <div class="md-form form-sm mb-4">
-                                    <input type="email" id="emailEmpreso" class="form-control form-control-sm validate">
+                                    <input type="email" id="emailEmpreso" class="form-control form-control-sm validate" required>
                                     <label data-error="Error" data-success="Correcto" for="emailEmpreso">Email Corporativo</label>
                                 </div>
                                 <div class="md-form form-sm mb-4">
@@ -182,11 +181,11 @@
                                     <label for="url">Sitio Web (opcional)</label>
                                 </div>
                                 <div class="md-form form-sm mb-4">
-                                    <input type="tel" id="telefonoEmpresa" class="form-control form-control-sm validate">
+                                    <input type="tel" id="telefonoEmpresa" class="form-control form-control-sm validate" required>
                                     <label data-error="Error" data-success="Correcto" for="telefonoEmpresa">Teléfono</label>
                                 </div>
                                 <div class="md-form form-sm mb-4">
-                                    <input type="text" id="direccionEmpresa" class="form-control form-control-sm validate">
+                                    <input type="text" id="direccionEmpresa" class="form-control form-control-sm validate" required>
                                     <label data-error="Error" data-success="Correcto" for="direccionEmpresa">Dirección</label>
                                 </div>
                             </div>
@@ -194,8 +193,7 @@
                         <!--/.Panel Empresa-->
 
                         <!--Panel Step-->
-                        <div class="tab-pane fade mt-2" id="step" role="tabpanel">
-
+                        <div class="tab-pane mt-2 active stepContent" id="step" role="tabpanel">
                             <!--Body-->
                             <div class="mb-1">
                                 <div class="card z-depth-0">
@@ -209,25 +207,25 @@
 
                                                         <!-- Group of material radios - option 1 -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input" id="equipos" name="servicio">
+                                                            <input type="radio" class="form-check-input validate radios" id="equipos" pasos-req="1" name="servicio" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="equipos">Venta de Aire Acondicionado</label>
                                                         </div>
 
                                                         <!-- Group of material radios - option 2 -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input" id="proyectos" name="servicio">
+                                                            <input type="radio" class="form-check-input validate radios" id="proyectos" pasos-req="0" name="servicio" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="proyectos">Proyectos de Climatizacion</label>
                                                         </div>
 
                                                         <!-- Group of material radios - option 3 -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input" id="mantenciones" name="servicio">
+                                                            <input type="radio" class="form-check-input validate radios" id="mantenciones" pasos-req="0" name="servicio" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="mantenciones">Mantención y Reparaciones</label>
                                                         </div>
 
                                                         <!-- Group of material radios - option 4 -->
                                                         <div class="form-check col-12 ml-auto">
-                                                            <input type="radio" class="form-check-input" id="instalacion" name="servicio">
+                                                            <input type="radio" class="form-check-input validate radios" id="instalacion" pasos-req="0" name="servicio" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="instalacion">Instalaciones (solo RM)</label>
                                                         </div>
 
@@ -238,7 +236,7 @@
                                                 </div>
                                             </li>
                                             <!-- Step 2 Equipos -->
-                                            <li class="step">
+                                            <li class="step" id="seleccionaProd">
                                                 <div class="step-title waves-effect waves-dark text-primary">Selecciona un producto</div>
                                                 <div class="step-new-content">
 
@@ -247,25 +245,25 @@
                                                     <div class="row">
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2 pr-0">
-                                                            <input type="radio" class="form-check-input" id="splitmuro" name="producto">
+                                                            <input type="radio" class="form-check-input" id="splitmuro" name="producto" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto pr-0 d-flex justify-content-between align-items-center" for="splitmuro">Split Muro Inverter <span class="number-type badge badge-pill bg-third z-depth-0">30% DCTO.</span></label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input" id="splitducto" name="producto">
+                                                            <input type="radio" class="form-check-input" id="splitducto" name="producto" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="splitducto">Split Ducto Inverter</label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input" id="splitcassette" name="producto">
+                                                            <input type="radio" class="form-check-input" id="splitcassette" name="producto" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="splitcassette">Split Cassette Inverter</label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto">
-                                                            <input type="radio" class="form-check-input" id="pisocielo" name="producto">
+                                                            <input type="radio" class="form-check-input" id="pisocielo" name="producto" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="pisocielo">Piso Cielo Inverter</label>
                                                         </div>
                                                     </div>
@@ -277,7 +275,7 @@
                                                 </div>
                                             </li>
                                             <!-- Step 3 Capacidad y Cantidad-->
-                                            <li class="step">
+                                            <li class="step" id="seleccionaCap">
                                                 <div class="step-title waves-effect waves-dark text-primary">Selecciona capacidad y más...</div>
                                                 <div class="step-new-content">
 
@@ -286,7 +284,7 @@
                                                         <!-- Capacidad 9000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="9000" name="9000">
+                                                                <input type="checkbox" class="form-check-input" id="9000" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type" for="9000" data-toggle="tooltip" data-placement="right" title="Alcance 15m a 16m">9.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0">
@@ -299,7 +297,7 @@
                                                         <!-- Capacidad 12000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="12000" name="12000">
+                                                                <input type="checkbox" class="form-check-input" id="12000" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type" for="12000">12.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0">
@@ -312,7 +310,7 @@
                                                         <!-- Capacidad Capacidad 18000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="18000" name="18000">
+                                                                <input type="checkbox" class="form-check-input" id="18000" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type" for="18000">18.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0">
@@ -325,7 +323,7 @@
                                                         <!-- Capacidad 24000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="24000" name="24000">
+                                                                <input type="checkbox" class="form-check-input" id="24000" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type" for="24000">24.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0">
@@ -340,13 +338,13 @@
                                                     <div class="row ml-0 mb-2">
                                                         <!-- Con Instalacion -->
                                                         <div class="form-check form-check-inline col-12 mb-1">
-                                                            <input type="radio" class="form-check-input" id="conInstalacion" name="instalacion">
+                                                            <input type="radio" class="form-check-input" id="conInstalacion" name="instalacion" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="conInstalacion">Con Instalación (solo RM)</label>
                                                         </div>
 
                                                         <!-- Sin Instalacion -->
                                                         <div class="form-check form-check-inline col-12 mb-1">
-                                                            <input type="radio" class="form-check-input" id="sinInstalacion" name="instalacion">
+                                                            <input type="radio" class="form-check-input" id="sinInstalacion" name="instalacion" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="sinInstalacion">Sin Instalación</label>
                                                         </div>
                                                     </div>
@@ -365,13 +363,13 @@
 
                                                         <!-- Text Area -->
                                                         <div class="md-form col-lg-12 mr-0 mb-2 pt-0">
-                                                            <textarea type="text" id="comentario" class="md-textarea form-control" rows="3" name="comentario"></textarea>
+                                                            <textarea type="text" id="comentario" class="md-textarea form-control next-step" rows="3" name="comentario"></textarea>
                                                             <label class="font-small dark-grey-text" for="comentario">Escríbe aquí tu comentario...</label>
                                                         </div>
 
                                                     </div>
                                                     <div class="step-actions">
-                                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="someFunction">OMITIR</button>
+                                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="verificaPasos" id="botonPaso4">CONTINUAR</button>
                                                         <button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step font-weight-bold">VOLVER</button>
                                                     </div>
                                                 </div>
@@ -388,7 +386,8 @@
 
                 <div class="modal-footer white">
                     <button type="button" class="btn-rounded btn-outline-grey btn z-depth-0 font-weight-bold d-none" data-dismiss="modal">Atrás</button>
-                    <button class="btn bg-third btn-rounded disabled z-depth-0 font-weight-bold">Enviar</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold invisible" id="botonEnviar">Enviar</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold invisible" id="botonSiguiente">Siguiente</button>
                 </div>
             </div>
             <!--/.Content-->
@@ -1401,6 +1400,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript" src="js/addons-pro/stepper.min.js"></script>
+    <script src='js/cotizar.js'></script>
     <script>
         $('.carousel').carousel({
             ride: true,
