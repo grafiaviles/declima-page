@@ -182,20 +182,6 @@ body,
     color: #fff;
 }
 
-
-/* ::-webkit-scrollbar-track {
-    background-color: #f0f0f0;
-}
-
- ::-webkit-scrollbar-thumb {
-    background-color: #00587a;
-}
-
- ::-webkit-scrollbar {
-    width: 10px;
-    height: 2px;
-} */
-
 //EQUIPOS HOME
 .dcto-card {
     display: flex;
@@ -266,4 +252,17 @@ label.btn input[type=checkbox]+label {
 label.btn input[type=radio]:not(:checked)+label:after,
 label.btn input[type=radio]:not(:checked)+label:before {
     border: 2px solid #8a8a8a!important;
+}
+
+.cont-calc-cantidad {
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px lightgray;
+    overflow: hidden;
+    height: 25px!important;
+    & span:nth-of-type(1) {
+        border-right: 1px solid lightgray;
+    }
+    & span:nth-of-type(3) {
+        border-left: 1px solid lightgray;
+    }
 }

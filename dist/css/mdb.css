@@ -17655,18 +17655,6 @@ body,
   background: #3fa7f3;
   color: #fff; }
 
-/* ::-webkit-scrollbar-track {
-    background-color: #f0f0f0;
-}
-
- ::-webkit-scrollbar-thumb {
-    background-color: #00587a;
-}
-
- ::-webkit-scrollbar {
-    width: 10px;
-    height: 2px;
-} */
 .dcto-card {
   display: -webkit-box;
   display: -webkit-flex;
@@ -17731,3 +17719,15 @@ label.btn input[type="checkbox"] + label {
 label.btn input[type=radio]:not(:checked) + label:after,
 label.btn input[type=radio]:not(:checked) + label:before {
   border: 2px solid #8a8a8a !important; }
+
+.cont-calc-cantidad {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 0 1px lightgray;
+  box-shadow: 0 0 0 1px lightgray;
+  overflow: hidden;
+  height: 25px !important; }
+  .cont-calc-cantidad span:nth-of-type(1) {
+    border-right: 1px solid lightgray; }
+  .cont-calc-cantidad span:nth-of-type(3) {
+    border-left: 1px solid lightgray; }

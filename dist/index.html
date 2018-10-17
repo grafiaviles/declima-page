@@ -114,15 +114,18 @@
                 <div class="modal-c-tabs">
 
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs md-tabs tabs-2 bg-secondary mx-0 z-depth-0 rounded-0" role="tablist">
+                    <ul class="nav nav-tabs md-tabs tabs-2 bg-secondary mx-0 z-depth-0 rounded-0 flex-lg-wrap flex-sm-nowrap" role="tablist">
                         <li class="nav-item" id="stepTag">
-                            <a class="nav-link d-flex align-items-center font-weight-bold" data-toggle="tab" href="#step" role="tab"><i class="material-icons mr-2">add</i>Cotizar</a>
+                            <a class="nav-link d-flex align-items-center font-weight-bold text-uppercase justify-content-sm-center" data-toggle="tab" href="#step" role="tab"><i class="fa fa-file-text mr-2"></i>Cotizar</a>
+                        </li>
+                        <li class="nav-item d-none" id="stepTag">
+                            <a class="nav-link d-flex align-items-center p-2" data-toggle="tab" href="#step" role="tab"><i class="material-icons">arrow_back</i></a>
                         </li>
                         <li class="nav-item invisible" id="personaTag">
-                            <a class="nav-link active d-flex align-items-center" data-toggle="tab" href="#persona" role="tab"><i class="material-icons mr-2">person</i>Persona</a>
+                            <a class="nav-link active d-flex align-items-center justify-content-sm-center" justify-content-center data-toggle="tab" href="#persona" role="tab"><i class="material-icons mr-2">person</i>Persona</a>
                         </li>
                         <li class="nav-item invisible" id="empresaTag">
-                            <a class="nav-link d-flex align-items-center" data-toggle="tab" href="#empresa" role="tab"><i class="material-icons mr-2">people</i>Empresa</a>
+                            <a class="nav-link d-flex align-items-center justify-content-sm-center" data-toggle="tab" href="#empresa" role="tab"><i class="material-icons mr-2">people</i>Empresa</a>
                         </li>
                         <li>
                             <a class="close" data-dismiss="modal" aria-label="Close"><i class="material-icons text-white">close</i></a>
@@ -282,64 +285,70 @@
                                                     <!-- CAPACIDAD -->
                                                     <div class="row ml-1">
                                                         <!-- Capacidad 9000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="9000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type" for="9000" data-toggle="tooltip" data-placement="right" title="Alcance 15m a 16m">9.000 BTU</label>
+                                                                <label class="form-check-label font-small dark-grey-text number-type" for="9000" data-toggle="tooltip" data-placement="right" title="Alcance 15m">9.000 BTU</label>
                                                             </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0">
-                                                                <span class="dark-grey-text waves-effect waves-circle restar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="dark-grey-text waves-effect waves-circle sumar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">add</i></span>
+                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
+                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3"><i class="align-self-center material-icons font-small">remove</i></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3"><i class="align-self-center material-icons font-small">add</i></span>
                                                             </div>
                                                         </div>
 
                                                         <!-- Capacidad 12000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="12000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type" for="12000">12.000 BTU</label>
+                                                                <label class="form-check-label font-small dark-grey-text number-type" for="12000" data-toggle="tooltip" data-placement="right" title="Alcance 20m">12.000 BTU</label>
                                                             </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0">
-                                                                <span class="dark-grey-text waves-effect waves-circle restar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="dark-grey-text waves-effect waves-circle sumar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">add</i></span>
+                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
+                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3"><i class="align-self-center material-icons font-small">remove</i></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3"><i class="align-self-center material-icons font-small">add</i></span>
                                                             </div>
                                                         </div>
 
                                                         <!-- Capacidad Capacidad 18000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="18000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type" for="18000">18.000 BTU</label>
+                                                                <label class="form-check-label font-small dark-grey-text number-type" for="18000" data-toggle="tooltip" data-placement="right" title="Alcance 30m">18.000 BTU</label>
                                                             </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0">
-                                                                <span class="dark-grey-text waves-effect waves-circle restar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="dark-grey-text waves-effect waves-circle sumar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">add</i></span>
+                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
+                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3"><i class="align-self-center material-icons font-small">remove</i></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3"><i class="align-self-center material-icons font-small">add</i></span>
                                                             </div>
                                                         </div>
 
                                                         <!-- Capacidad 24000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-1 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="24000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type" for="24000">24.000 BTU</label>
+                                                                <label class="form-check-label font-small dark-grey-text number-type" for="24000" data-toggle="tooltip" data-placement="right" title="Alcance 40m">24.000 BTU</label>
                                                             </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0">
-                                                                <span class="dark-grey-text waves-effect waves-circle restar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="dark-grey-text waves-effect waves-circle sumar d-flex align-content-center text-center col-5"><i class="align-self-center material-icons font-small">add</i></span>
+                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
+                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3"><i class="align-self-center material-icons font-small">remove</i></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3"><i class="align-self-center material-icons font-small">add</i></span>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <!-- INSTALACION -->
-                                                    <div class="row ml-0 mb-2">
+                                                    <div class="row ml-0 mb-2 mt-3">
                                                         <!-- Con Instalacion -->
                                                         <div class="form-check form-check-inline col-12 mb-1">
                                                             <input type="radio" class="form-check-input" id="conInstalacion" name="instalacion" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="conInstalacion">Con Instalación (solo RM)</label>
+                                                        </div>
+                                                        <!-- Input Direccion Instalacion -->
+                                                        <div class="mt-0 pl-0 md-form form-sm col-12 mb-3 mt-2">
+                                                            <i class="pl-1 text-primary fa fa-map-marker prefix" aria-hidden="true"></i>
+                                                            <input type="text" id="direccionInstalacion" class="form-control form-control-sm">
+                                                            <label class="ml-3 pl-1" for="direccionInstalacion">Dirección en donde desea instalar...</label>
                                                         </div>
 
                                                         <!-- Sin Instalacion -->
@@ -357,7 +366,7 @@
                                             </li>
                                             <!-- Step 4 Commit Optional -->
                                             <li class="step">
-                                                <div class="step-title waves-effect waves-dark text-primary">¿Algún comentario?</div>
+                                                <div class="step-title waves-effect waves-dark text-primary">Comentar (opcional)</div>
                                                 <div class="step-new-content">
                                                     <div class="row">
 
@@ -369,7 +378,6 @@
 
                                                     </div>
                                                     <div class="step-actions">
-                                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="verificaPasos" id="botonPaso4">CONTINUAR</button>
                                                         <button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step font-weight-bold">VOLVER</button>
                                                     </div>
                                                 </div>
@@ -385,9 +393,8 @@
                 </div>
 
                 <div class="modal-footer white">
-                    <button type="button" class="btn-rounded btn-outline-grey btn z-depth-0 font-weight-bold d-none" data-dismiss="modal">Atrás</button>
-                    <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold invisible" id="botonEnviar">Enviar</button>
-                    <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold invisible" id="botonSiguiente">Siguiente</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold col-lg-5 col-md-12" id="botonSiguiente">Siguiente</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark font-weight-bold invisible d-none" id="botonEnviar">Enviar</button>
                 </div>
             </div>
             <!--/.Content-->
