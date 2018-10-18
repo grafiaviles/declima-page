@@ -61,10 +61,6 @@ gulp.task('js-build', function() {
     return gulp.src(plugins.modules)
         .pipe(concat('mdb.js'))
         .pipe(gulp.dest('./dist/js/'));
-
-    gulp.start('js-lite-build');
-    gulp.start('js-minify');
-
 });
 
 gulp.task('js-lite-build', function() {

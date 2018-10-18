@@ -259,10 +259,4 @@ label.btn input[type=radio]:not(:checked)+label:before {
     box-shadow: 0 0 0 1px lightgray;
     overflow: hidden;
     height: 25px!important;
-    & span:nth-of-type(1) {
-        border-right: 1px solid lightgray;
-    }
-    & span:nth-of-type(3) {
-        border-left: 1px solid lightgray;
-    }
 }
