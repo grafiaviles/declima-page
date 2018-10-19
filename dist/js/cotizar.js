@@ -3,6 +3,7 @@
  */
 $(document).ready(function(){
 	$('#botonEnviar').addClass('invisible');
+	$('#campoDireccion').height(0);
 	$('.radios').click(function(){
 		if(!parseInt($(this).attr('pasos-req')))
 		{
@@ -42,6 +43,42 @@ $(document).ready(function(){
 		.done(function(json) {
 			var tmp = '';
 		});
+	});
+	$('.radioInstalacion').click(function(){
+		if(this.id == 'conInstalacion')
+		{
+			$('#campoDireccion').removeAttr('style');
+			$('#campoDireccion').removeClass('invisible');
+		}
+		else
+		{
+			$('#campoDireccion').addClass('invisible');
+			$('#campoDireccion').height(0);
+		}
+	});
+	
+	$('.restar').click(function(){
+		let valor = $(this).next().children().text();
+		if(parseInt(valor) > 0)
+		{
+			valor = parseInt(valor) - 1;
+			$(this).next().children().text(valor);
+			$('#cant-btu-' + $(this).attr('dimen')).val(valor);
+		}
+		if(parseInt(valor) - 1 <= 0)
+		{
+			$(this).next().children().text(1);
+			$('#cant-btu-' + $(this).attr('dimen')).val(1);
+		}
+	});
+	$('.sumar').click(function(){
+		let valor = $(this).prev().children().text();
+		if(parseInt(valor) < 10)
+		{
+			valor = parseInt(valor) + 1;
+			$(this).prev().children().text(valor);
+			$('#cant-btu-' + $(this).attr('dimen')).val(valor);
+		}
 	});
 });
 
