@@ -113,10 +113,10 @@
 
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs md-tabs tabs-2 bg-secondary mx-0 z-depth-0 rounded-0 flex-lg-wrap flex-sm-nowrap" role="tablist">
-                        <li class="nav-item" id="stepTag">
+                        <li class="nav-item" id="stepTagText">
                             <a class="nav-link d-flex align-items-center font-weight-bold text-uppercase justify-content-sm-center" data-toggle="tab" href="#step" role="tab"><i class="fa fa-file-text mr-2"></i>Cotizar</a>
                         </li>
-                        <li class="nav-item d-none" id="stepTag">
+                        <li class="nav-item d-none" id="stepTagArrow">
                             <a class="nav-link d-flex align-items-center p-2" data-toggle="tab" href="#step" role="tab"><i class="material-icons">arrow_back</i></a>
                         </li>
                         <li class="nav-item invisible" id="personaTag">
@@ -134,7 +134,7 @@
                     <div class="tab-content py-0">
 
                         <!--Panel Persona-->
-                        <div class="tab-pane fade in show mt-2 personaContent" id="persona" role="tabpanel">
+                        <div class="tab-pane mt-2 personaContent" id="persona" role="tabpanel">
 
                             <!--Body-->
                             <div class="modal-body mb-1">
@@ -202,7 +202,7 @@
                                         <ul class="stepper linear py-0 px-2" id="feedback-step">
                                             <!-- Step 1 Tipo -->
                                             <li class="step active">
-                                                <div class="step-title waves-effect waves-dark text-primary">Selecciona un tipo de servicio</div>
+                                                <div class="step-title waves-effect waves-dark text-primary titulosStep" flag="1">Selecciona un tipo de servicio</div>
                                                 <div class="step-new-content">
                                                     <div class="row">
 
@@ -238,7 +238,7 @@
                                             </li>
                                             <!-- Step 2 Equipos -->
                                             <li class="step" id="seleccionaProd">
-                                                <div class="step-title waves-effect waves-dark text-primary">Selecciona un producto</div>
+                                                <div class="step-title waves-effect waves-dark text-primary titulosStep" flag="1">Selecciona un producto</div>
                                                 <div class="step-new-content">
 
                                                     <!-- MODELO -->
@@ -276,7 +276,7 @@
                                             </li>
                                             <!-- Step 3 Capacidad y Cantidad-->
                                             <li class="step" id="seleccionaCap">
-                                                <div class="step-title waves-effect waves-dark text-primary">Selecciona capacidad y más...</div>
+                                                <div class="step-title waves-effect waves-dark text-primary titulosStep" flag="1">Selecciona capacidad y más...</div>
                                                 <div class="step-new-content">
 
                                                     <!-- CAPACIDAD -->
@@ -360,7 +360,7 @@
                                                     </div>
 
                                                     <div class="step-actions">
-                                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="someFunction">CONTINUAR</button>
+                                                        <button id="continuarpaso3" class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="someFunction">CONTINUAR</button>
                                                         <button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step font-weight-bold">VOLVER</button>
                                                     </div>
                                                 </div>
@@ -394,8 +394,8 @@
                 </div>
 
                 <div class="modal-footer white">
-                    <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold col-lg-5 col-md-12" id="botonSiguiente">Siguiente</button>
-                    <button type="button" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark font-weight-bold invisible d-none" id="botonEnviar">Enviar</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold col-lg-5 col-md-12 invisible" id="botonSiguiente">Siguiente</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark font-weight-bold invisible" id="botonEnviar">Enviar</button>
                 </div>
             </div>
             <!--/.Content-->

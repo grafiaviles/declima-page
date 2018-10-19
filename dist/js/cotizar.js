@@ -4,6 +4,14 @@
 $(document).ready(function(){
 	$('#botonEnviar').addClass('invisible');
 	$('#campoDireccion').height(0);
+	$("#continuarpaso3").click(function(){
+		$('#botonSiguiente').removeClass('invisible');
+	});
+	$('.titulosStep').click(function(){
+		tmp = parseInt($(this).attr('flag'));
+		if(parseInt($(this).attr('flag')))
+			$('#botonSiguiente').addClass('invisible');
+	});
 	$('.radios').click(function(){
 		if(!parseInt($(this).attr('pasos-req')))
 		{
@@ -14,6 +22,7 @@ $(document).ready(function(){
 			$('#seleccionaCap').addClass('invisible');
 			$('#seleccionaProd').removeClass('step');
 			$('#seleccionaCap').removeClass('step');
+			$('#botonSiguiente').removeClass('invisible');
 		}
 		else
 		{
@@ -23,14 +32,33 @@ $(document).ready(function(){
 			$('#seleccionaCap').removeClass('invisible');
 			$('#seleccionaProd').addClass('step');
 			$('#seleccionaCap').addClass('step');
+			$('#botonSiguiente').addClass('invisible');
 		}
 	});
+	
 	$('#botonSiguiente').click(function(){
 		$('#personaTag').removeClass('invisible');
 		$('#empresaTag').removeClass('invisible');
+		$('#personaTag').children().addClass('active');
+		$('#empresaTag').children().removeClass('active');
 		$('.stepContent').removeClass('active');
 		$('.personaContent').addClass('active');
 		$('.empresaContent').removeClass('active');
+		$('#stepTagText').addClass('d-none');
+		$('#stepTagArrow').removeClass('d-none');
+		$('#stepTagText').children().removeClass('active');
+		$('#stepTagArrow').children().removeClass('active');
+		$('#botonSiguiente').addClass('invisible');
+		$('#botonEnviar').removeClass('invisible');
+	});
+	
+	$('#stepTagArrow').click(function(){
+		$('#personaTag').addClass('invisible');
+		$('#empresaTag').addClass('invisible');
+		$('#stepTagText').removeClass('d-none');
+		$('#stepTagArrow').addClass('d-none');
+		$('#botonSiguiente').removeClass('invisible');
+		$('#botonEnviar').addClass('invisible');
 	});
 	
 	$('#botonEnviar').click(function(){
