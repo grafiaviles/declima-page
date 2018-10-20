@@ -119,10 +119,10 @@
                         <li class="nav-item d-none" id="stepTagArrow">
                             <a class="nav-link d-flex align-items-center p-2" data-toggle="tab" href="#step" role="tab"><i class="material-icons">arrow_back</i></a>
                         </li>
-                        <li class="nav-item invisible" id="personaTag">
+                        <li class="nav-item d-none" id="personaTag">
                             <a class="nav-link active d-flex align-items-center justify-content-sm-center" justify-content-center data-toggle="tab" href="#persona" role="tab"><i class="material-icons mr-2">person</i>Persona</a>
                         </li>
-                        <li class="nav-item invisible" id="empresaTag">
+                        <li class="nav-item d-none" id="empresaTag">
                             <a class="nav-link d-flex align-items-center justify-content-sm-center" data-toggle="tab" href="#empresa" role="tab"><i class="material-icons mr-2">people</i>Empresa</a>
                         </li>
                         <li>
@@ -162,34 +162,35 @@
 
                         <!--Panel Empresa-->
                         <div class="tab-pane fade mt-2 empresaContent" id="empresa" role="tabpanel">
-
                             <!--Body-->
-                            <div class="modal-body mb-1">
-                                <div class="md-form form-sm mb-4">
-                                    <input type="text" id="nombreEmpresa" class="form-control form-control-sm validate" required>
-                                    <label data-error="Error" data-success="Correcto" for="nombreEmpresa">Nombre o Razón Social</label>
-                                </div>
-                                <div class="md-form form-sm mb-4">
-                                    <input type="text" id="nombreUser" class="form-control form-control-sm validate" required>
-                                    <label data-error="Error" data-success="Correcto" for="nombreUser">Nombre y Apellido</label>
-                                </div>
-                                <div class="md-form form-sm mb-4">
-                                    <input type="email" id="emailEmpreso" class="form-control form-control-sm validate" required>
-                                    <label data-error="Error" data-success="Correcto" for="emailEmpreso">Email Corporativo</label>
-                                </div>
-                                <div class="md-form form-sm mb-4">
-                                    <input type="url" id="url" class="form-control form-control-sm">
-                                    <label for="url">Sitio Web (opcional)</label>
-                                </div>
-                                <div class="md-form form-sm mb-4">
-                                    <input type="tel" id="telefonoEmpresa" class="form-control form-control-sm validate" required>
-                                    <label data-error="Error" data-success="Correcto" for="telefonoEmpresa">Teléfono</label>
-                                </div>
-                                <div class="md-form form-sm mb-4">
-                                    <input type="text" id="direccionEmpresa" class="form-control form-control-sm validate" required>
-                                    <label data-error="Error" data-success="Correcto" for="direccionEmpresa">Dirección</label>
-                                </div>
-                            </div>
+                            <form class="needs-validation" novalidate>
+	                            <div class="modal-body mb-1">
+	                                <div class="md-form form-sm mb-4">
+	                                    <input type="text" id="nombreEmpresa" class="form-control form-control-sm validate" required>
+	                                    <label data-error="Error" data-success="Correcto" for="nombreEmpresa">Nombre o Razón Social</label>
+	                                </div>
+	                                <div class="md-form form-sm mb-4">
+	                                    <input type="text" id="nombreUser" class="form-control form-control-sm validate" required>
+	                                    <label data-error="Error" data-success="Correcto" for="nombreUser">Nombre y Apellido</label>
+	                                </div>
+	                                <div class="md-form form-sm mb-4">
+	                                    <input type="email" id="emailEmpreso" class="form-control form-control-sm validate" required>
+	                                    <label data-error="Error" data-success="Correcto" for="emailEmpreso">Email Corporativo</label>
+	                                </div>
+	                                <div class="md-form form-sm mb-4">
+	                                    <input type="url" id="url" class="form-control form-control-sm">
+	                                    <label for="url">Sitio Web (opcional)</label>
+	                                </div>
+	                                <div class="md-form form-sm mb-4">
+	                                    <input type="tel" id="telefonoEmpresa" class="form-control form-control-sm validate" required>
+	                                    <label data-error="Error" data-success="Correcto" for="telefonoEmpresa">Teléfono</label>
+	                                </div>
+	                                <div class="md-form form-sm mb-4">
+	                                    <input type="text" id="direccionEmpresa" class="form-control form-control-sm validate" required>
+	                                    <label data-error="Error" data-success="Correcto" for="direccionEmpresa">Dirección</label>
+	                                </div>
+	                            </div>
+                            </form>
                         </div>
                         <!--/.Panel Empresa-->
 
@@ -346,7 +347,7 @@
                                                             <label class="form-check-label dark-grey-text font-small" for="conInstalacion">Con Instalación (solo RM)</label>
                                                         </div>
                                                         <!-- Input Direccion Instalacion -->
-                                                        <div class="mt-0 pl-0 md-form form-sm col-12 mb-3 mt-2 invisible" id="campoDireccion">
+                                                        <div class="mt-0 pl-0 md-form form-sm col-12 mb-3 mt-2 d-none" id="campoDireccion">
                                                             <i class="pl-1 text-primary fa fa-map-marker prefix" aria-hidden="true"></i>
                                                             <input type="text" id="direccionInstalacion" class="form-control form-control-sm">
                                                             <label class="ml-3 pl-1" for="direccionInstalacion">Dirección en donde desea instalar...</label>
@@ -394,8 +395,8 @@
                 </div>
 
                 <div class="modal-footer white">
-                    <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold col-lg-5 col-md-12 invisible" id="botonSiguiente">Siguiente</button>
-                    <button type="button" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark font-weight-bold invisible" id="botonEnviar">Enviar</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold col-lg-5 col-md-12 d-none" id="botonSiguiente">Siguiente</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark font-weight-bold d-none" id="botonEnviar">Enviar</button>
                 </div>
             </div>
             <!--/.Content-->
