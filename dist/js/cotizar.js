@@ -101,7 +101,7 @@ $(document).ready(function(){
 	});
 	$('.sumar').click(function(){
 		let valor = $(this).prev().children().text();
-		if(parseInt(valor) < 10)
+		if(parseInt(valor) < 20)
 		{
 			valor = parseInt(valor) + 1;
 			$(this).prev().children().text(valor);
