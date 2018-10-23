@@ -135,60 +135,74 @@
 
                         <!--Panel Persona-->
                         <div class="tab-pane mt-2 personaContent" id="persona" role="tabpanel">
-
                             <!--Body-->
-                            <div class="modal-body mb-1">
-                                <div class="md-form form-sm mb-4">
-                                    <input type="text" id="nombre" class="form-control form-control-sm validate" required>
-                                    <label data-error="Error" data-success="Correcto" for="nombre">Nombre y Apellido</label>
-                                </div>
-
-                                <div class="md-form form-sm mb-4">
-                                    <input type="email" id="email" class="form-control form-control-sm validate" required>
-                                    <label data-error="Error" data-success="Correcto" for="email">Email</label>
-                                </div>
-
-                                <div class="md-form form-sm mb-4">
-                                    <input type="tel" id="telefono" class="form-control form-control-sm validate" required>
-                                    <label data-error="Error" data-success="Correcto" for="telefono">Teléfono</label>
-                                </div>
-                                <div class="md-form form-sm mb-4">
-                                    <input type="text" id="direccion" class="form-control form-control-sm validate" required>
-                                    <label data-error="Error" data-success="Correcto" for="direccion">Dirección</label>
-                                </div>
-                            </div>
+                            <form action="#" id="formPersona" class="needs-validation" novalidate>
+	                            <div class="modal-body mb-1">
+	                                <div class="md-form form-sm mb-4">
+	                                    <input type="text" id="nombre" class="form-control form-control-sm validate" required>
+	                                    <div class="invalid-feedback">Por favor indique nombre y apellido de contacto.</div>
+	                                    <label data-error="Error" data-success="Correcto" for="nombre">Nombre y Apellido</label>
+	                                </div>
+	
+	                                <div class="md-form form-sm mb-4">
+	                                    <input type="email" id="email" class="form-control form-control-sm validate" required>
+	                                    <div class="invalid-feedback">Por favor indique un correo válido.</div>
+	                                    <label data-error="Error" data-success="Correcto" for="email">Email</label>
+	                                </div>
+	
+	                                <div class="md-form form-sm mb-4">
+	                                    <input type="tel" id="telefono" class="form-control form-control-sm validate" required>
+	                                    <div class="invalid-feedback">Por favor un teléfono válido.</div>
+	                                    <label data-error="Error" data-success="Correcto" for="telefono">Teléfono</label>
+	                                </div>
+	                                <div class="md-form form-sm mb-4">
+	                                    <input type="text" id="direccion" class="form-control form-control-sm validate" required>
+	                                    <div class="invalid-feedback">Por favor indique una dirección válida.</div>
+	                                    <label data-error="Error" data-success="Correcto" for="direccion">Dirección</label>
+	                                </div>
+	                                <button type="submit" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark font-weight-bold" id="botonEnviarPersona">Enviar</button>
+	                            </div>
+                            </form>
                         </div>
                         <!--/.Panel Persona-->
 
                         <!--Panel Empresa-->
                         <div class="tab-pane fade mt-2 empresaContent" id="empresa" role="tabpanel">
                             <!--Body-->
-                            <form class="needs-validation" novalidate>
-	                            <div class="modal-body mb-1">
-	                                <div class="md-form form-sm mb-4">
-	                                    <input type="text" id="nombreEmpresa" class="form-control form-control-sm validate" required>
-	                                    <label data-error="Error" data-success="Correcto" for="nombreEmpresa">Nombre o Razón Social</label>
-	                                </div>
-	                                <div class="md-form form-sm mb-4">
-	                                    <input type="text" id="nombreUser" class="form-control form-control-sm validate" required>
-	                                    <label data-error="Error" data-success="Correcto" for="nombreUser">Nombre y Apellido</label>
-	                                </div>
-	                                <div class="md-form form-sm mb-4">
-	                                    <input type="email" id="emailEmpreso" class="form-control form-control-sm validate" required>
-	                                    <label data-error="Error" data-success="Correcto" for="emailEmpreso">Email Corporativo</label>
-	                                </div>
-	                                <div class="md-form form-sm mb-4">
-	                                    <input type="url" id="url" class="form-control form-control-sm">
-	                                    <label for="url">Sitio Web (opcional)</label>
-	                                </div>
-	                                <div class="md-form form-sm mb-4">
-	                                    <input type="tel" id="telefonoEmpresa" class="form-control form-control-sm validate" required>
-	                                    <label data-error="Error" data-success="Correcto" for="telefonoEmpresa">Teléfono</label>
-	                                </div>
-	                                <div class="md-form form-sm mb-4">
-	                                    <input type="text" id="direccionEmpresa" class="form-control form-control-sm validate" required>
-	                                    <label data-error="Error" data-success="Correcto" for="direccionEmpresa">Dirección</label>
-	                                </div>
+                            <form action="#" id="formEmpresa" class="needs-validation" novalidate>
+                             	<div class="form-row">
+		                            <div class="modal-body mb-1">
+		                                <div class="md-form form-sm mb-4">
+		                                	<input type="text" id="nombreEmpresa" class="form-control form-control-sm validate" required>
+		                                	<div class="invalid-feedback">Por favor indique nombre de empresa.</div>
+		                                    <label data-error="Error" data-success="Correcto" for="nombreEmpresa">Nombre o Razón Social</label>
+		                                </div>
+		                                <div class="md-form form-sm mb-4">
+		                                    <input type="text" id="nombreUser" class="form-control form-control-sm validate" required>
+		                                    <div class="invalid-feedback">Por favor indique nombre y apellido de contacto.</div>
+		                                    <label data-error="Error" data-success="Correcto" for="nombreUser">Nombre y Apellido</label>
+		                                </div>
+		                                <div class="md-form form-sm mb-4">
+		                                    <input type="email" id="emailEmpreso" class="form-control form-control-sm validate" required>
+		                                    <div class="invalid-feedback">Por favor indique un correo válido.</div>
+		                                    <label data-error="Error" data-success="Correcto" for="emailEmpreso">Email Corporativo</label>
+		                                </div>
+		                                <div class="md-form form-sm mb-4">
+		                                    <input type="url" id="url" class="form-control form-control-sm">
+		                                    <label for="url">Sitio Web (opcional)</label>
+		                                </div>
+		                                <div class="md-form form-sm mb-4">
+		                                    <input type="tel" id="telefonoEmpresa" class="form-control form-control-sm validate" required>
+		                                    <div class="invalid-feedback">Por favor un teléfono válido.</div>
+		                                    <label data-error="Error" data-success="Correcto" for="telefonoEmpresa">Teléfono</label>
+		                                </div>
+		                                <div class="md-form form-sm mb-4">
+		                                    <input type="text" id="direccionEmpresa" class="form-control form-control-sm validate" required>
+		                                    <div class="invalid-feedback">Por favor indique una dirección válida.</div>
+		                                    <label data-error="Error" data-success="Correcto" for="direccionEmpresa">Dirección</label>
+		                                </div>
+		                                <button type="submit" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark font-weight-bold" id="botonEnviarEmpresa">Enviar</button>
+		                            </div>
 	                            </div>
                             </form>
                         </div>
@@ -209,31 +223,31 @@
 
                                                         <!-- Group of material radios - option 1 -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input validate radios" id="equipos" pasos-req="1" name="servicio" required>
+                                                            <input type="radio" class="form-check-input validate radios tipoServicio" id="equipos" pasos-req="1" name="servicio" value="1" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="equipos">Venta de Aire Acondicionado</label>
                                                         </div>
 
                                                         <!-- Group of material radios - option 2 -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input validate radios" id="proyectos" pasos-req="0" name="servicio" required>
+                                                            <input type="radio" class="form-check-input validate radios tipoServicio" id="proyectos" pasos-req="0" name="servicio" value="2" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="proyectos">Proyectos de Climatizacion</label>
                                                         </div>
 
                                                         <!-- Group of material radios - option 3 -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input validate radios" id="mantenciones" pasos-req="0" name="servicio" required>
+                                                            <input type="radio" class="form-check-input validate radios tipoServicio" id="mantenciones" pasos-req="0" name="servicio" value="3" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="mantenciones">Mantención y Reparaciones</label>
                                                         </div>
 
                                                         <!-- Group of material radios - option 4 -->
                                                         <div class="form-check col-12 ml-auto">
-                                                            <input type="radio" class="form-check-input validate radios" id="instalacion" pasos-req="0" name="servicio" required>
+                                                            <input type="radio" class="form-check-input validate radios tipoServicio" id="instalacion" pasos-req="0" name="servicio" value="4" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="instalacion">Instalaciones (solo RM)</label>
                                                         </div>
 
                                                     </div>
                                                     <div class="step-actions pt-2">
-                                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="someFunction">CONTINUAR</button>
+                                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold " data-feedback="someFunction">CONTINUAR</button>
                                                     </div>
                                                 </div>
                                             </li>
@@ -246,25 +260,25 @@
                                                     <div class="row">
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2 pr-0">
-                                                            <input type="radio" class="form-check-input" id="splitmuro" name="producto" required>
+                                                            <input type="radio" class="form-check-input tipoProducto" id="splitmuro" name="producto" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto pr-0 d-flex justify-content-between align-items-center" for="splitmuro">Split Muro Inverter <span class="number-type badge badge-pill bg-third z-depth-0">30% DCTO.</span></label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input" id="splitducto" name="producto" required>
+                                                            <input type="radio" class="form-check-input tipoProducto" id="splitducto" name="producto" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="splitducto">Split Ducto Inverter</label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input" id="splitcassette" name="producto" required>
+                                                            <input type="radio" class="form-check-input tipoProducto" id="splitcassette" name="producto" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="splitcassette">Split Cassette Inverter</label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto">
-                                                            <input type="radio" class="form-check-input" id="pisocielo" name="producto" required>
+                                                            <input type="radio" class="form-check-input tipoProducto" id="pisocielo" name="producto" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="pisocielo">Piso Cielo Inverter</label>
                                                         </div>
                                                     </div>
@@ -285,7 +299,7 @@
                                                         <!-- Capacidad 9000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="9000" value="9000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="9000" value="9000" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="9000" data-toggle="tooltip" data-placement="right" title="Alcance 15m">9.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
@@ -299,7 +313,7 @@
                                                         <!-- Capacidad 12000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="12000" value="12000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="12000" value="12000" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="12000" data-toggle="tooltip" data-placement="right" title="Alcance 20m">12.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
@@ -313,7 +327,7 @@
                                                         <!-- Capacidad Capacidad 18000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="18000" value="18000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="18000" value="18000" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="18000" data-toggle="tooltip" data-placement="right" title="Alcance 30m">18.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
@@ -327,7 +341,7 @@
                                                         <!-- Capacidad 24000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="24000" value="24000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="24000" value="24000" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="24000" data-toggle="tooltip" data-placement="right" title="Alcance 40m">24.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
@@ -349,7 +363,7 @@
                                                         <!-- Input Direccion Instalacion -->
                                                         <div class="mt-0 pl-0 md-form form-sm col-12 mb-3 mt-2 d-none" id="campoDireccion">
                                                             <i class="pl-1 text-primary fa fa-map-marker prefix" aria-hidden="true"></i>
-                                                            <input type="text" id="direccionInstalacion" class="form-control form-control-sm">
+                                                            <input type="text" id="direccionInstalacion" class="form-control form-control-sm" value="">
                                                             <label class="ml-3 pl-1" for="direccionInstalacion">Dirección en donde desea instalar...</label>
                                                         </div>
 
@@ -361,7 +375,7 @@
                                                     </div>
 
                                                     <div class="step-actions">
-                                                        <button id="continuarpaso3" class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold" data-feedback="someFunction">CONTINUAR</button>
+                                                        <button id="continuarpaso3" class="waves-effect waves-dark btn btn-sm btn-primary next-step font-weight-bold scroll-fin" data-feedback="someFunction">CONTINUAR</button>
                                                         <button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step font-weight-bold">VOLVER</button>
                                                     </div>
                                                 </div>
@@ -396,7 +410,6 @@
 
                 <div class="modal-footer white">
                     <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold col-lg-5 col-md-12 d-none" id="botonSiguiente">Siguiente</button>
-                    <button type="button" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark font-weight-bold d-none" id="botonEnviar">Enviar</button>
                 </div>
             </div>
             <!--/.Content-->
