@@ -17742,3 +17742,6 @@ label.btn input[type=radio]:not(:checked) + label:before {
 .invalid-feedback {
   color: red;
   font-size: .8rem; }
+  @media screen and (max-width: 321px) {
+    .invalid-feedback {
+      font-size: .7rem; } }
