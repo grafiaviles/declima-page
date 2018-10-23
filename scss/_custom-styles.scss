@@ -212,10 +212,23 @@ body,
     color: $third-color;
 }
 
+.md-form input[type=tel] {
+    font-family: 'Questrial', sans-serif;
+}
+
 //OPTION EMPRESA O PERSONA
 .bg-third {
     background: $third-color;
     background-color: $third-color;
+}
+
+.was-validated .form-control:valid {
+    border-color: $third-color;
+    box-shadow: 0 1px 0 0 $third-color;
+}
+
+.was-validated .form-control:invalid {
+    border-color: red;
 }
 
 //STEP
@@ -259,4 +272,10 @@ label.btn input[type=radio]:not(:checked)+label:before {
     box-shadow: 0 0 0 1px lightgray;
     overflow: hidden;
     height: 25px!important;
+}
+
+//VALIDATION
+.invalid-feedback {
+    color: red;
+    font-size: .8rem;
 }

@@ -17688,9 +17688,20 @@ body,
 .md-form input[type=url].valid + label:after {
   color: #80c80e; }
 
+.md-form input[type=tel] {
+  font-family: 'Questrial', sans-serif; }
+
 .bg-third {
   background: #80c80e;
   background-color: #80c80e; }
+
+.was-validated .form-control:valid {
+  border-color: #80c80e;
+  -webkit-box-shadow: 0 1px 0 0 #80c80e;
+  box-shadow: 0 1px 0 0 #80c80e; }
+
+.was-validated .form-control:invalid {
+  border-color: red; }
 
 .success-color, ul.stepper .step.done:before,
 ul.stepper .step.done:before {
@@ -17727,3 +17738,7 @@ label.btn input[type=radio]:not(:checked) + label:before {
   box-shadow: 0 0 0 1px lightgray;
   overflow: hidden;
   height: 25px !important; }
+
+.invalid-feedback {
+  color: red;
+  font-size: .8rem; }
