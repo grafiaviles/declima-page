@@ -2,10 +2,13 @@
  * 
  */
 $(document).ready(function(){
-	$('#botonEnviar').addClass('d-none');
-	$('#campoDireccion').height(0);
 	$("#continuarpaso3").click(function(){
 		$('#botonSiguiente').removeClass('d-none');
+	});
+	$('.scroll-fin').click(function(){
+		 $('.modal-c-tabs').animate({
+			 	scrollTop: $('#botonSiguiente').offset().top
+		}, 1000);
 	});
 	$('.titulosStep').click(function(){
 		tmp = parseInt($(this).attr('flag'));
@@ -17,8 +20,8 @@ $(document).ready(function(){
 		{
 			$('#seleccionaProd').addClass('d-none');
 			$('#seleccionaCap').addClass('d-none');
-			$('#seleccionaProd').height(0);
-			$('#seleccionaCap').height(0);
+			//$('#seleccionaProd').height(0);
+			//$('#seleccionaCap').height(0);
 			$('#seleccionaCap').addClass('d-none');
 			$('#seleccionaProd').removeClass('step');
 			$('#seleccionaCap').removeClass('step');
@@ -49,7 +52,7 @@ $(document).ready(function(){
 		$('#stepTagText').children().removeClass('active');
 		$('#stepTagArrow').children().removeClass('active');
 		$('#botonSiguiente').addClass('d-none');
-		$('#botonEnviar').removeClass('d-none');
+		//$('#botonEnviar').removeClass('d-none');
 	});
 	
 	$('#stepTagArrow').click(function(){
@@ -58,20 +61,9 @@ $(document).ready(function(){
 		$('#stepTagText').removeClass('d-none');
 		$('#stepTagArrow').addClass('d-none');
 		$('#botonSiguiente').removeClass('d-none');
-		$('#botonEnviar').addClass('d-none');
+		//$('#botonEnviar').addClass('d-none');
 	});
 	
-	$('#botonEnviar').click(function(){
-		$.ajax({
-			method: 'POST',
-			url: 'http://declimaback.cl/index.php?r=cotizacion%2Fsetcotizacion',
-			data: {id: 1, _csrf: $('#token').val(), },
-			dataType: 'json'
-		})
-		.done(function(json) {
-			var tmp = '';
-		});
-	});
 	$('.radioInstalacion').click(function(){
 		if(this.id == 'conInstalacion')
 		{
@@ -108,6 +100,10 @@ $(document).ready(function(){
 			$('#cant-btu-' + $(this).attr('dimen')).val(valor);
 		}
 	});
+	
+	$('.needs-validation').submit(function(){
+		enviaCotizacion(this, event);
+	})
 });
 
 verificaPasos = function(){
@@ -119,6 +115,50 @@ verificaPasos = function(){
 	$('.personaContent').removeClass('active');
 	$('.personaContent').addClass('active');
 	$('.personaContent').addClass('show');
-	$('#botonEnviar').removeClass('d-none');
+	//$('#botonEnviar').removeClass('d-none');
 	$('.stepper').nextStep();
+}
+
+enviaCotizacion = function(e,event){
+	var result = e.checkValidity();
+	if(e.checkValidity() === false)
+	{
+		event.preventDefault();
+		event.stopPropagation();
+		e.classList.add('was-validated');
+	}
+	else
+	{
+		e.classList.add('was-validated');
+		event.preventDefault();
+		let tipoServ;
+		let tipoProd;
+		let tipoCap;
+		let radioInst = '';
+		$.each($('.tipoServicio'), function(k, v){
+			if(v.checked)
+				tipoServ = v.value;
+		});
+		$.each($('.tipoProducto'), function(k, v){
+			if(v.checked)
+				tipoProd = v.value;
+		});
+		$.each($('.tipoCapacidad'), function(k, v){
+			if(v.checked)
+				tipoCap = v.value;
+		});
+		$.each($('.radioInstalacion'), function(k, v){
+			if(v.checked && v.id == 'conInstalacion')
+				radioInst = v.value;
+		});
+		$.ajax({
+			method: 'POST',
+			url: 'http://declimamanager.declima.cl/insertacotizacion/setcotizacion',
+			data: {id: 1},
+			dataType: 'json'
+		})
+		.done(function(json) {
+			var tmp = '';
+		});
+	}
 }
