@@ -282,3 +282,14 @@ label.btn input[type=radio]:not(:checked)+label:before {
         font-size: .7rem;
     }
 }
+
+//RECAPTCHA
+.g-recaptcha {
+    @media screen and (max-width: 321px) {
+        transform: scale(.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0!important;
+    }
+}
