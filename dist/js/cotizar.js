@@ -25,7 +25,7 @@ $(document).ready(function(){
 			$('#seleccionaCap').addClass('d-none');
 			$('#seleccionaProd').removeClass('step');
 			$('#seleccionaCap').removeClass('step');
-			//$('#botonSiguiente').removeClass('disable');
+			$('#botonSiguiente').removeClass('disabled');
 		}
 		else
 		{
@@ -35,7 +35,7 @@ $(document).ready(function(){
 			$('#seleccionaCap').removeClass('d-none');
 			$('#seleccionaProd').addClass('step');
 			$('#seleccionaCap').addClass('step');
-			//$('#botonSiguiente').addClass('disable');
+			$('#botonSiguiente').addClass('disabled');
 		}
 	});
 	
@@ -103,7 +103,28 @@ $(document).ready(function(){
 	
 	$('.needs-validation').submit(function(){
 		enviaCotizacion(this, event);
-	})
+	});
+	
+	$('.tipoProducto').click(function(){
+		let capAsoc = $(this).attr('lista').split('|');
+		$.each($('.contentCapacidad'), function(k,v){
+			$(v).addClass('d-none');
+		});
+		$.each($('.contentCapacidad'), function(k,v){
+			let cap = v;
+			let flag = false;
+			$.each(capAsoc, function(a, e){
+				if(e == $(cap).attr('cap'))
+				{
+					flag = true;;
+				}
+			});
+			if(flag)
+				$(cap).removeClass('d-none');
+			else
+				$(cap).addClass('d-none');
+		});
+	});
 });
 
 verificaPasos = function(){

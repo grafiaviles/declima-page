@@ -260,30 +260,29 @@
                                             <li class="step" id="seleccionaProd">
                                                 <div class="step-title waves-effect waves-dark text-primary titulosStep titulosStep pb-3" flag="1">Selecciona un producto</div>
                                                 <div class="step-new-content">
-
                                                     <!-- MODELO -->
                                                     <div class="row">
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2 pr-0">
-                                                            <input type="radio" class="form-check-input tipoProducto" id="splitmuro" name="producto" value="1" required>
+                                                            <input lista="9|12|18|24" type="radio" class="form-check-input tipoProducto" id="splitmuro" name="producto" value="1" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto pr-0 d-flex justify-content-between align-items-center" for="splitmuro">Split Muro Inverter <span class="number-type badge badge-pill bg-third z-depth-0">30% DCTO.</span></label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input tipoProducto" id="splitducto" name="producto" value="2" required>
+                                                            <input lista="12|18|24|36|48|60" type="radio" class="form-check-input tipoProducto" id="splitducto" name="producto" value="2" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="splitducto">Split Ducto Inverter</label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input tipoProducto" id="splitcassette" name="producto" value="3" required>
+                                                            <input lista="12|18|24|36|48|60" type="radio" class="form-check-input tipoProducto" id="splitcassette" name="producto" value="3" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="splitcassette">Split Cassette Inverter</label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto">
-                                                            <input type="radio" class="form-check-input tipoProducto" id="pisocielo" name="producto" value="4" required>
+                                                            <input lista="24|36|48|60|90" type="radio" class="form-check-input tipoProducto" id="pisocielo" name="producto" value="4" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="pisocielo">Piso Cielo Inverter</label>
                                                         </div>
                                                     </div>
@@ -302,7 +301,7 @@
                                                     <!-- SPLIT MURO -->
                                                     <div id="split-muro" class="row ml-1">
                                                         <!-- Capacidad 9000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="9">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input tipoCapacidad" id="9000" value="1" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="9000" data-toggle="tooltip" data-placement="right" title="Alcance 15m">9.000 BTU</label>
@@ -316,7 +315,7 @@
                                                         </div>
 
                                                         <!-- Capacidad 12000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="12">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input tipoCapacidad" id="12000" value="2" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="12000" data-toggle="tooltip" data-placement="right" title="Alcance 20m">12.000 BTU</label>
@@ -330,7 +329,7 @@
                                                         </div>
 
                                                         <!-- Capacidad Capacidad 18000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="18">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input tipoCapacidad" id="18000" value="3" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="18000" data-toggle="tooltip" data-placement="right" title="Alcance 30m">18.000 BTU</label>
@@ -344,7 +343,7 @@
                                                         </div>
 
                                                         <!-- Capacidad 24000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="24">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input tipoCapacidad" id="24000" value="4" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="24000" data-toggle="tooltip" data-placement="right" title="Alcance 40m">24.000 BTU</label>
@@ -358,7 +357,7 @@
                                                         </div>
 
                                                         <!-- Capacidad 36000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="36">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="36000" value="5" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="36000" data-toggle="tooltip" data-placement="right" title="Alcance 60m">36.000 BTU</label>
@@ -372,7 +371,7 @@
                                                         </div>
 
                                                         <!-- Capacidad 48000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="36">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="48000" value="6" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="48000" data-toggle="tooltip" data-placement="right" title="Alcance 80m">48.000 BTU</label>
@@ -386,7 +385,7 @@
                                                         </div>
 
                                                         <!-- Capacidad 60000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="60">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="60000" value="7" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="60000" data-toggle="tooltip" data-placement="right" title="Alcance 100m">60.000 BTU</label>
@@ -400,7 +399,7 @@
                                                         </div>
 
                                                         <!-- Capacidad 90000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
+                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="90">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="90000" value="8" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="90000" data-toggle="tooltip" data-placement="right" title="Alcance 150m">90.000 BTU</label>
