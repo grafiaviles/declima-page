@@ -3,7 +3,7 @@
  */
 $(document).ready(function(){
 	$("#continuarpaso3").click(function(){
-		$('#botonSiguiente').removeClass('d-none');
+		$('#botonSiguiente').removeClass('disabled');
 	});
 	$('.scroll-fin').click(function(){
 		 $('.modal-c-tabs').animate({
@@ -12,8 +12,8 @@ $(document).ready(function(){
 	});
 	$('.titulosStep').click(function(){
 		tmp = parseInt($(this).attr('flag'));
-		/*if(parseInt($(this).attr('flag')))
-			$('#botonSiguiente').addClass('d-none');*/
+		if(parseInt($(this).attr('flag')))
+			$('#botonSiguiente').addClass('disabled');
 	});
 	$('.radios').click(function(){
 		if(!parseInt($(this).attr('pasos-req')))
@@ -52,7 +52,7 @@ $(document).ready(function(){
 		$('#stepTagText').children().removeClass('active');
 		$('#stepTagArrow').children().removeClass('active');
 		$('#botonSiguiente').addClass('d-none');
-		//$('#botonEnviar').removeClass('d-none');
+		$('#botonEnviar').removeClass('d-none');
 	});
 	
 	$('#stepTagArrow').click(function(){
