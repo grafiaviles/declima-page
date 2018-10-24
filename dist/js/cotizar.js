@@ -69,11 +69,14 @@ $(document).ready(function(){
 		{
 			$('#campoDireccion').removeAttr('style');
 			$('#campoDireccion').removeClass('d-none');
+			$('#direccionInstalacion').attr('required', 'true');
+			//$('.stepper').mdbStepper();
 		}
 		else
 		{
 			$('#campoDireccion').addClass('d-none');
 			$('#campoDireccion').height(0);
+			$('#direccionInstalacion').removeAttr('required');
 		}
 	});
 	
