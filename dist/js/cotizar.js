@@ -61,7 +61,7 @@ $(document).ready(function(){
 		$('#stepTagText').removeClass('d-none');
 		$('#stepTagArrow').addClass('d-none');
 		$('#botonSiguiente').removeClass('d-none');
-		//$('#botonEnviar').addClass('d-none');
+		$('#botonEnviar').addClass('d-none');
 	});
 	
 	$('.radioInstalacion').click(function(){
