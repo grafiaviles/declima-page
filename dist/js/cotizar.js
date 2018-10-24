@@ -131,30 +131,49 @@ enviaCotizacion = function(e,event){
 	{
 		e.classList.add('was-validated');
 		event.preventDefault();
-		let tipoServ;
-		let tipoProd;
-		let tipoCap;
-		let radioInst = '';
+		let data = new Array();
 		$.each($('.tipoServicio'), function(k, v){
 			if(v.checked)
-				tipoServ = v.value;
+			{
+				let tipoServ = new Object();
+				tipoServ.name = 'Servicio';
+				tipoServ.value = v.value;
+				data.push(tipoServ);
+			}
 		});
 		$.each($('.tipoProducto'), function(k, v){
 			if(v.checked)
-				tipoProd = v.value;
+			{
+				let tipoProd = new Object();
+				tipoProd.name = 'Producto'
+				tipoProd.value = v.value;
+				data.push(tipoProd);
+			}
 		});
 		$.each($('.tipoCapacidad'), function(k, v){
 			if(v.checked)
-				tipoCap = v.value;
+			{
+				let tipoCap = new Object();
+				tipoCap.name = 'Capacidad';
+				tipoCap.value = v.value;
+				tipoCap.cantidad = $('.cant-cap-' + v.id).text();
+				data.push(tipoCap);
+			}
 		});
 		$.each($('.radioInstalacion'), function(k, v){
 			if(v.checked && v.id == 'conInstalacion')
-				radioInst = v.value;
+			{
+				let radioInst = new Object();
+				radioInst.name = 'instalacion';
+				radioInst.value = 1;
+				data.push(radioInst);
+			}
 		});
+		var jsonData = JSON.parse(JSON.stringify(data));
 		$.ajax({
 			method: 'POST',
 			url: 'http://declimamanager.declima.cl/insertacotizacion/setcotizacion',
-			data: {id: 1},
+			data: {id: 1, data: data},
 			dataType: 'json'
 		})
 		.done(function(json) {
