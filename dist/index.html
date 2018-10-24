@@ -165,10 +165,6 @@
                                     <!-- Recaptcha -->
                                     <div id="captcha" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>
                                 </div>
-                                <!-- Boton Enviar Persona-->
-                                <div class="modal-footer white d-flex justify-content-lg-end justify-content-md-center">
-                                    <button type="submit" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold" id="botonEnviarPersona">COTIZAR</button>
-                                </div>
                             </form>
                         </div>
                         <!--/.Panel Persona-->
@@ -212,10 +208,6 @@
                                     </div>
                                     <!-- Recaptcha -->
                                     <div id="captcha" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>
-                                </div>
-                                <!-- Boton Enviar Empresa -->
-                                <div class="modal-footer white d-flex justify-content-lg-end justify-content-md-center">
-                                    <button type="submit" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold" id="botonEnviarEmpresa">COTIZAR</button>
                                 </div>
                             </form>
                         </div>
@@ -273,25 +265,25 @@
                                                     <div class="row">
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2 pr-0">
-                                                            <input type="radio" class="form-check-input tipoProducto" id="splitmuro" name="producto" required>
+                                                            <input type="radio" class="form-check-input tipoProducto" id="splitmuro" name="producto" value="1" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto pr-0 d-flex justify-content-between align-items-center" for="splitmuro">Split Muro Inverter <span class="number-type badge badge-pill bg-third z-depth-0">30% DCTO.</span></label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input tipoProducto" id="splitducto" name="producto" required>
+                                                            <input type="radio" class="form-check-input tipoProducto" id="splitducto" name="producto" value="2" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="splitducto">Split Ducto Inverter</label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto mb-2">
-                                                            <input type="radio" class="form-check-input tipoProducto" id="splitcassette" name="producto" required>
+                                                            <input type="radio" class="form-check-input tipoProducto" id="splitcassette" name="producto" value="3" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="splitcassette">Split Cassette Inverter</label>
                                                         </div>
 
                                                         <!-- Capacidad -->
                                                         <div class="form-check col-12 ml-auto">
-                                                            <input type="radio" class="form-check-input tipoProducto" id="pisocielo" name="producto" required>
+                                                            <input type="radio" class="form-check-input tipoProducto" id="pisocielo" name="producto" value="4" required>
                                                             <label class="col-12 form-check-label font-small dark-grey-text h-auto" for="pisocielo">Piso Cielo Inverter</label>
                                                         </div>
                                                     </div>
@@ -308,118 +300,72 @@
                                                 <div class="step-new-content">
 
                                                     <!-- SPLIT MURO -->
-                                                    <div id="split-muro" class="row ml-1 d-none">
+                                                    <div id="split-muro" class="row ml-1">
                                                         <!-- Capacidad 9000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="9000" value="9000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="9000" value="1" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="9000" data-toggle="tooltip" data-placement="right" title="Alcance 15m">9.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="9000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small cant-cap-9000" >1</h6></span>
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="9000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-9000" id="cant-btu-9000" />
+                                                                <input type="hidden" value="" name="cant-btu-9000" id="cant-btu-9000"/>
                                                             </div>
                                                         </div>
 
                                                         <!-- Capacidad 12000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="12000" value="12000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="12000" value="2" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="12000" data-toggle="tooltip" data-placement="right" title="Alcance 20m">12.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="12000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small cant-cap-12000">1</h6></span>
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="12000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-12000" id="cant-btu-12000" />
+                                                                <input type="hidden" value="" name="cant-btu-12000" id="cant-btu-12000"/>
                                                             </div>
                                                         </div>
 
                                                         <!-- Capacidad Capacidad 18000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="18000" value="18000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="18000" value="3" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="18000" data-toggle="tooltip" data-placement="right" title="Alcance 30m">18.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="18000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small cant-cap-18000">1</h6></span>
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="18000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-18000" id="cant-btu-18000" />
+                                                                <input type="hidden" value="" name="cant-btu-18000" id="cant-btu-18000"/>
                                                             </div>
                                                         </div>
 
                                                         <!-- Capacidad 24000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="24000" value="24000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input tipoCapacidad" id="24000" value="4" name="btu" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="24000" data-toggle="tooltip" data-placement="right" title="Alcance 40m">24.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="24000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small cant-cap-24000">1</h6></span>
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="24000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-24000" id="cant-btu-24000" />
+                                                                <input type="hidden" value="" name="cant-btu-24000" id="cant-btu-24000"/>
                                                             </div>
                                                         </div>
-                                                    </div>
-
-                                                    <!-- CAPACIDAD SPLIT DUCTO -->
-                                                    <div id="split-ducto" class="row ml-1">
-
-                                                        <!-- Capacidad 12000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="12000" value="12000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="12000" data-toggle="tooltip" data-placement="right" title="Alcance 20m">12.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="12000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="12000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-12000" id="cant-btu-12000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad Capacidad 18000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="18000" value="18000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="18000" data-toggle="tooltip" data-placement="right" title="Alcance 30m">18.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="18000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="18000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-18000" id="cant-btu-18000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad 24000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="24000" value="24000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="24000" data-toggle="tooltip" data-placement="right" title="Alcance 40m">24.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="24000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="24000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-24000" id="cant-btu-24000" />
-                                                            </div>
-                                                        </div>
-
+                                                        
                                                         <!-- Capacidad 36000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="36000" value="36000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input" id="36000" value="36000" name="5" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="36000" data-toggle="tooltip" data-placement="right" title="Alcance 60m">36.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="36000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small cant-cap-36000">1</h6></span>
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="36000"><i class="align-self-center material-icons font-small">add</i></span>
                                                                 <input type="hidden" value="" name="cant-btu-36000" id="cant-btu-36000" />
                                                             </div>
@@ -428,12 +374,12 @@
                                                         <!-- Capacidad 48000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="48000" value="48000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input" id="48000" value="48000" name="6" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="48000" data-toggle="tooltip" data-placement="right" title="Alcance 80m">48.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="48000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small cant-cap-48000">1</h6></span>
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="48000"><i class="align-self-center material-icons font-small">add</i></span>
                                                                 <input type="hidden" value="" name="cant-btu-48000" id="cant-btu-48000" />
                                                             </div>
@@ -442,187 +388,22 @@
                                                         <!-- Capacidad 60000 BTU -->
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
                                                             <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="60000" value="60000" name="btu" required>
+                                                                <input type="checkbox" class="form-check-input" id="60000" value="60000" name="7" required>
                                                                 <label class="form-check-label font-small dark-grey-text number-type pr-2" for="60000" data-toggle="tooltip" data-placement="right" title="Alcance 100m">60.000 BTU</label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="60000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
+                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small cant-cap-60000">1</h6></span>
                                                                 <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="60000"><i class="align-self-center material-icons font-small">add</i></span>
                                                                 <input type="hidden" value="" name="cant-btu-60000" id="cant-btu-60000" />
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <!-- CAPACIDAD SPLIT CASSETTE -->
-                                                    <div id="split-cassette" class="row ml-1 d-none">
-
-                                                        <!-- Capacidad 12000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="12000" value="12000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="12000" data-toggle="tooltip" data-placement="right" title="Alcance 20m">12.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="12000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="12000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-12000" id="cant-btu-12000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad Capacidad 18000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="18000" value="18000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="18000" data-toggle="tooltip" data-placement="right" title="Alcance 30m">18.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="18000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="18000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-18000" id="cant-btu-18000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad 24000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="24000" value="24000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="24000" data-toggle="tooltip" data-placement="right" title="Alcance 40m">24.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="24000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="24000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-24000" id="cant-btu-24000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad 36000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="36000" value="36000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="36000" data-toggle="tooltip" data-placement="right" title="Alcance 60m">36.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="36000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="36000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-36000" id="cant-btu-36000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad 48000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="48000" value="48000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="48000" data-toggle="tooltip" data-placement="right" title="Alcance 80m">48.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="48000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="48000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-48000" id="cant-btu-48000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad 60000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="60000" value="60000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="60000" data-toggle="tooltip" data-placement="right" title="Alcance 100m">60.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="60000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="60000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-60000" id="cant-btu-60000" />
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!-- CAPACIDAD PISO CIELO  -->
-                                                    <div id="piso-cielo" class="row ml-1 d-none">
-
-                                                        <!-- Capacidad 24000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="24000" value="24000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="24000" data-toggle="tooltip" data-placement="right" title="Alcance 40m">24.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="24000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="24000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-24000" id="cant-btu-24000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad 36000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="36000" value="36000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="36000" data-toggle="tooltip" data-placement="right" title="Alcance 60m">36.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="36000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="36000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-36000" id="cant-btu-36000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad 48000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="48000" value="48000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="48000" data-toggle="tooltip" data-placement="right" title="Alcance 80m">48.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="48000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="48000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-48000" id="cant-btu-48000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad 60000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="60000" value="60000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="60000" data-toggle="tooltip" data-placement="right" title="Alcance 100m">60.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="60000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="60000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-60000" id="cant-btu-60000" />
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- Capacidad 90000 BTU -->
-                                                        <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0">
-                                                            <div class="col-8 p-0">
-                                                                <input type="checkbox" class="form-check-input" id="90000" value="90000" name="btu" required>
-                                                                <label class="form-check-label font-small dark-grey-text number-type pr-2" for="90000" data-toggle="tooltip" data-placement="right" title="Alcance 150m">90.000 BTU</label>
-                                                            </div>
-                                                            <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="90000"><i class="align-self-center material-icons font-small">remove</i></span>
-                                                                <span class="dark-grey-text text-center  numero d-flex align-content-center justify-content-center col-3"><h6 class="number-type m-0 align-self-center font-small">1</h6></span>
-                                                                <span class="justify-content-center dark-grey-text waves-effect waves-dark sumar d-flex align-content-center text-center col-3" dimen="90000"><i class="align-self-center material-icons font-small">add</i></span>
-                                                                <input type="hidden" value="" name="cant-btu-90000" id="cant-btu-90000" />
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-
                                                     <!-- INSTALACION -->
                                                     <div class="row ml-0 mb-2 mt-3">
                                                         <!-- Con Instalacion -->
                                                         <div class="form-check form-check-inline col-12 mb-1">
-                                                            <input type="radio" class="form-check-input radioInstalacion" id="conInstalacion" name="instalacion" required>
+                                                            <input type="radio" class="form-check-input radioInstalacion" id="conInstalacion" name="instalacion" value="1" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="conInstalacion">Con Instalación (solo RM)</label>
                                                         </div>
                                                         <!-- Input Direccion Instalacion -->
@@ -634,7 +415,7 @@
 
                                                         <!-- Sin Instalacion -->
                                                         <div class="form-check form-check-inline col-12 mb-1">
-                                                            <input type="radio" class="form-check-input radioInstalacion" id="sinInstalacion" name="instalacion" required>
+                                                            <input type="radio" class="form-check-input radioInstalacion" id="sinInstalacion" name="instalacion" value="0" required>
                                                             <label class="form-check-label dark-grey-text font-small" for="sinInstalacion">Sin Instalación</label>
                                                         </div>
                                                     </div>
@@ -674,6 +455,7 @@
                 <!-- Boton Siguiente -->
                 <div class="modal-footer white d-flex justify-content-lg-end justify-content-md-center">
                     <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold col-lg-5 col-md-12 d-none" id="botonSiguiente">SIGUIENTE</button>
+                    <button type="submit" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold" id="botonEnviarPersona">COTIZAR</button>
                 </div>
             </div>
             <!--/.Content-->
