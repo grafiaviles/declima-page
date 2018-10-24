@@ -218,7 +218,7 @@
                             <!--Body-->
                             <div class="mb-1">
                                 <div class="card z-depth-0">
-                                    <div class="card-body">
+                                    <div class="card-body pb-0">
                                         <ul class="stepper linear py-0 px-2" id="feedback-step">
                                             <!-- Step 1 Tipo -->
                                             <li class="step active">
@@ -466,7 +466,7 @@
                     </div>
                 </div>
                 <!-- Boton Siguiente -->
-                <div class="modal-footer white d-flex justify-content-lg-end justify-content-md-center">
+                <div class="modal-footer modal-footer-btn white d-flex justify-content-lg-end justify-content-md-center col-12">
                     <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold col-lg-5 col-md-12 disabled" id="botonSiguiente">SIGUIENTE</button>
                     <button type="button" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold disabled d-none" id="botonEnviar">COTIZAR</button>
                 </div>
@@ -496,7 +496,7 @@
                             <a class="nav-link" href="#carousel-home">Inicio<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#proyectos" data-offset="90">Proyectos</a>
+                            <a class="nav-link" href="#proyectosView" data-offset="90">Proyectos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#servicios" data-offset="90">Servicios</a>
@@ -632,7 +632,7 @@
                                 <p class="font-weight-bold text-uppercase py-4">Más <span class="number-type">20</span> casos de éxito a lo largo de todo Chile</p>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#proyectos" class="btn btn-secondary btn-lg btn-rounded mr-0">VER PROYECTOS</a>
+                                <a href="#proyectosView" class="btn btn-secondary btn-lg btn-rounded mr-0">VER PROYECTOS</a>
                             </li>
                         </ul>
                     </div>
@@ -655,7 +655,7 @@
                             </li>
                             <li>
                                 <a href="#!" class="btn btn-secondary btn-rounded btn-lg">VER OFERTA</a>
-                                <a href="#equipos" class="btn btn-primary btn-rounded btn-lg">VER TODOS LOS EQUIPOS</a>
+                                <a href="#equiposView" class="btn btn-primary btn-rounded btn-lg">VER TODOS LOS EQUIPOS</a>
                             </li>
                         </ul>
                     </div>
@@ -707,7 +707,8 @@
 
         <div class="container">
 
-            <section id="equipos" class="py-5 mt-4 mb-5">
+            <!-- PRODUCTOS -->
+            <section id="equiposView" class="py-5 mt-4 mb-5">
 
                 <!-- Section heading -->
                 <h2 class="h1-responsive font-weight-bold text-center my-5 text-primary">Equipos de Aire Acondicionado</h2>
@@ -884,9 +885,10 @@
 
                 </div>
             </section>
+            <!--PRODUCTOS-->
 
             <!--PROYECTOS-->
-            <section id="proyectos" class="py-5 my-5">
+            <section id="proyectosView" class="py-5 my-5">
 
 
                 <!-- Section heading -->
@@ -1008,7 +1010,7 @@
 
 
             <!-- SERVICES -->
-            <section id="servicios" class="my-5 py-5">
+            <section id="servicios" class="my-5 pb-5 pt-2">
 
                 <!-- Section heading -->
                 <h2 class="h1-responsive font-weight-bold text-center my-5 text-primary">Servicios</h2>
@@ -1316,11 +1318,98 @@
         </div>
         <!-- CONTAINER -->
 
+        <!-- CONTACTO -->
+        <div class="container-fluid grey lighten-5 m-0 pb-5" id="contacto">
+            <section class="container pb-5 pt-3">
+                <!-- Section heading -->
+                <h2 class="h1-responsive font-weight-bold text-center my-5 pt-3 text-primary"></h2>
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-lg-5 mb-lg-0 mb-4">
+
+                        <!-- Form with header -->
+                        <div class="card">
+                            <div class="card-body px-5">
+                                <!-- Header -->
+                                <div class="form-header bg-primary accent-1">
+                                    <h3 class="mt-2"><i class="fa fa-envelope"></i> Contacto</h3>
+                                </div>
+                                <p class="dark-grey-text">Favor de completar todos los campos.</p>
+                                <!-- Body -->
+                                <div class="md-form">
+                                    <input type="text" id="form-name" class="form-control">
+                                    <label for="form-name">Nombre y Apellido</label>
+                                </div>
+                                <div class="md-form">
+                                    <input type="text" id="form-email" class="form-control">
+                                    <label for="form-email">Email</label>
+                                </div>
+                                <div class="md-form">
+                                    <input type="text" id="form-Subject" class="form-control">
+                                    <label for="form-Subject">Asunto</label>
+                                </div>
+                                <div class="md-form">
+                                    <textarea type="text" id="form-text" class="form-control md-textarea" rows="3"></textarea>
+                                    <label for="form-text">Escríbenos...</label>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn bg-secondary btn-rounded font-weight-bold">ENVIAR</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Form with header -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-lg-7">
+
+                        <!-- Google map-->
+                        <div id="map-container" class="rounded z-depth-1-half map-container" style="height: 400px">
+                            <iframe class="map-sala" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.5964753447206!2d-70.639310985109!3d-33.45981818077127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c56ed1ef9fd9%3A0x608ba36da8d8fe95!2sArtemio+Guti%C3%A9rrez+1226%2C+Santiago%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1ses-419!2scl!4v1506660773414"
+                                width="100%" height="400" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                        </div>
+                        <br>
+                        <!-- Buttons-->
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <a class="btn-floating bg-primary accent-1">
+                                    <i class="fa fa-map-marker"></i>
+                                </a>
+                                <p class="mb-0 font-small">Artemio Gutiérrez 1226</p>
+                                <p class="mb-md-0 font-small">Santiago de Chile</p>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn-floating bg-primary accent-1">
+                                    <i class="fa fa-phone"></i>
+                                </a>
+                                <p class="mb-0 font-small">22 904 6383</p>
+                                <p class="mb-md-0 font-small">22 605 1140</p>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn-floating bg-primary accent-1">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                                <p class="mb-1 font-small"><a href="info@declima.cl,dvenegas@declima.cl,amontero@declima.cl,grafiaviles@gmail.com">info@declima.cl</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </section>
+        </div>
+        <!-- CONTACTO -->
+
     </main>
     <!-- CONTAINER FLUID -->
 
     <!-- Footer -->
-    <footer class="page-footer font-small elegant-color pt-4">
+    <footer class="page-footer font-small elegant-color pt-5">
 
         <!-- Footer Links -->
         <div class="container text-center text-md-left">
@@ -1332,8 +1421,8 @@
                 <div class="col-md-4 mx-auto">
 
                     <!-- Content -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-                    <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <img class="mt-3 mb-4" src="img/logo-declima.svg" width="200">
+                    <p>Somos una empresa dedicada a la ingeniería, venta, distribución, montaje, reparación y mantención en el área de climatización. Entregamos soluciones integrales y oportunas a nuestros clientes.</p>
 
                 </div>
                 <!-- Grid column -->
@@ -1344,20 +1433,20 @@
                 <div class="col-md-2 mx-auto">
 
                     <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                    <h5 class="font-weight-bold mt-3 mb-4">Productos</h5>
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">Link 1</a>
+                            <a href="#!">Split Muro</a>
                         </li>
                         <li>
-                            <a href="#!">Link 2</a>
+                            <a href="#!">Split Ducto</a>
                         </li>
                         <li>
-                            <a href="#!">Link 3</a>
+                            <a href="#!">Split Cassette</a>
                         </li>
                         <li>
-                            <a href="#!">Link 4</a>
+                            <a href="#!">Piso Cielo</a>
                         </li>
                     </ul>
 
@@ -1370,20 +1459,26 @@
                 <div class="col-md-2 mx-auto">
 
                     <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                    <h5 class="font-weight-bold mt-3 mb-4">Menú</h5>
 
-                    <ul class="list-unstyled">
+                    <ul class="list-unstyled smooth-scroll">
                         <li>
-                            <a href="#!">Link 1</a>
+                            <a href="http://declima.cl">Inicio</a>
                         </li>
                         <li>
-                            <a href="#!">Link 2</a>
+                            <a href="#proyectosView">Proyectos</a>
                         </li>
                         <li>
-                            <a href="#!">Link 3</a>
+                            <a href="#servicios">Servicios</a>
                         </li>
                         <li>
-                            <a href="#!">Link 4</a>
+                            <a href="#equiposView">Productos</a>
+                        </li>
+                        <li>
+                            <a href="#nosotros">Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="#contacto">Contacto</a>
                         </li>
                     </ul>
 
@@ -1396,20 +1491,17 @@
                 <div class="col-md-2 mx-auto">
 
                     <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                    <h5 class="font-weight-bold mt-3 mb-4">Información</h5>
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">Link 1</a>
+                            <a href="" class="drift-open-chat">Chat Online</a>
                         </li>
                         <li>
-                            <a href="#!">Link 2</a>
+                            <a href="info@declima.cl,dvenegas@declima.cl,amontero@declima.cl">Reclamos</a>
                         </li>
                         <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
+                            <a href="#ModalCotizador" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">Cotizar</a>
                         </li>
                     </ul>
 
@@ -1424,47 +1516,43 @@
 
         <hr>
 
-        <!-- Call to action -->
-        <ul class="list-unstyled list-inline text-center py-2">
-            <li class="list-inline-item">
-                <h6 class="mb-2 mx-2">Entérate de nuestros proyectos, noticias y mucho más!</h6>
-            </li>
-            <li class="list-inline-item">
-                <a href="#!" class="btn declima-cian-bg btn-rounded font-weight-bold">Suscríbete</a>
-            </li>
-        </ul>
-        <!-- Call to action -->
-
-        <hr>
-
         <!-- Social buttons -->
         <ul class="list-unstyled list-inline text-center">
             <li class="list-inline-item">
-                <a class="btn-floating btn-fb mx-1 z-depth-0">
+                <a href="https://www.facebook.com/declimachile" target="_blank" class="btn-floating btn-fb mx-1 z-depth-0">
                     <i class="fa fa-facebook"> </i>
                 </a>
             </li>
             <li class="list-inline-item">
-                <a class="btn-floating btn-ins mx-1 z-depth-0">
+                <a href="https://www.instagram.com/declima/" target="_blank" class="btn-floating btn-ins mx-1 z-depth-0">
                     <i class="fa fa-instagram"> </i>
                 </a>
             </li>
             <li class="list-inline-item">
-                <a class="btn-floating btn-li mx-1 z-depth-0">
+                <a href="https://www.linkedin.com/company/declima/" target="_blank" class="btn-floating btn-li mx-1 z-depth-0">
                     <i class="fa fa-linkedin"> </i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a type="button" class="btn-floating mx-1 btn-email z-depth-0">
-                    <i class="fa fa-envelope"></i>
                 </a>
             </li>
         </ul>
         <!-- Social buttons -->
 
+        <hr>
+
+        <div class="row d-flex text-center justify-content-center">
+            <!-- Grid column -->
+            <div class="col-md-10 col-12 text-center my-2">
+                <p class="px-4 grey-text text-justify" style="font-size: .7rem;">Declima – Ingeniería y Servicios en Climatización, Ofertas válidas hasta agotar stock. El stock de unidades corresponde al total disponible en www.declima.cl Ofertas aplican sobre precio normal, descuentos ya aplicados a precio Internet.
+                    Válido pagando con todo medio. Las ofertas no son canjeables ni reembolsables por dinero en efectivo. Valor del despacho no está incluido en el precio del producto. Las imágenes son referenciales. Los valores incluyen IVA. Exclusivo
+                    declima.cl. Declima © 2015 | Ingeniería y Servicios en Climatización. Santiago de Chile. Todos los derechos reservados.
+                </p>
+            </div>
+            <!-- Grid column -->
+        </div>
+
+
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2018 Todos los derechos reservados
-            <a href="https://declima.cl">Declima.cl</a>
+        <div class="footer-copyright text-center py-3">Developed by a
+            <a href="https://linkedin.com/in/grafiaviles/" target="_blank">Friend</a>
         </div>
         <!-- Copyright -->
 
@@ -1481,7 +1569,8 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript" src="js/addons-pro/stepper.min.js"></script>
-    <script src='js/cotizar.js'></script>
+    <script type="text/javascript" src='js/cotizar.js'></script>
+    <script type="text/javascript" src="http://www.laescala.cl/proyectos/declimapp/js/dist/chat-drift.js"></script>
     <script>
         $('.carousel').carousel({
             ride: true,
