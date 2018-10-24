@@ -12,8 +12,8 @@ $(document).ready(function(){
 	});
 	$('.titulosStep').click(function(){
 		tmp = parseInt($(this).attr('flag'));
-		if(parseInt($(this).attr('flag')))
-			$('#botonSiguiente').addClass('d-none');
+		/*if(parseInt($(this).attr('flag')))
+			$('#botonSiguiente').addClass('d-none');*/
 	});
 	$('.radios').click(function(){
 		if(!parseInt($(this).attr('pasos-req')))
@@ -25,7 +25,7 @@ $(document).ready(function(){
 			$('#seleccionaCap').addClass('d-none');
 			$('#seleccionaProd').removeClass('step');
 			$('#seleccionaCap').removeClass('step');
-			$('#botonSiguiente').removeClass('d-none');
+			//$('#botonSiguiente').removeClass('disable');
 		}
 		else
 		{
@@ -35,7 +35,7 @@ $(document).ready(function(){
 			$('#seleccionaCap').removeClass('d-none');
 			$('#seleccionaProd').addClass('step');
 			$('#seleccionaCap').addClass('step');
-			$('#botonSiguiente').addClass('d-none');
+			//$('#botonSiguiente').addClass('disable');
 		}
 	});
 	
