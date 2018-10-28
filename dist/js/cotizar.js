@@ -200,3 +200,7 @@ enviarForm = function(recaptcha){
         }
     });
 }
+
+reset = function(){
+    $('#botonEnviar').addClass('disabled');
+}
