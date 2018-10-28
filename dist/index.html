@@ -97,7 +97,6 @@
     <meta itemprop="description" content="">
     <meta itemprop="image" content="">
     <!-- End Google Share -->
-
 </head>
 
 <body>
@@ -232,10 +231,10 @@
                             <a class="nav-link d-flex align-items-center p-2" data-toggle="tab" href="#step" role="tab"><i class="material-icons">arrow_back</i></a>
                         </li>
                         <li class="nav-item d-none" id="personaTag">
-                            <a class="nav-link active d-flex align-items-center justify-content-sm-center" justify-content-center data-toggle="tab" href="#persona" role="tab"><i class="material-icons mr-2">person</i>Persona</a>
+                            <a class="nav-link active d-flex align-items-center justify-content-sm-center" justify-content-center data-toggle="tab" href="#persona" role="tab" id="pestanaPersona"><i class="material-icons mr-2">person</i>Persona</a>
                         </li>
                         <li class="nav-item d-none" id="empresaTag">
-                            <a class="nav-link d-flex align-items-center justify-content-sm-center" data-toggle="tab" href="#empresa" role="tab"><i class="material-icons mr-2">people</i>Empresa</a>
+                            <a class="nav-link d-flex align-items-center justify-content-sm-center" data-toggle="tab" href="#empresa" role="tab" id="pestanaEmpresa"><i class="material-icons mr-2">people</i>Empresa</a>
                         </li>
                         <li>
                             <a class="close" data-dismiss="modal" aria-label="Close"><i class="material-icons text-white">close</i></a>
@@ -274,8 +273,8 @@
                                         <input type="text" id="direccion" class="form-control form-control-sm mb-1">
                                         <label for="direccion">Dirección (opcional)</label>
                                     </div>
-                                    <!-- Recaptcha -->
-                                    <div id="captcha" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>
+                                    <div id="captcha" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>
+                                    <!-- <div id="captcha" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeEQ3cUAAAAAPNYxCFXI5nlP8Z6SsAhtEbHoTfN"></div> -->
                                 </div>
                             </form>
                         </div>
@@ -319,7 +318,9 @@
                                         <label for="direccionEmpresa">Dirección casa matriz (opcional)</label>
                                     </div>
                                     <!-- Recaptcha -->
-                                    <div id="captcha" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>
+                                    <!--Recaptcha de Cesar-->
+                                    <div id="captcha" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>
+                                    <!-- <div id="captcha" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeEQ3cUAAAAAPNYxCFXI5nlP8Z6SsAhtEbHoTfN"></div> -->
                                 </div>
                             </form>
                         </div>

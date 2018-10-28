@@ -1,6 +1,7 @@
 /**
  * 
  */
+var recaptchaResponse = false;
 $(document).ready(function() {
     $("#continuarpaso3").click(function() {
         $('#botonSiguiente').removeClass('disabled');
@@ -95,10 +96,6 @@ $(document).ready(function() {
         }
     });
 
-    $('.needs-validation').submit(function() {
-        enviaCotizacion(this, event);
-    });
-
     $('.tipoProducto').click(function() {
         let capAsoc = $(this).attr('lista').split('|');
         $.each($('.contentCapacidad'), function(k, v) {
@@ -133,15 +130,15 @@ verificaPasos = function() {
     $('.stepper').nextStep();
 }
 
-enviaCotizacion = function(e, event) {
+enviaCotizacion = function(e) {
     var result = e.checkValidity();
     if (e.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
+        //e.preventDefault();
+        //e.stopPropagation();
         e.classList.add('was-validated');
     } else {
         e.classList.add('was-validated');
-        event.preventDefault();
+        //e.preventDefault();
         let data = new Array();
         $.each($('.tipoServicio'), function(k, v) {
             if (v.checked) {
@@ -180,11 +177,26 @@ enviaCotizacion = function(e, event) {
         $.ajax({
                 method: 'POST',
                 url: 'http://declimamanager.declima.cl/insertacotizacion/setcotizacion',
-                data: { id: 1, data: data },
+                data: { id: 1, data: data, recaptcha: recaptchaResponse},
                 dataType: 'json'
             })
             .done(function(json) {
                 var tmp = '';
             });
     }
+}
+
+enviarForm = function(recaptcha){
+    recaptchaResponse = recaptcha;
+    $('#botonEnviar').removeClass('disabled');
+    $('#botonEnviar').click(function(){
+        if($('#pestanaEmpresa').hasClass('active'))
+        {
+            enviaCotizacion($('#formEmpresa')[0]);
+        }
+        if($('#pestanaPersona').hasClass('active'))
+        {
+            enviaCotizacion($('#formPersona')[0]);
+        }
+    });
 }
