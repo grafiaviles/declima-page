@@ -40,6 +40,16 @@ ul.stepper .step.wrong:before {
     font-size: 1.1rem;
 }
 
+//Tooltips
+.tooltip-inner {
+    background-color: $primary-color!important;
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow::before,
+.bs-tooltip-right .arrow::before {
+    border-right-color: $primary-color;
+}
+
 
 /* NAVAR MENU */
 
@@ -254,7 +264,7 @@ ul.stepper .step.wrong:before {
     font-size: 15px!important;
     padding: 0 .5rem;
     position: absolute;
-    bottom: 13%;
+    bottom: 8%;
     @media screen and (max-width: 768px) {
         bottom: 10%;
     }
