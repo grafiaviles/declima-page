@@ -12895,10 +12895,22 @@ body,
     top: -2px;
     vertical-align: middle; }
 
-/* NAVAR MENU */
-.navbar {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+.a.text-primary:focus,
+a.text-primary:hover,
+.btn-white {
+  color: #00587A !important; }
 
+ul.stepper .step.done:before {
+  content: '\e5ca';
+  font-size: 1rem;
+  font-family: 'Material Icons'; }
+
+ul.stepper .step.wrong:before {
+  content: '\e001';
+  font-family: 'Material Icons';
+  font-size: 1.1rem; }
+
+/* NAVAR MENU */
 .top-nav-collapse {
   background-color: #00587A !important; }
 
@@ -12939,6 +12951,29 @@ body,
 
 .news-title {
   font-size: 1rem !important; }
+
+/* FORM CONSULTAS */
+.form-elegant .font-small {
+  font-size: 0.8rem; }
+
+.form-elegant .z-depth-1a {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+  box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+
+.form-elegant .modal-header {
+  border-bottom: none; }
+
+.modal-dialog .form-elegant .btn .fa {
+  color: #2196f3 !important; }
+
+.form-elegant .modal-body,
+.form-elegant .modal-footer {
+  font-weight: 400; }
 
 /* CARRUSEL */
 .carousel,
@@ -13001,9 +13036,22 @@ body,
         min-width: 100px;
         max-width: 100px; } }
 
+.pills-default .nav-link {
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background-color: rgba(158, 158, 158, 0.1); }
+
 .pills-default .nav-link.active {
-  background-color: #48a5f9 !important;
-  color: white !important; }
+  background-color: #00587A !important;
+  color: white !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-border-radius: 50px;
+  border-radius: 50px; }
+
+.pills-default .nav-link.active:hover {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
 
 .declima-blue-bg {
   background: #00587A !important; }
@@ -13023,13 +13071,14 @@ body,
   top: 10px; }
 
 ::-moz-selection {
-  background: #3fa7f3;
+  background: #00587A;
   color: #fff; }
 
 ::selection {
-  background: #3fa7f3;
+  background: #00587A;
   color: #fff; }
 
+/* EQUIPOS HOME */
 .dcto-card {
   display: -webkit-box;
   display: -webkit-flex;
@@ -13043,7 +13092,16 @@ body,
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 1rem !important; }
+  font-size: 1rem !important;
+  width: 100%;
+  height: 35px !important;
+  font-size: 15px !important;
+  padding: 0 .5rem;
+  position: absolute;
+  bottom: 13%; }
+  @media screen and (max-width: 768px) {
+    .dcto-card {
+      bottom: 10%; } }
 
 /* MODAL COTIZADOR */
 .md-form input[type=text].valid,
