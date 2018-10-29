@@ -101,6 +101,7 @@
 
 <body>
 
+
     <!-- Modal Consultas -->
     <div class="modal fade" id="consultasForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -580,8 +581,8 @@
                 </div>
                 <!-- Boton Siguiente -->
                 <div class="modal-footer modal-footer-btn white d-flex justify-content-lg-end justify-content-md-center col-12">
-                    <button type="button" class="btn bg-third btn-rounded z-depth-0 font-weight-bold col-lg-5 col-md-12 disabled" id="botonSiguiente">SIGUIENTE</button>
-                    <button type="button" class="btn bg-third btn-rounded z-depth-0 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold disabled d-none" id="botonEnviar">COTIZAR</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-7 font-weight-bold col-lg-5 col-md-12 disabled" id="botonSiguiente">SIGUIENTE</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-7 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold disabled d-none" id="botonEnviar">COTIZAR</button>
                 </div>
             </div>
             <!--/.Content-->
@@ -696,7 +697,7 @@
                     <!-- cotizar  -->
                     <ul class="navbar-nav nav-flex-icons">
                         <li class="nav-item active-cotizar btn-rounded">
-                            <a class="nav-link btn-rounded" href="#ModalCotizador" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">Cotizar <i class="fa fa-file-text"></i></a>
+                            <a class="nav-link btn-rounded z-depth-7" href="#ModalCotizador" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">Cotizar <i class="fa fa-file-text"></i></a>
                         </li>
                     </ul>
                     <!-- Social Icon  -->
@@ -751,7 +752,7 @@
                                 <p class="font-weight-bold text-uppercase py-4 number-type">9.000 • 12.000 • 18.000 • 24.000 BTU • c/s Instalación</p>
                             </li>
                             <li>
-                                <a href="#!" class="btn btn-white btn-rounded btn-lg z-depth-0 font-weight-bold">VER OFERTA</a>
+                                <a href="#!" class="btn btn-white btn-rounded btn-lg z-depth-7 font-weight-bold">VER OFERTA</a>
                                 <a href="#equiposView" class="btn btn-outline-white btn-rounded btn-lg z-depth-0 font-weight-bold">VER TODO LOS EQUIPOS</a>
                             </li>
                         </ul>
@@ -774,7 +775,7 @@
                                 <p class="font-weight-bold text-uppercase py-4">Más <span class="number-type">20</span> casos de éxito a lo largo de todo Chile</p>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#proyectosView" class="btn btn-white btn-lg btn-rounded mr-0 z-depth-0 font-weight-bold">VER PROYECTOS</a>
+                                <a href="#proyectosView" class="btn btn-white btn-lg btn-rounded mr-0 z-depth-7 font-weight-bold">VER PROYECTOS</a>
                             </li>
                         </ul>
                     </div>
@@ -796,7 +797,7 @@
                                 <p class="font-weight-bold text-uppercase py-4">Manten tus equipos de acondicionado en perfectas condiciones</p>
                             </li>
                             <li>
-                                <a href="#servicios" class="btn btn-lg btn-white btn-rounded z-depth-0 font-weight-bold">VER SERVICIOS</a>
+                                <a href="#servicios" class="btn btn-lg btn-white btn-rounded z-depth-7 font-weight-bold">VER SERVICIOS</a>
                             </li>
                         </ul>
                     </div>
@@ -825,37 +826,36 @@
     <main class="container-fluid px-0">
 
         <!-- PRODUCTOS -->
-        <div class="container-fluid" id="equiposView">
+        <div class="container-fluid">
             <div class="container">
-                <section class="my-5 py-1">
+                <section class="mb-5 py-5">
 
                     <!-- Section heading -->
-                    <h2 class="h1-responsive font-weight-bold text-center my-5 text-primary">Equipos de Aire Acondicionado</h2>
+                    <h2 id="equiposView" class="h1-responsive font-weight-bold text-center my-5 text-primary">Equipos de Aire Acondicionado</h2>
                     <!-- Section description -->
-                    <p class="lead grey-text text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-
+                    <p class="lead grey-text text-center w-responsive mx-auto mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 
                     <div class="row">
 
                         <!-- Grid Split Muro -->
                         <div class="col-lg-3 col-md-6 mb-4">
                             <!-- Card -->
-                            <div class="card card-cascade narrower z-depth-0 border-light card-ecommerce hoverable">
+                            <div class="card card-cascade narrower z-depth-7 border-primary card-ecommerce hoverable">
                                 <!--Card image-->
                                 <div class="view view-cascade overlay z-depth-0 mx-0 rounded-0 position-relative mt-0">
                                     <div class="content-atributos d-flex flex-column justify-content-start position-absolute">
-                                        <a class="btn-floating btn-sm bg-white z-depth-1 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos recidenciales">home</i></a>
-                                        <a class="btn-floating btn-sm bg-white z-depth-1 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos recidenciales">home</i></a>
-                                        <a class="btn-floating btn-sm bg-white z-depth-1 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos recidenciales">home</i></a>
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos recidenciales">home</i></a>
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Modo frío - calor">brightness_4</i></a>
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos con wifi">wifi</i></a>
                                     </div>
-                                    <img class="card-img-top" src="http://instaplansur.cl/wp-content/uploads/2017/06/02crystal.jpg" alt="">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" alt="">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
-                                    <a href="#!" class="btn-floating dcto-card font-weight-bold rounded-0 number-type d-flex justify-content-center align-item-center btn-action ml-auto mr-4 bg-primary text-white z-depth-0">Desde $156.990</a>
                                 </div>
                                 <!--/.Card image-->
-                                <!-- Button -->
+                                <!-- Precio -->
+                                <a href="#!" class="btn-floating dcto-card font-weight-bold rounded-0 number-type d-flex justify-content-center align-item-center position-relative btn-action ml-auto mr-4 bg-primary text-white z-depth-0 m-0">Desde $156.990</a>
                                 <!-- Card content -->
                                 <div class="card-body card-body-cascade text-left">
                                     <!-- Category & Title -->
@@ -867,19 +867,19 @@
                                         <a href="#!" class="text-primary h6 font-weight-bold title-producto-home">Split Muro Inverter</a>
                                     </strong>
                                     </h4>
-                                    <hr>
+                                    <hr class="my-2">
                                     <!-- Description -->
                                     <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Btu:</strong> 9.000 - 12.000 - 18.000 - 24.000 - 36.000</p>
-                                    <hr>
+                                    <hr class="my-2">
                                     <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Alcance:</strong> desde <span class="number-type">15m<sup>2</sup> hasta </span> <span class="number-type">40m<sup>2</sup></span> </p>
-                                    <hr>
-                                    <p class="grey-text small font-weight-bold number-type text-truncate mb-3"><strong class="mr-1">Incluye:</strong> Instalación básica / kit wifi / Control </p>
+                                    <hr class="my-2">
+                                    <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Incluye:</strong> Instalación básica / kit wifi / Control </p>
                                     <!-- Card footer -->
                                     <div class="card-footer px-0">
                                         <a href="#!" class="float-left font-weight-bold small btn btn-sm btn-outline-primary z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0 waves-effect">
                                             <strong class="ver-mas-product">VER MÁS</strong>
                                         </a>
-                                        <a href="#ModalCotizador" class="float-right font-weight-bold small btn btn-sm bg-third white-text z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
+                                        <a href="#ModalCotizador" class="float-right font-weight-bold small btn btn-sm bg-third white-text z-depth-7 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
                                             <strong class="cotizar-product">COTIZAR</strong>
                                         </a>
                                     </div>
@@ -894,14 +894,18 @@
                             <!-- Card -->
                             <div class="card card-cascade narrower z-depth-0 border-light card-ecommerce hoverable">
                                 <!--Card image-->
-                                <div class="view view-cascade overlay z-depth-0 mx-0 rounded-0 position-relative">
+                                <div class="view view-cascade overlay z-depth-0 mx-0 rounded-0 position-relative mt-0">
+                                    <div class="content-atributos d-flex flex-column justify-content-start position-absolute">
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos recidenciales">home</i></a>
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Modo frío - calor">brightness_4</i></a>
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos con wifi">wifi</i></a>
+                                    </div>
                                     <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" alt="">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
                                 <!--/.Card image-->
-                                <!-- Button -->
                                 <!-- Card content -->
                                 <div class="card-body card-body-cascade text-left">
                                     <!-- Category & Title -->
@@ -913,19 +917,19 @@
                                         <a href="#!" class="text-primary h6 font-weight-bold title-producto-home">Split Ducto Inverter</a>
                                     </strong>
                                     </h4>
-                                    <hr>
+                                    <hr class="my-2">
                                     <!-- Description -->
                                     <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Btu:</strong> 12.000 - 18.000 - 24.000 - 36.000 - 48.000 - 60.000</p>
-                                    <hr>
+                                    <hr class="my-2">
                                     <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Alcance:</strong> desde <span class="number-type">20m<sup>2</sup> hasta </span> <span class="number-type">100m<sup>2</sup></span> </p>
-                                    <hr>
-                                    <p class="grey-text small font-weight-bold number-type text-truncate mb-3"><strong class="mr-1">Incluye:</strong> Instalación básica / kit wifi / Control </p>
+                                    <hr class="my-2">
+                                    <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Incluye:</strong> Instalación básica / kit wifi / Control </p>
                                     <!-- Card footer -->
                                     <div class="card-footer px-0">
                                         <a href="#!" class="float-left font-weight-bold small grey-text btn btn-sm btn-outline-primary z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0 waves-effect">
                                             <strong class="ver-mas-product">VER MÁS</strong>
                                         </a>
-                                        <a href="#ModalCotizador" class="float-right font-weight-bold small grey-text btn btn-sm bg-third white-text z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
+                                        <a href="#ModalCotizador" class="float-right font-weight-bold small grey-text btn btn-sm bg-third white-text z-depth-7 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
                                             <strong class="cotizar-product">COTIZAR</strong>
                                         </a>
                                     </div>
@@ -940,15 +944,18 @@
                             <!-- Card -->
                             <div class="card card-cascade narrower z-depth-0 border-light card-ecommerce hoverable">
                                 <!--Card image-->
-                                <div class="view view-cascade overlay z-depth-0 mx-0 rounded-0 position-relative">
-                                    <a class="btn-floating btn-sm position-absolute bg-white z-depth-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Frío y Calor">account_balance</i></a>
+                                <div class="view view-cascade overlay z-depth-0 mx-0 rounded-0 position-relative mt-0">
+                                    <div class="content-atributos d-flex flex-column justify-content-start position-absolute">
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos recidenciales">home</i></a>
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Modo frío - calor">brightness_4</i></a>
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos con wifi">wifi</i></a>
+                                    </div>
                                     <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" alt="">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
                                 <!--/.Card image-->
-                                <!-- Button -->
                                 <!-- Card content -->
                                 <div class="card-body card-body-cascade text-left">
                                     <!-- Category & Title -->
@@ -960,19 +967,19 @@
                                         <a href="#!" class="text-primary h6 font-weight-bold title-producto-home">Split Cassette Inverter</a>
                                     </strong>
                                     </h4>
-                                    <hr>
+                                    <hr class="my-2">
                                     <!-- Description -->
                                     <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Btu:</strong> 12.000 - 18.000 - 24.000 - 36.000 - 48.000 - 60.000</p>
-                                    <hr>
+                                    <hr class="my-2">
                                     <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Alcance:</strong> desde <span class="number-type">20m<sup>2</sup> hasta </span> <span class="number-type">100m<sup>2</sup></span> </p>
-                                    <hr>
-                                    <p class="grey-text small font-weight-bold number-type text-truncate mb-3"><strong class="mr-1">Incluye:</strong> Instalación básica / kit wifi / Control </p>
+                                    <hr class="my-2">
+                                    <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Incluye:</strong> Instalación básica / kit wifi / Control </p>
                                     <!-- Card footer -->
                                     <div class="card-footer px-0">
                                         <a href="#!" class="float-left font-weight-bold small grey-text btn btn-sm btn-outline-primary z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0 waves-effect">
                                             <strong class="ver-mas-product">VER MÁS</strong>
                                         </a>
-                                        <a href="#ModalCotizador" class="float-right font-weight-bold small grey-text btn btn-sm bg-third white-text z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
+                                        <a href="#ModalCotizador" class="float-right font-weight-bold small grey-text btn btn-sm bg-third white-text z-depth-7 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
                                             <strong class="cotizar-product">COTIZAR</strong>
                                         </a>
                                     </div>
@@ -987,15 +994,18 @@
                             <!-- Card -->
                             <div class="card card-cascade narrower z-depth-0 border-light card-ecommerce hoverable">
                                 <!--Card image-->
-                                <div class="view view-cascade overlay z-depth-0 mx-0 rounded-0 position-relative">
-                                    <a class="btn-floating btn-sm position-absolute bg-white z-depth-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos recidenciales">home</i></a>
+                                <div class="view view-cascade overlay z-depth-0 mx-0 rounded-0 position-relative mt-0">
+                                    <div class="content-atributos d-flex flex-column justify-content-start position-absolute">
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos recidenciales">home</i></a>
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Modo frío - calor">brightness_4</i></a>
+                                        <a class="btn-floating btn-sm bg-white z-depth-0 mb-0" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="right" title="Equipos con wifi">wifi</i></a>
+                                    </div>
                                     <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" alt="">
                                     <a href="#!">
                                         <div class="mask rgba-white-slight"></div>
                                     </a>
                                 </div>
                                 <!--/.Card image-->
-                                <!-- Button -->
                                 <!-- Card content -->
                                 <div class="card-body card-body-cascade text-left">
                                     <!-- Category & Title -->
@@ -1007,19 +1017,19 @@
                                         <a href="#!" class="text-primary h6 font-weight-bold title-producto-home">Piso Cielo Inverter</a>
                                     </strong>
                                     </h4>
-                                    <hr>
+                                    <hr class="my-2">
                                     <!-- Description -->
                                     <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Btu:</strong> 24.000 - 36.000 - 48.000 - 60.000 - 90.000</p>
-                                    <hr>
+                                    <hr class="my-2">
                                     <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Alcance:</strong> desde <span class="number-type">40m<sup>2</sup> hasta </span> <span class="number-type">150m<sup>2</sup></span></p>
-                                    <hr>
-                                    <p class="grey-text small font-weight-bold number-type text-truncate mb-3"><strong class="mr-1">Incluye:</strong> Instalación básica / kit wifi / Control </p>
+                                    <hr class="my-2">
+                                    <p class="grey-text small font-weight-bold number-type text-truncate mb-2"><strong class="mr-1">Incluye:</strong> Instalación básica / kit wifi / Control </p>
                                     <!-- Card footer -->
                                     <div class="card-footer px-0">
                                         <a href="#!" class="float-left font-weight-bold small grey-text btn btn-sm btn-outline-primary z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0 waves-effect">
                                             <strong class="ver-mas-product">VER MÁS</strong>
                                         </a>
-                                        <a href="#ModalCotizador" class="float-right font-weight-bold small grey-text btn btn-sm bg-third white-text z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
+                                        <a href="#ModalCotizador" class="float-right font-weight-bold small grey-text btn btn-sm bg-third white-text z-depth-7 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
                                             <strong class="cotizar-product">COTIZAR</strong>
                                         </a>
                                     </div>
@@ -1037,13 +1047,11 @@
         <!--PRODUCTOS-->
 
         <!--PROYECTOS-->
-        <div class="container-fluid">
+        <div class="container-fluid cloudy-knoxville-gradient">
             <div class="container">
-                <section id="proyectosView" class="py-5 my-5">
-
-
+                <section class="mt-5 py-5">
                     <!-- Section heading -->
-                    <h2 class="h1-responsive font-weight-bold text-center mb-5 text-primary">Proyectos</h2>
+                    <h2 id="proyectosView" class="h1-responsive font-weight-bold text-center my-5 text-primary">Proyectos Destacados</h2>
                     <!-- Section description -->
                     <p class="lead grey-text text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 
@@ -1076,7 +1084,7 @@
                     </ul>
 
                     <!-- Tab panels -->
-                    <div class="tab-content">
+                    <div class="tab-content mb-4">
 
                         <!--Panel 1-->
                         <div class="tab-pane fade show active" id="panel1" role="tabpanel">
@@ -1089,17 +1097,16 @@
 
                                     <div class="col-md-2 float-left p-0">
                                         <div class="avatar mx-auto mb-md-0 mb-3">
-                                            <img src="img/proyectos/latam.jpg" class="rounded-circle border border-light" width="150" alt="First sample avatar image">
+                                            <img src="img/proyectos/latam.jpg" class="rounded-circle z-depth-6" width="150" alt="First sample avatar image">
                                         </div>
                                     </div>
 
-                                    <div class="col-md-10 float-right">
+                                    <div class="col-md-10 float-right pl-0">
                                         <h5><strong class="text-primary font-weight-bold">Nombre del Proyecto</strong></h5>
-                                        <div class="d-flex justify-content-start align-items-center">
-                                            <h6 class="grey-text mb-3 mr-3">Duración</h6>
-                                            <h6 class="grey-text mb-3 mr-3">Duración</h6>
-                                            <h6 class="grey-text mb-3 mr-3">Duración</h6>
-                                            <h6 class="grey-text mb-3">Duración</h6>
+                                        <div class="d-flex justify-content-start align-items-center my-3 flex-wrap w-100">
+                                            <h6 class="grey-text mb-lg-1 mb-sm-5 mr-4 font-small d-flex align-items-center justify-content-start"><i class="material-icons text-primary mr-1">assignment_ind</i><strong class="text-primary">Latam</strong></h6>
+                                            <h6 class="grey-text mb-lg-1 mb-sm-5 mr-4 font-small d-flex align-items-center justify-content-start"><i class="material-icons text-primary mr-1">date_range</i><strong class="text-primary number-type">14 - 07 - 2018</strong></h6>
+                                            <h6 class="grey-text mb-lg-1 mb-sm-3 mr-4 font-small d-flex align-items-center justify-content-start"><i class="material-icons text-primary mr-1">location_on</i><strong class="text-primary">Aeropuerto, Santiago de Chile</strong></h6>
                                         </div>
                                         <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur Lorem ipsum dolor sit amet,
                                             consectetur adipisicing elit. Quod eos id officiis hic tenetur quod eos id officiis hic tenetur.
@@ -1166,156 +1173,27 @@
         </div>
         <!-- PROYECTS -->
 
+        <!-- PARALAX -->
+        <div class="view jarallax m-0" style="min-height: 100vh;">
+            <div class="jarallax" data-jarallax-video="https://youtu.be/8DU703uUA6Q"></div>
+        </div>
+        <!-- PARALAX -->
+
         <!-- SERVICES -->
         <div class="container-fluid">
-            <div class="container">
-                <section id="servicios" class="my-5 pb-5 pt-2">
-
-                    <!-- Section heading -->
-                    <h2 class="h1-responsive font-weight-bold text-center my-5 text-primary">Servicios</h2>
-                    <!-- Section description -->
-                    <p class="lead grey-text text-center w-responsive mx-auto mb-5">Somos una empresa dedicada a la ingeniería, venta, distribución, montaje, reparación y mantención en el área de climatización. Entregamos soluciones integrales y oportunas a nuestros cliente</p>
-
-                    <!-- Grid row -->
-                    <div class="row">
-
-                        <!-- Grid column -->
-                        <div class="col-md-4">
-
-                            <!-- Grid row -->
-                            <div class="row mb-3">
-
-                                <!-- Grid column -->
-                                <div class="col-2">
-                                    <i class="fa fa-2x fa-flag-checkered text-secondary"></i>
-                                </div>
-                                <!-- Grid column -->
-
-                                <!-- Grid column -->
-                                <div class="col-10">
-                                    <h5 class="font-weight-bold mb-3 text-primary">Servicio 1</h5>
-                                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
-                                </div>
-                                <!-- Grid column -->
-
-                            </div>
-                            <!-- Grid row -->
-
-                            <!-- Grid row -->
-                            <div class="row mb-3">
-
-                                <!-- Grid column -->
-                                <div class="col-2">
-                                    <i class="fa fa-2x fa-flask text-secondary"></i>
-                                </div>
-                                <!-- Grid column -->
-
-                                <!-- Grid column -->
-                                <div class="col-10">
-                                    <h5 class="font-weight-bold mb-3 text-primary">Servicio 2</h5>
-                                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
-                                </div>
-                                <!-- Grid column -->
-
-                            </div>
-                            <!-- Grid row -->
-
-                            <!-- Grid row -->
-                            <div class="row mb-md-0 mb-3">
-
-                                <!-- Grid column -->
-                                <div class="col-2">
-                                    <i class="fa fa-2x fa-glass text-secondary"></i>
-                                </div>
-                                <!-- Grid column -->
-
-                                <!-- Grid column -->
-                                <div class="col-10">
-                                    <h5 class="font-weight-bold mb-3 text-primary">Servicio 3</h5>
-                                    <p class="grey-text mb-md-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
-                                </div>
-                                <!-- Grid column -->
-
-                            </div>
-                            <!-- Grid row -->
-
+            <section class="mb-5 py-5">
+                <div class="view jarallax" style="min-height: 100vh;">
+                    <img class="jarallax-img" src="https://mdbootstrap.com/img/Photos/Others/img%20%2844%29.jpg" alt="">
+                    <div class="mask rgba-blue-slight">
+                        <div class="container flex-column text-center">
+                            <!-- Section heading -->
+                            <h2 id="servicios" class="h1-responsive font-weight-bold text-center mb-5 text-primary">Servicios</h2>
+                            <!-- Section description -->
+                            <p class="lead grey-text text-center w-responsive mx-auto mb-5">Somos una empresa dedicada a la ingeniería, venta, distribución, montaje, reparación y mantención en el área de climatización. Entregamos soluciones integrales y oportunas a nuestros cliente</p>
                         </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-4 text-center">
-                            <img class="img-fluid" src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="Sample image">
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-4">
-
-                            <!-- Grid row -->
-                            <div class="row mb-3">
-
-                                <!-- Grid column -->
-                                <div class="col-2">
-                                    <i class="fa fa-2x fa-heart text-secondary"></i>
-                                </div>
-                                <!-- Grid column -->
-
-                                <!-- Grid column -->
-                                <div class="col-10">
-                                    <h5 class="font-weight-bold mb-3 text-primary">Servicio 4</h5>
-                                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
-                                </div>
-                                <!-- Grid column -->
-
-                            </div>
-                            <!-- Grid row -->
-
-                            <!-- Grid row -->
-                            <div class="row mb-3">
-
-                                <!-- Grid column -->
-                                <div class="col-2">
-                                    <i class="fa fa-2x fa-flash text-secondary"></i>
-                                </div>
-                                <!-- Grid column -->
-
-                                <!-- Grid column -->
-                                <div class="col-10">
-                                    <h5 class="font-weight-bold mb-3 text-primary">Servicio 5</h5>
-                                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
-                                </div>
-                                <!-- Grid column -->
-
-                            </div>
-                            <!-- Grid row -->
-
-                            <!-- Grid row -->
-                            <div class="row">
-
-                                <!-- Grid column -->
-                                <div class="col-2">
-                                    <i class="fa fa-2x fa-magic text-secondary"></i>
-                                </div>
-                                <!-- Grid column -->
-
-                                <!-- Grid column -->
-                                <div class="col-10">
-                                    <h5 class="font-weight-bold mb-3 text-primary">Servicio 6</h5>
-                                    <p class="grey-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
-                                </div>
-                                <!-- Grid column -->
-
-                            </div>
-                            <!-- Grid row -->
-
-                        </div>
-                        <!-- Grid column -->
-
                     </div>
-                    <!-- Grid row -->
-
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
         <!-- SERVICES -->
 
@@ -1752,6 +1630,15 @@
                 $('#feedback-step').nextStep();
             }, 500);
         }
+        // object-fit polyfill run
+        objectFitImages();
+
+        /* init Jarallax */
+        jarallax(document.querySelectorAll('.jarallax'));
+
+        jarallax(document.querySelectorAll('.jarallax-keep-img'), {
+            keepImg: true,
+        });
     </script>
 </body>
 

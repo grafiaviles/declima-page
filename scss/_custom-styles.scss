@@ -28,6 +28,10 @@ a.text-primary:hover,
     color: $primary-color!important;
 }
 
+.text-third {
+    color: $third-color;
+}
+
 ul.stepper .step.done:before {
     content: '\e5ca';
     font-size: 1rem;
@@ -43,11 +47,34 @@ ul.stepper .step.wrong:before {
 //Tooltips
 .tooltip-inner {
     background-color: $primary-color!important;
+    border-radius: 3px!important;
 }
 
 .bs-tooltip-auto[x-placement^=right] .arrow::before,
 .bs-tooltip-right .arrow::before {
     border-right-color: $primary-color;
+    border-radius: 3px!important;
+}
+
+.z-depth-6 {
+    box-shadow: $z-depth-6;
+}
+
+.z-depth-7 {
+    box-shadow: $z-depth-7;
+}
+
+//BACKGROUND
+.declima-blue-bg {
+    background: $primary-color!important;
+}
+
+.declima-cian-bg {
+    background: $secondary-color!important;
+}
+
+.declima-green-bg {
+    background: $third-color!important;
 }
 
 
@@ -128,10 +155,6 @@ ul.stepper .step.wrong:before {
     border-bottom: none;
 }
 
-.modal-dialog .form-elegant .btn .fa {
-    color: #2196f3!important;
-}
-
 .form-elegant .modal-body,
 .form-elegant .modal-footer {
     font-weight: 400;
@@ -208,35 +231,24 @@ ul.stepper .step.wrong:before {
 
 .pills-default .nav-link {
     border-radius: 50px;
-    background-color: rgba(158, 158, 158, .1);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: $z-depth-6;
+}
+
+.pills-default .nav-link:hover {
+    background-color: white;
+    box-shadow: $z-depth-7;
 }
 
 .pills-default .nav-link.active {
     background-color: $primary-color!important;
     color: white!important;
-    box-shadow: none!important;
     border-radius: 50px;
+    box-shadow: 0 20px 10px -15px rgba(0, 0, 0, .1)!important;
 }
 
 .pills-default .nav-link.active:hover {
-    box-shadow: none!important;
-}
-
-//BACKGROUND
-.declima-blue-bg {
-    background: $primary-color!important;
-}
-
-.declima-cian-bg {
-    background: $secondary-color!important;
-}
-
-.declima-green-bg {
-    background: $third-color!important;
-}
-
-.text-third {
-    color: $third-color;
+    /* background-color: rgba($primary-color, 90%); */
 }
 
 //Close
@@ -262,9 +274,6 @@ ul.stepper .step.wrong:before {
     width: 100%;
     height: 35px!important;
     font-size: 15px!important;
-    padding: 0 .5rem;
-    position: absolute;
-    bottom: 8%;
     @media screen and (max-width: 768px) {
         bottom: 10%;
     }
