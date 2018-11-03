@@ -17526,7 +17526,7 @@ a.text-primary:hover,
   color: #00587A !important; }
 
 .text-third {
-  color: #80c80e; }
+  color: #80c80e !important; }
 
 ul.stepper .step.done:before {
   content: '\e5ca';
@@ -17549,6 +17549,10 @@ ul.stepper .step.wrong:before {
   -webkit-border-radius: 3px !important;
   border-radius: 3px !important; }
 
+.bs-tooltip-auto[x-placement^=top] .arrow::before,
+.bs-tooltip-top .arrow::before {
+  border-top-color: #00587A; }
+
 .z-depth-6 {
   -webkit-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.07) !important;
   box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.07) !important; }
@@ -17556,6 +17560,10 @@ ul.stepper .step.wrong:before {
 .z-depth-7 {
   -webkit-box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.3) !important;
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.3) !important; }
+
+.z-depth-8 {
+  -webkit-box-shadow: 0 5px 15px -2px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 5px 15px -2px rgba(0, 0, 0, 0.15) !important; }
 
 .declima-blue-bg {
   background: #00587A !important; }
@@ -17747,6 +17755,9 @@ ul.stepper .step.wrong:before {
     .dcto-card {
       bottom: 10%; } }
 
+.content-atributos {
+  bottom: 0; }
+
 /* MODAL COTIZADOR */
 .md-form input[type=text].valid,
 .md-form input[type=email].valid,
@@ -17849,3 +17860,10 @@ label.btn input[type=radio]:not(:checked) + label:before {
     .modal-footer-btn {
       position: relative;
       bottom: inherit; } }
+
+/* SERVICIOS */
+.jarallax-services {
+  min-height: 100vh; }
+  @media screen and (max-width: 768px) {
+    .jarallax-services {
+      min-height: 1250px; } }

@@ -29,7 +29,7 @@ a.text-primary:hover,
 }
 
 .text-third {
-    color: $third-color;
+    color: $third-color!important;
 }
 
 ul.stepper .step.done:before {
@@ -56,12 +56,22 @@ ul.stepper .step.wrong:before {
     border-radius: 3px!important;
 }
 
+.bs-tooltip-auto[x-placement^=top] .arrow::before,
+.bs-tooltip-top .arrow::before {
+    border-top-color: $primary-color;
+}
+
+//My Shadow
 .z-depth-6 {
     box-shadow: $z-depth-6;
 }
 
 .z-depth-7 {
     box-shadow: $z-depth-7;
+}
+
+.z-depth-8 {
+    box-shadow: $z-depth-8;
 }
 
 //BACKGROUND
@@ -279,6 +289,10 @@ ul.stepper .step.wrong:before {
     }
 }
 
+.content-atributos {
+    bottom: 0;
+}
+
 
 /* MODAL COTIZADOR */
 
@@ -390,5 +404,15 @@ label.btn input[type=radio]:not(:checked)+label:before {
     @media screen and (max-width: 768px) {
         position: relative;
         bottom: inherit;
+    }
+}
+
+
+/* SERVICIOS */
+
+.jarallax-services {
+    min-height: 100vh;
+    @media screen and (max-width: 768px) {
+        min-height: 1250px;
     }
 }
