@@ -284,30 +284,31 @@
                             <form action="#" id="formPersona" class="needs-validation animated fadeIn" novalidate>
                                 <div class="modal-body mb-1">
                                     <div class="md-form form-sm mb-4">
-                                        <input type="text" id="nombre" class="form-control form-control-sm validate mb-1" minlength="5" required>
+                                        <input type="text" id="nombre" name="nombre" class="form-control form-control-sm validate mb-1" minlength="5" required>
                                         <div class="invalid-feedback">Por favor indique nombre y apellido de contacto.</div>
                                         <div class="valid-feedback text-third">Correcto</div>
                                         <label for="nombre">Nombre y apellido</label>
                                     </div>
 
                                     <div class="md-form form-sm mb-4">
-                                        <input type="email" id="email" class="form-control form-control-sm validate mb-1" minlength="5" required>
+                                        <input type="email" id="email" name="email" class="form-control form-control-sm validate mb-1" minlength="5" required>
                                         <div class="invalid-feedback">Por favor indique un correo válido.</div>
                                         <div class="valid-feedback text-third">Correcto</div>
                                         <label for="email">Email</label>
                                     </div>
 
                                     <div class="md-form form-sm mb-4">
-                                        <input type="tel" id="telefono" class="form-control form-control-sm validate mb-1" minlength="8" required>
+                                        <input type="tel" id="telefono" name="telefono" class="form-control form-control-sm validate mb-1" minlength="8" required>
                                         <div class="invalid-feedback">Por favor un teléfono válido.</div>
                                         <div class="valid-feedback text-third">Correcto</div>
                                         <label for="telefono">Teléfono</label>
                                     </div>
                                     <div class="md-form form-sm mb-4">
-                                        <input type="text" id="direccion" class="form-control form-control-sm mb-1">
+                                        <input type="text" id="direccion" name="direccion" class="form-control form-control-sm mb-1">
                                         <label for="direccion">Dirección (opcional)</label>
                                     </div>
-                                    <div id="captcha" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>
+                                    <!--<div id="captcha" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>-->
+                                    <div id="captcha" data-expired-callback="reset" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeEQ3cUAAAAAPNYxCFXI5nlP8Z6SsAhtEbHoTfN"></div>
                                 </div>
                             </form>
                         </div>
@@ -319,40 +320,41 @@
                             <form action="#" id="formEmpresa" class="needs-validation animated fadeIn" novalidate>
                                 <div class="modal-body mb-1">
                                     <div class="md-form form-sm mb-4">
-                                        <input type="text" id="nombreEmpresa" class="form-control form-control-sm validate mb-1" minlength="5" required>
+                                        <input type="text" id="nombreEmpresa" name="nombreEmpresa" class="form-control form-control-sm validate mb-1" minlength="5" required>
                                         <div class="invalid-feedback">Por favor indique nombre de empresa.</div>
                                         <div class="valid-feedback text-third">Correcto</div>
                                         <label for="nombreEmpresa">Nombre o Razón social</label>
                                     </div>
                                     <div class="md-form form-sm mb-4">
-                                        <input type="text" id="nombreUser" class="form-control form-control-sm validate mb-1" minlength="5" required>
+                                        <input type="text" id="nombreUser" name="nombreContacto"  class="form-control form-control-sm validate mb-1" minlength="5" required>
                                         <div class="invalid-feedback">Por favor indique nombre y apellido de contacto.</div>
                                         <div class="valid-feedback text-third">Correcto</div>
                                         <label for="nombreUser">Nombre y apellido del contacto</label>
                                     </div>
                                     <div class="md-form form-sm mb-4">
-                                        <input type="email" id="emailEmpreso" class="form-control form-control-sm validate mb-1" minlength="5" required>
+                                        <input type="email" id="emailEmpreso" name="emailEmpresa" class="form-control form-control-sm validate mb-1" minlength="5" required>
                                         <div class="invalid-feedback">Por favor indique un correo válido.</div>
                                         <div class="valid-feedback text-third">Correcto</div>
                                         <label for="emailEmpreso">Email corporativo</label>
                                     </div>
                                     <div class="md-form form-sm mb-4">
-                                        <input type="tel" id="telefonoEmpresa" class="form-control form-control-sm validate mb-1" minlength="8" required>
+                                        <input type="tel" id="telefonoEmpresa" name="telefonoEmpresa" class="form-control form-control-sm validate mb-1" minlength="8" required>
                                         <div class="invalid-feedback">Por favor un teléfono válido.</div>
                                         <div class="valid-feedback text-third">Correcto</div>
                                         <label for="telefonoEmpresa">Teléfono</label>
                                     </div>
                                     <div class="md-form form-sm mb-4">
-                                        <input type="url" id="url" class="form-control form-control-sm mb-1">
+                                        <input type="url" id="url" name="web" class="form-control form-control-sm mb-1">
                                         <label for="url">Sitio web (opcional)</label>
                                     </div>
                                     <div class="md-form form-sm mb-4">
-                                        <input type="text" id="direccionEmpresa" class="form-control form-control-sm mb-1">
+                                        <input type="text" id="direccionEmpresa" name="direccionEmpresa" class="form-control form-control-sm mb-1">
                                         <label for="direccionEmpresa">Dirección casa matriz (opcional)</label>
                                     </div>
                                     <!-- Recaptcha -->
                                     <!--Recaptcha de Cesar-->
-                                    <div id="captcha" data-expired-callback="reset" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>
+                                    <!--<div id="captcha" data-expired-callback="reset" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>-->
+                                    <div id="captcha" data-expired-callback="reset" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeEQ3cUAAAAAPNYxCFXI5nlP8Z6SsAhtEbHoTfN"></div>
                                 </div>
                             </form>
                         </div>
@@ -609,6 +611,19 @@
                             </div>
                         </div>
                         <!--/.Panel Step-->
+                        <div class="preloader-wrapper">
+                            <div class="spinner-layer spinner-red-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="gap-patch">
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Boton Siguiente -->

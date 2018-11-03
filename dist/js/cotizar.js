@@ -139,45 +139,54 @@ enviaCotizacion = function(e) {
     } else {
         e.classList.add('was-validated');
         //e.preventDefault();
-        let data = new Array();
+        let data = new Object();
+        var tipoServ = new Object();
+        var tipoProd = new Object();
+        var tipoCap = new Object();
+        var radioInst = new Object();
+        var comentarios = new Object();
         $.each($('.tipoServicio'), function(k, v) {
             if (v.checked) {
-                let tipoServ = new Object();
-                tipoServ.name = 'Servicio';
-                tipoServ.value = v.value;
-                data.push(tipoServ);
+                tipoServ.servicio = v.value;
             }
         });
         $.each($('.tipoProducto'), function(k, v) {
             if (v.checked) {
-                let tipoProd = new Object();
-                tipoProd.name = 'Producto'
-                tipoProd.value = v.value;
-                data.push(tipoProd);
+                tipoProd.producto = v.value;
             }
         });
         $.each($('.tipoCapacidad'), function(k, v) {
             if (v.checked) {
-                let tipoCap = new Object();
-                tipoCap.name = 'Capacidad';
-                tipoCap.value = v.value;
+                tipoCap.capacidad = v.value;
                 tipoCap.cantidad = $('.cant-cap-' + v.id).text();
-                data.push(tipoCap);
             }
         });
         $.each($('.radioInstalacion'), function(k, v) {
             if (v.checked && v.id == 'conInstalacion') {
-                let radioInst = new Object();
-                radioInst.name = 'instalacion';
-                radioInst.value = 1;
-                data.push(radioInst);
+                radioInst.instalacion = 1;
             }
         });
+        if($('#comentario').val() != '')
+        {
+            comentarios.comentario = $('#comentario').val();
+        }
+        form = new Array();
+        $.each(e.elements, function(k,v){
+            let campos = new Object();
+            campos[v.name] = v.value;
+            form.push(campos);
+        });
+        data.tipoServicio = tipoServ;
+        data.tipoProducto = tipoProd;
+        data.tipoCapacidad = tipoCap;
+        data.radioInstalacion = radioInst;
+        data.comentario = comentarios;
+        data.formulario = form;
         var jsonData = JSON.parse(JSON.stringify(data));
         $.ajax({
                 method: 'POST',
                 url: 'http://declimamanager.declima.cl/insertacotizacion/setcotizacion',
-                data: { id: 1, data: data, recaptcha: recaptchaResponse},
+                data: {data: data},
                 dataType: 'json'
             })
             .done(function(json) {
@@ -185,6 +194,17 @@ enviaCotizacion = function(e) {
             });
     }
 }
+
+$('#botonEnviar').click(function(){
+    if($('#pestanaEmpresa').hasClass('active'))
+    {
+        enviaCotizacion($('#formEmpresa')[0]);
+    }
+    if($('#pestanaPersona').hasClass('active'))
+    {
+        enviaCotizacion($('#formPersona')[0]);
+    }
+});
 
 enviarForm = function(recaptcha){
     recaptchaResponse = recaptcha;
@@ -202,5 +222,6 @@ enviarForm = function(recaptcha){
 }
 
 reset = function(){
+    $('#botonEnviar').off('click');
     $('#botonEnviar').addClass('disabled');
 }
