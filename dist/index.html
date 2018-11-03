@@ -245,10 +245,43 @@
                     <!-- Tab panels -->
                     <div class="tab-content py-0">
 
+                        <!--Panel Exito-->
+                        <div class="tab-pane mt-5" id="exito" role="tabpanel">
+                            <!--Body-->
+                            <div class="modal-body">
+                                <!-- contenid-exito -->
+                                <div class="content-exito">
+                                    <img src="img/cotizar/success.png" width="80" alt="" class="animated fadeInUp img-fluid d-block m-auto">
+                                    <div class="text-center mt-3 animated fadeInUp">
+                                        <h5 class="text-third font-weight-bold h5-responsive">¡Perfecto, solicitud enviada!</h5>
+                                        <p class="grey-text">Nuestros ejecutivos te contactarán a la brevedad muchas gracias.</p>
+                                    </div>
+                                </div>
+                                <!--Cargador-->
+                                <div class="w-100 d-none d-flex align-content-center justify-content-center flex-wrap">
+                                    <div class="preloader-wrapper active d-block m-auto">
+                                        <div class="spinner-layer spinner-primary-color-only">
+                                            <div class="circle-clipper left">
+                                                <div class="circle"></div>
+                                            </div>
+                                            <div class="gap-patch">
+                                                <div class="circle"></div>
+                                            </div>
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="col-12 grey-text text-center font-small mt-2">Enviando cotización...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.Panel Exito-->
+
                         <!--Panel Persona-->
                         <div class="tab-pane mt-2 personaContent" id="persona" role="tabpanel">
                             <!--Body-->
-                            <form action="#" id="formPersona" class="needs-validation" novalidate>
+                            <form action="#" id="formPersona" class="needs-validation animated fadeIn" novalidate>
                                 <div class="modal-body mb-1">
                                     <div class="md-form form-sm mb-4">
                                         <input type="text" id="nombre" class="form-control form-control-sm validate mb-1" minlength="5" required>
@@ -275,7 +308,6 @@
                                         <label for="direccion">Dirección (opcional)</label>
                                     </div>
                                     <div id="captcha" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>
-                                    <!--<div id="captcha" data-expired-callback="reset" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeEQ3cUAAAAAPNYxCFXI5nlP8Z6SsAhtEbHoTfN"></div>-->
                                 </div>
                             </form>
                         </div>
@@ -284,7 +316,7 @@
                         <!--Panel Empresa-->
                         <div class="tab-pane fade mt-2 empresaContent" id="empresa" role="tabpanel">
                             <!--Body-->
-                            <form action="#" id="formEmpresa" class="needs-validation" novalidate>
+                            <form action="#" id="formEmpresa" class="needs-validation animated fadeIn" novalidate>
                                 <div class="modal-body mb-1">
                                     <div class="md-form form-sm mb-4">
                                         <input type="text" id="nombreEmpresa" class="form-control form-control-sm validate mb-1" minlength="5" required>
@@ -321,7 +353,6 @@
                                     <!-- Recaptcha -->
                                     <!--Recaptcha de Cesar-->
                                     <div id="captcha" data-expired-callback="reset" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeI6hYUAAAAAI2U71sOJ2LdRhYdkSz2MYUNhGEk"></div>
-                                    <!--<div id="captcha" data-expired-callback="reset" data-callback="enviarForm" class="g-recaptcha my-4" data-sitekey="6LeEQ3cUAAAAAPNYxCFXI5nlP8Z6SsAhtEbHoTfN"></div>-->
                                 </div>
                             </form>
                         </div>
@@ -330,7 +361,7 @@
                         <!--Panel Step-->
                         <div class="tab-pane mt-2 active stepContent" id="step" role="tabpanel">
                             <!--Body-->
-                            <div class="mb-1">
+                            <div class="mb-1 animated fadeIn">
                                 <div class="card z-depth-0">
                                     <div class="card-body pb-0">
                                         <ul class="stepper linear py-0 px-2" id="feedback-step">
@@ -365,8 +396,9 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="step-actions pt-2">
+                                                    <div class="step-actions pt-2 d-flex justify-content-between align-items-center">
                                                         <button class="waves-effect waves-light btn btn-sm btn-primary next-step font-weight-bold z-depth-0" data-feedback="someFunction">CONTINUAR</button>
+                                                        <i class="material-icons right text-primary">expand_more</i>
                                                     </div>
                                                 </div>
                                             </li>
@@ -583,6 +615,7 @@
                 <div class="modal-footer modal-footer-btn white d-flex justify-content-lg-end justify-content-md-center col-12">
                     <button type="button" class="btn bg-third btn-rounded z-depth-7 font-weight-bold col-lg-5 col-md-12 disabled" id="botonSiguiente">SIGUIENTE</button>
                     <button type="button" class="btn bg-third btn-rounded z-depth-7 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold disabled d-none" id="botonEnviar">COTIZAR</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-7 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold disabled d-none" id="botonExito">OK, GRACIAS</button>
                 </div>
             </div>
             <!--/.Content-->
@@ -1173,23 +1206,72 @@
         </div>
         <!-- PROYECTS -->
 
-        <!-- PARALAX -->
-        <div class="view jarallax m-0" style="min-height: 100vh;">
-            <div class="jarallax" data-jarallax-video="https://youtu.be/8DU703uUA6Q"></div>
-        </div>
-        <!-- PARALAX -->
-
         <!-- SERVICES -->
-        <div class="container-fluid">
-            <section class="mb-5 py-5">
+        <div class="container-fluid p-0">
+            <section class="mb-5 pb-0 pt-0">
                 <div class="view jarallax" style="min-height: 100vh;">
-                    <img class="jarallax-img" src="https://mdbootstrap.com/img/Photos/Others/img%20%2844%29.jpg" alt="">
+                    <img class="jarallax-img" src="img/slider-3.jpg" alt="">
                     <div class="mask rgba-blue-slight">
-                        <div class="container flex-column text-center">
-                            <!-- Section heading -->
-                            <h2 id="servicios" class="h1-responsive font-weight-bold text-center mb-5 text-primary">Servicios</h2>
-                            <!-- Section description -->
-                            <p class="lead grey-text text-center w-responsive mx-auto mb-5">Somos una empresa dedicada a la ingeniería, venta, distribución, montaje, reparación y mantención en el área de climatización. Entregamos soluciones integrales y oportunas a nuestros cliente</p>
+                        <div class="container d-flex flex-column text-center align-content-center justify-content-center" style="min-height: 100vh;">
+                            <hr id="servicios" class="m-0 p-0 border-top-0">
+                            <!-- Section: Features v.1 -->
+                            <section class="text-center my-5">
+
+                                <!-- Section heading -->
+                                <h2 class="h1-responsive font-weight-bold mb-5 text-white">Servicios en Climatización</h2>
+                                <!-- Section description -->
+                                <p class="d-none lead text-white text-center w-responsive mx-auto mb-5">Especialistas en ingeniería, venta, distribución, montaje, reparación y mantención en el área de climatización.</p>
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-3">
+
+                                        <a class="btn-floating btn-lg bg-secondary z-depth-7"><i class="large white-text material-icons">tonality</i></a>
+                                        <h5 class="font-weight-bold my-4 text-white">Proyectos e Ingeniería</h5>
+                                        <p class="mb-md-0 mb-5 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                                        </p>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-3">
+                                        <a class="btn-floating btn-lg bg-secondary z-depth-7"><i class="large white-text material-icons">cast</i></a>
+                                        <h5 class="text-white font-weight-bold my-4">Venta y Distribución</h5>
+                                        <p class="text-white mb-md-0 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                                        </p>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-3">
+                                        <a class="btn-floating btn-lg bg-secondary z-depth-7"><i class="large white-text material-icons">network_check</i></a>
+                                        <h5 class="white-text font-weight-bold my-4">Contrato de Mantenciones</h5>
+                                        <p class="white-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                                        </p>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-3">
+
+                                        <a class="btn-floating btn-lg bg-secondary z-depth-7"><i class="large white-text material-icons">card_travel</i></a>
+                                        <h5 class="white-text font-weight-bold my-4">Instalaciones</h5>
+                                        <p class="white-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores aperiam minima assumenda deleniti hic.
+                                        </p>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                            </section>
+                            <!-- Section: Features v.1 -->
                         </div>
                     </div>
                 </div>
@@ -1198,24 +1280,23 @@
         <!-- SERVICES -->
 
         <!-- NOSOTROS -->
-        <div class="container-fluid">
+        <div class="container-fluid px-0">
             <div class="container">
-                <section id="nosotros" class="team-section text-center my-5 py-5">
-
+                <section id="nosotros" class="team-section text-center mt-5 py-5">
                     <!-- Section heading -->
-                    <h2 class="h1-responsive font-weight-bold mb-5 pt-5 text-primary">Nosotros</h2>
+                    <h2 class="h1-responsive font-weight-bold mb-5 mt-4 text-primary">Team Declima</h2>
 
                     <!-- Grid row -->
                     <div class="row">
 
                         <!-- Grid column -->
-                        <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="col-lg-3 col-md-6 mb-lg-0 mb-5 pb-3">
                             <div class="avatar mx-auto">
                                 <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle" alt="Sample avatar">
                             </div>
-                            <h5 class="font-weight-bold mt-4 mb-3 text-primary">Domingo Venegas</h5>
-                            <p class="text-uppercase blue-text"><strong>CEO FOUNDER</strong></p>
-                            <p class="grey-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci sed quia non numquam.</p>
+                            <h6 class="font-weight-bold mt-4 mb-3 text-primary">Domingo Venegas</h6>
+                            <p class="text-uppercase text-secondary font-small"><strong>CEO FOUNDER</strong></p>
+                            <p class="grey-text font-small">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p>
                         </div>
                         <!-- Grid column -->
 
@@ -1224,9 +1305,9 @@
                             <div class="avatar mx-auto">
                                 <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle" alt="Sample avatar">
                             </div>
-                            <h5 class="font-weight-bold mt-4 mb-3 text-primary">John Doe</h5>
-                            <p class="text-uppercase blue-text"><strong>MARKETING MANAGER</strong></p>
-                            <p class="grey-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem ipsa accusantium doloremque rem laudantium totam aperiam.</p>
+                            <h6 class="font-weight-bold mt-4 mb-3 text-primary">Domingo Venegas</h6>
+                            <p class="text-uppercase text-secondary font-small"><strong>CEO FOUNDER</strong></p>
+                            <p class="grey-text font-small">Sed ut perspiciatis unde omnis iste natus error sit voluptatem ipsa accusantium.</p>
                         </div>
                         <!-- Grid column -->
 
@@ -1235,9 +1316,9 @@
                             <div class="avatar mx-auto">
                                 <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" class="rounded-circle" alt="Sample avatar">
                             </div>
-                            <h5 class="font-weight-bold mt-4 mb-3 text-primary">Maria Smith</h5>
-                            <p class="text-uppercase blue-text"><strong>COMMERCIAL MANAGER</strong></p>
-                            <p class="grey-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim est fugiat nulla id eu laborum.</p>
+                            <h6 class="font-weight-bold mt-4 mb-3 text-primary">Domingo Venegas</h6>
+                            <p class="text-uppercase text-secondary font-small"><strong>CEO FOUNDER</strong></p>
+                            <p class="grey-text font-small">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
                         </div>
                         <!-- Grid column -->
 
@@ -1246,111 +1327,128 @@
                             <div class="avatar mx-auto">
                                 <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle" alt="Sample avatar">
                             </div>
-                            <h5 class="font-weight-bold mt-4 mb-3 text-primary">Tom Adams</h5>
-                            <p class="text-uppercase blue-text"><strong>TI MANAGER</strong></p>
-                            <p class="grey-text">Perspiciatis repellendus ad odit consequuntur, eveniet earum nisi qui consectetur totam officia voluptates.</p>
+                            <h6 class="font-weight-bold mt-4 mb-3 text-primary">Domingo Venegas</h6>
+                            <p class="text-uppercase text-secondary font-small"><strong>CEO FOUNDER</strong></p>
+                            <p class="grey-text font-small">Perspiciatis repellendus ad odit consequuntur, eveniet earum nisi qui consectetur totam.</p>
                         </div>
                         <!-- Grid column -->
 
                     </div>
                     <!-- Grid row -->
+                </section>
+            </div>
 
-                    <!-- Testimonials -->
-                    <section class="text-center">
+            <div class="view jarallax" style="min-height: 50vh;">
+                <img class="jarallax-img" src="img/slider-1.jpg" alt="">
+                <div class="mask rgba-blue-slight">
+                    <div class="container d-flex flex-column text-center align-content-center justify-content-center h-100">
+                        <!-- Section: Features v.1 -->
+                        <section id="servicios" class="text-center my-5">
+                            <!-- Section description -->
+                            <p class="lead text-white text-center w-responsive mx-auto">Somos una empresa especialista en ingeniería, venta, distribución, montaje, reparación y mantención en el área de climatización.</p>
 
-                        <!-- Section heading -->
-                        <h4 class="h4-responsive font-weight-bold my-5 text-primary">Lo que dicen nuestros Clientes</h4>
+                        </section>
+                        <!-- Section: Features v.1 -->
+                    </div>
+                </div>
+            </div>
 
-                        <!-- Carousel Wrapper -->
-                        <div id="testimonials" class="carousel no-flex testimonial-carousel slide carousel-fade pb-5" data-ride="carousel" data-interval="false">
-                            <!--Slides-->
-                            <div class="carousel-inner" role="listbox">
-                                <!--First slide-->
-                                <div class="carousel-item active">
-                                    <div class="testimonial">
-                                        <!--Avatar-->
-                                        <div class="avatar mx-auto mb-4">
-                                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" class="rounded-circle z-depth-0 img-fluid" alt="First sample avatar image">
-                                        </div>
-                                        <!--Content-->
-                                        <p class="grey-text">
-                                            <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Dolore cum accusamus eveniet molestias voluptatum inventore laboriosam labore sit, aspernatur praesentium iste impedit quidem dolor veniam.
-                                        </p>
-                                        <h4 class="font-weight-bold text-primary">Anna Deynah</h4>
-                                        <h6 class="font-weight-bold my-3 text-secondary">Founder at ET Company</h6>
-                                        <!--Review-->
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star-half-full blue-text"> </i>
+            <!-- Testimonios -->
+            <div class="container py-5">
+                <!-- Testimonials -->
+                <section class="text-center">
+
+                    <!-- Section heading -->
+                    <h4 class="h4-responsive font-weight-bold my-5 text-primary">Lo que dicen nuestros Clientes</h4>
+
+                    <!-- Carousel Wrapper -->
+                    <div id="testimonials" class="carousel no-flex testimonial-carousel slide carousel-fade pb-5" data-ride="carousel" data-interval="false">
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+                            <!--First slide-->
+                            <div class="carousel-item active">
+                                <div class="testimonial">
+                                    <!--Avatar-->
+                                    <div class="avatar mx-auto mb-4">
+                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" class="rounded-circle z-depth-0 img-fluid" alt="First sample avatar image">
                                     </div>
+                                    <!--Content-->
+                                    <p class="grey-text">
+                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
+                                        cum accusamus eveniet molestias voluptatum inventore laboriosam labore sit, aspernatur praesentium iste impedit quidem dolor veniam.
+                                    </p>
+                                    <h4 class="font-weight-bold text-primary">Anna Deynah</h4>
+                                    <h6 class="font-weight-bold my-3 text-secondary">Founder at ET Company</h6>
+                                    <!--Review-->
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star-half-full text-secondary"> </i>
                                 </div>
-                                <!--First slide-->
-                                <!--Second slide-->
-                                <div class="carousel-item">
-                                    <div class="testimonial">
-                                        <!--Avatar-->
-                                        <div class="avatar mx-auto mb-4">
-                                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="rounded-circle z-depth-0 img-fluid" alt="Second sample avatar image">
-                                        </div>
-                                        <!--Content-->
-                                        <p class="grey-text">
-                                            <i class="fa fa-quote-left"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                                            est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore. </p>
-                                        <h4 class="font-weight-bold text-primary">Maria Kate</h4>
-                                        <h6 class="font-weight-bold my-3 text-secondary">Photographer at Studio LA</h6>
-                                        <!--Review-->
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star blue-text"> </i>
-                                    </div>
-                                </div>
-                                <!--Second slide-->
-                                <!--Third slide-->
-                                <div class="carousel-item">
-                                    <div class="testimonial">
-                                        <!--Avatar-->
-                                        <div class="avatar mx-auto mb-4">
-                                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle z-depth-0 img-fluid" alt="Third sample avatar image">
-                                        </div>
-                                        <!--Content-->
-                                        <p class="grey-text">
-                                            <i class="fa fa-quote-left"></i> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                            deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                                        <h4 class="font-weight-bold text-primary">John Doe</h4>
-                                        <h6 class="font-weight-bold my-3 text-secondary">Front-end Developer in NY</h6>
-                                        <!--Review-->
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star blue-text"> </i>
-                                        <i class="fa fa-star-o blue-text"> </i>
-                                    </div>
-                                </div>
-                                <!--Third slide-->
                             </div>
-                            <!--Slides-->
-                            <!--Controls-->
-                            <a class="carousel-item-prev left carousel-control" href="#testimonials" role="button" data-slide="prev">
-                                <span class="icon-prev" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-item-next right carousel-control" href="#testimonials" role="button" data-slide="next">
-                                <span class="icon-next" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                            <!--Controls-->
+                            <!--First slide-->
+                            <!--Second slide-->
+                            <div class="carousel-item">
+                                <div class="testimonial">
+                                    <!--Avatar-->
+                                    <div class="avatar mx-auto mb-4">
+                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="rounded-circle z-depth-0 img-fluid" alt="Second sample avatar image">
+                                    </div>
+                                    <!--Content-->
+                                    <p class="grey-text">
+                                        <i class="fa fa-quote-left"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                                        qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore. </p>
+                                    <h4 class="font-weight-bold text-primary">Maria Kate</h4>
+                                    <h6 class="font-weight-bold my-3 text-secondary">Photographer at Studio LA</h6>
+                                    <!--Review-->
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star text-secondary"> </i>
+                                </div>
+                            </div>
+                            <!--Second slide-->
+                            <!--Third slide-->
+                            <div class="carousel-item">
+                                <div class="testimonial">
+                                    <!--Avatar-->
+                                    <div class="avatar mx-auto mb-4">
+                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle z-depth-0 img-fluid" alt="Third sample avatar image">
+                                    </div>
+                                    <!--Content-->
+                                    <p class="grey-text">
+                                        <i class="fa fa-quote-left"></i> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                                    <h4 class="font-weight-bold text-primary">John Doe</h4>
+                                    <h6 class="font-weight-bold my-3 text-secondary">Front-end Developer in NY</h6>
+                                    <!--Review-->
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star text-secondary"> </i>
+                                    <i class="fa fa-star-o text-secondary"> </i>
+                                </div>
+                            </div>
+                            <!--Third slide-->
                         </div>
-                        <!-- Carousel Wrapper -->
-
-                    </section>
-                    <!-- Testimonials -->
+                        <!--Slides-->
+                        <!--Controls-->
+                        <a class="carousel-item-prev left carousel-control" href="#testimonials" role="button" data-slide="prev">
+                            <span class="icon-prev" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-item-next right carousel-control" href="#testimonials" role="button" data-slide="next">
+                            <span class="icon-next" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <!--Controls-->
+                    </div>
+                    <!-- Carousel Wrapper -->
 
                 </section>
+                <!-- Testimonials -->
             </div>
         </div>
         <!-- NOSOTROS -->
@@ -1360,7 +1458,7 @@
             <section class="container pb-5 pt-3" id="saladeventas">
                 <!-- Section heading -->
                 <h2 class="h1-responsive font-weight-bold text-center my-5 pt-3 text-primary">
-                    Sala de Ventas
+                    Sala de Ventas y Proyectos
                 </h2>
                 <!-- Grid row -->
                 <div class="row">
