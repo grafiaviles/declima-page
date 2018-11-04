@@ -26,11 +26,9 @@
  */
 
 @charset "UTF-8";
-
 // Bootstrap
 @import "core/bootstrap/functions";
 @import "core/bootstrap/variables";
-
 // CORE
 @import "core/mixins";
 // Your custom variables
@@ -42,7 +40,6 @@
 @import "core/typography";
 @import "core/masks";
 @import "core/waves";
-
 // FREE
 @import "free/animations-basic";
 @import "free/buttons";
@@ -62,7 +59,6 @@
 @import "free/switch";
 @import "free/depreciated";
 @import "free/steppers";
-
 // PRO
 @import "pro/variables";
 @import "pro/buttons";
@@ -96,7 +92,6 @@
 @import "custom-skin";
 @import "pro/skins";
 @import "pro/depreciated";
-
 // Sections
 @import "pro/sections/templates";
 @import "pro/sections/social";
@@ -105,9 +100,8 @@
 @import "pro/sections/magazine";
 @import "pro/sections/pricing";
 @import "pro/sections/contacts";
-
 // PRO addons
 @import "addons-pro/steppers";
-
 // Your custom styles
 @import "custom-styles";
+@import "productos";

@@ -122,6 +122,10 @@ ul.stepper .step.wrong:before {
     & .nav-link {
         border-radius: 5px;
     }
+    & .active-productos {
+        color: $third-color!important;
+        font-weight: bold;
+    }
 }
 
 .active-cotizar {

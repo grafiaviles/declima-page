@@ -17562,8 +17562,8 @@ ul.stepper .step.wrong:before {
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.3) !important; }
 
 .z-depth-8 {
-  -webkit-box-shadow: 0 5px 15px -2px rgba(0, 0, 0, 0.15) !important;
-  box-shadow: 0 5px 15px -2px rgba(0, 0, 0, 0.15) !important; }
+  -webkit-box-shadow: 0 5px 15px -4px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 5px 15px -4px rgba(0, 0, 0, 0.15) !important; }
 
 .declima-blue-bg {
   background: #00587A !important; }
@@ -17599,6 +17599,9 @@ ul.stepper .step.wrong:before {
   .nav-item .nav-link {
     -webkit-border-radius: 5px;
     border-radius: 5px; }
+  .nav-item .active-productos {
+    color: #80c80e !important;
+    font-weight: bold; }
 
 .active-cotizar {
   background: #80c80e;
@@ -17867,3 +17870,25 @@ label.btn input[type=radio]:not(:checked) + label:before {
   @media screen and (max-width: 768px) {
     .jarallax-services {
       min-height: 1250px; } }
+
+/* Required for full background image */
+.view-intro {
+  height: 70%; }
+  @media (max-width: 740px) {
+    .view-intro {
+      margin-top: 3.5rem;
+      height: 850px; } }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .view-intro {
+      height: 600px; } }
+  .view-intro h6 {
+    line-height: 1.7rem; }
+  .view-intro .rgba-gradient {
+    background: -webkit-gradient(linear, -90deg, from(#00587a), to(rgba(72, 165, 249, 0.2)));
+    background: -webkit-linear-gradient(-90deg, #00587a, rgba(72, 165, 249, 0.2) 100%);
+    background: -o-linear-gradient(-90deg, #00587a, rgba(72, 165, 249, 0.2) 100%);
+    background: linear-gradient(to -90deg, #00587a, rgba(72, 165, 249, 0.2) 100%); }
+
+.table-hover tbody tr:hover {
+  background-color: white;
+  opacity: 1; }
