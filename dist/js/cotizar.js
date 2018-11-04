@@ -195,17 +195,6 @@ enviaCotizacion = function(e) {
     }
 }
 
-$('#botonEnviar').click(function(){
-    if($('#pestanaEmpresa').hasClass('active'))
-    {
-        enviaCotizacion($('#formEmpresa')[0]);
-    }
-    if($('#pestanaPersona').hasClass('active'))
-    {
-        enviaCotizacion($('#formPersona')[0]);
-    }
-});
-
 enviarForm = function(recaptcha){
     recaptchaResponse = recaptcha;
     $('#botonEnviar').removeClass('disabled');
