@@ -131,6 +131,8 @@ verificaPasos = function() {
 }
 
 enviaCotizacion = function(e) {
+	$('.mensExito').addClass('d-none');
+	$('.loaderGif').addClass('d-none');
     var result = e.checkValidity();
     if (e.checkValidity() === false) {
         //e.preventDefault();
@@ -145,6 +147,7 @@ enviaCotizacion = function(e) {
         var tipoCap = new Object();
         var radioInst = new Object();
         var comentarios = new Object();
+        var capacidades = new Array();
         $.each($('.tipoServicio'), function(k, v) {
             if (v.checked) {
                 tipoServ.servicio = v.value;
@@ -159,6 +162,7 @@ enviaCotizacion = function(e) {
             if (v.checked) {
                 tipoCap.capacidad = v.value;
                 tipoCap.cantidad = $('.cant-cap-' + v.id).text();
+                capacidades.push(tipoCap);
             }
         });
         $.each($('.radioInstalacion'), function(k, v) {
@@ -182,6 +186,16 @@ enviaCotizacion = function(e) {
         data.radioInstalacion = radioInst;
         data.comentario = comentarios;
         data.formulario = form;
+        data.capacidades = capacidades;
+        $('#personaTag').removeClass('d-none');
+        $('#empresaTag').removeClass('d-none');
+        $('#personaTag').children().addClass('active');
+        $('#empresaTag').children().removeClass('active');
+        $('.stepContent').removeClass('active');
+        $('.personaContent').removeClass('active');
+        $('.empresaContent').removeClass('active');
+        $('.exitoContent').addClass('active');
+        $('.loaderGif').removeClass('d-none');
         var jsonData = JSON.parse(JSON.stringify(data));
         $.ajax({
                 method: 'POST',
@@ -189,11 +203,24 @@ enviaCotizacion = function(e) {
                 data: {data: data},
                 dataType: 'json'
             })
-            .done(function(json) {
-                var tmp = '';
-            });
+            .done(function( data, textStatus, jqXHR ) {
+                	$('.mensExito').removeClass('d-none');
+                	$('.loaderGif').addClass('d-none');
+                })
     }
 }
+
+/*$('#botonEnviar').click(function(){
+    if($('#pestanaEmpresa').hasClass('active'))
+    {
+        enviaCotizacion($('#formEmpresa')[0]);
+    }
+    if($('#pestanaPersona').hasClass('active'))
+    {
+        enviaCotizacion($('#formPersona')[0]);
+    }
+});*/
+
 
 enviarForm = function(recaptcha){
     recaptchaResponse = recaptcha;

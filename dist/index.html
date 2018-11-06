@@ -247,11 +247,11 @@
                     <div class="tab-content py-0">
 
                         <!--Panel Exito-->
-                        <div class="tab-pane mt-5" id="exito" role="tabpanel">
+                        <div class="tab-pane mt-5 exitoContent" id="exito" role="tabpanel">
                             <!--Body-->
                             <div class="modal-body">
                                 <!-- contenid-exito -->
-                                <div class="content-exito">
+                                <div class="content-exito mensExito d-none">
                                     <img src="img/cotizar/success.png" width="80" alt="" class="animated fadeInUp img-fluid d-block m-auto">
                                     <div class="text-center mt-3 animated fadeInUp">
                                         <h5 class="text-third font-weight-bold h5-responsive">¡Perfecto, solicitud enviada!</h5>
@@ -259,7 +259,7 @@
                                     </div>
                                 </div>
                                 <!--Cargador-->
-                                <div class="w-100 d-none d-flex align-content-center justify-content-center flex-wrap">
+                                <div class="loaderGif w-100 d-none align-content-center justify-content-center flex-wrap">
                                     <div class="preloader-wrapper active d-block m-auto">
                                         <div class="spinner-layer spinner-primary-color-only">
                                             <div class="circle-clipper left">
@@ -630,7 +630,7 @@
                 <!-- Boton Siguiente -->
                 <div class="modal-footer modal-footer-btn white d-flex justify-content-lg-end justify-content-md-center col-12">
                     <button type="button" class="btn bg-third btn-rounded z-depth-7 font-weight-bold col-lg-5 col-md-12 disabled" id="botonSiguiente">SIGUIENTE</button>
-                    <button type="button" class="btn bg-third btn-rounded z-depth-7 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold disabled d-none" id="botonEnviar">COTIZAR</button>
+                    <button type="button" class="btn bg-third btn-rounded z-depth-7 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold  d-none" id="botonEnviar">COTIZAR</button>
                     <button type="button" class="btn bg-third btn-rounded z-depth-7 waves-effect waves-dark col-lg-5 col-md-12 font-weight-bold disabled d-none" id="botonExito">OK, GRACIAS</button>
                 </div>
             </div>
