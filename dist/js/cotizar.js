@@ -2,6 +2,7 @@
  * 
  */
 var recaptchaResponse = false;
+var timeoutModal;
 $(document).ready(function() {
 	$("#continuarpaso3").click(function() {
 		$('#botonSiguiente').removeClass('disabled');
@@ -63,6 +64,7 @@ $(document).ready(function() {
 		$('#botonSiguiente').removeClass('d-none');
 		$('#botonEnviar').addClass('d-none');
 		$('#botonExito').addClass('d-none');
+		clearTimeout(timeoutModal);
 	});
 
 	$('.radioInstalacion').click(function() {
@@ -200,8 +202,7 @@ enviaCotizacion = function(e) {
 		$('.exitoContent').addClass('active');
 		$('.loaderGif').removeClass('d-none');
 		var jsonData = JSON.parse(JSON.stringify(data));
-		$
-				.ajax(
+		$.ajax(
 						{
 							method : 'POST',
 							url : 'http://declimamanager.declima.cl/insertacotizacion/setcotizacion',
@@ -237,22 +238,36 @@ enviaCotizacion = function(e) {
 							$('#botonSiguiente').addClass('disabled');
 							$("#formPersona").removeClass('was-validated');
 							$("#formEmpresa").removeClass('was-validated');
-							setTimeout(() => {
+							$('#botonExito').click(() => {
 								$('.modal').modal('hide');
+							});
+							timeoutModal = setTimeout(() => {
+								$('#botonExito').addClass('d-none');
+								$('.modal').modal('hide');
+								$('.mensExito').addClass('d-none');
+								$('.stepContent').addClass('active');
+								$('.personaContent').removeClass('active');
+								$('.empresaContent').removeClass('active');
+								$('#personaTag').addClass('d-none');
+								$('#empresaTag').addClass('d-none');
+								$('#stepTagText').removeClass('d-none');
+								$('#stepTagArrow').addClass('d-none');
+								$('.exitoContent').removeClass('active');
+								$('#botonSiguiente').removeClass('d-none');
 							}, 3000);
 							
 				})
 	}
 }
 
-$('#botonEnviar').click(function() {
+/*$('#botonEnviar').click(function() {
 	if ($('#pestanaEmpresa').hasClass('active')) {
 		enviaCotizacion($('#formEmpresa')[0]);
 	}
 	if ($('#pestanaPersona').hasClass('active')) {
 		enviaCotizacion($('#formPersona')[0]);
 	}
-});
+});*/
 
 enviarForm = function(recaptcha) {
 	recaptchaResponse = recaptcha;
