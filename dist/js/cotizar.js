@@ -236,11 +236,7 @@ enviaCotizacion = function(e) {
 							$("#formPersona").removeClass('was-validated');
 							$("#formEmpresa").removeClass('was-validated');
 							setTimeout(() => {
-								$('.modal').removeClass('show');
-								$('.modal').attr('aria-hidden', 'true');
-								$('.modal').removeAttr('style');
-								$('.modal').attr('style', 'display:none');
-								$('.modal-backdrop').removeClass('show');
+								$('.modal').modal('hide');
 							}, 3000);
 							
 				})
