@@ -25,7 +25,9 @@ $(document).ready(function() {
 			$('#seleccionaCap').addClass('d-none');
 			$('#seleccionaProd').removeClass('step');
 			$('#seleccionaCap').removeClass('step');
-			$('#botonSiguiente').removeClass('disabled');
+			$('#cotinuarBoton1').click(function(){
+				$('#botonSiguiente').removeClass('disabled');
+			});
 		} else {
 			$('#seleccionaProd').removeAttr('style');
 			$('#seleccionaCap').removeAttr('style');
