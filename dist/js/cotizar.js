@@ -212,6 +212,7 @@ enviaCotizacion = function(e) {
 							dataType : 'json'
 						})
 						.done(function(data, textStatus, jqXHR) {
+							grecaptcha.reset();
 							let count = 1;
 							$('.mensExito').removeClass('d-none');
 							$('.loaderGif').addClass('d-none');
