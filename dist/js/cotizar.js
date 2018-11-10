@@ -214,6 +214,7 @@ enviaCotizacion = function(e) {
 						.done(function(data, textStatus, jqXHR) {
 							grecaptcha.reset();
 							let count = 1;
+							$('.mensError').addClass('d-none');
 							$('.mensExito').removeClass('d-none');
 							$('.loaderGif').addClass('d-none');
 							$.each($('.form-check-input'), function(k, v) {
@@ -258,6 +259,53 @@ enviaCotizacion = function(e) {
 							}, 3000);
 							
 				})
+				.fail(function(){
+					grecaptcha.reset();
+					$('.mensExito').addClass('d-none');
+					$('.loaderGif').addClass('d-none');
+					$('.mensError').removeClass('d-none');
+					let count = 1;
+					$.each($('.form-check-input'), function(k, v) {
+						v.checked = false;
+					});
+					$.each($('.step'), function(k, v) {
+						$(v).removeClass('active');
+						$(v).removeClass('done');
+						$(v).children('.step-new-content').attr('style', 'display:none');
+						if(count == 1)
+						{
+							$(v).addClass('active');
+							$(v).children('.step-new-content').attr('style', 'display:block');
+						}
+						count++;
+					});
+					$("#formPersona").get(0).reset();
+					$("#formEmpresa").get(0).reset();
+					$("#direccionInstalacion").val('');
+					$("#comentario").val('');
+					$('#botonEnviar').addClass('d-none');
+					$('#botonExito').removeClass('d-none');
+					$('#botonSiguiente').addClass('disabled');
+					$("#formPersona").removeClass('was-validated');
+					$("#formEmpresa").removeClass('was-validated');
+					$('#botonExito').click(() => {
+						$('.modal').modal('hide');
+					});
+					timeoutModal = setTimeout(() => {
+						$('#botonExito').addClass('d-none');
+						$('.modal').modal('hide');
+						$('.mensExito').addClass('d-none');
+						$('.stepContent').addClass('active');
+						$('.personaContent').removeClass('active');
+						$('.empresaContent').removeClass('active');
+						$('#personaTag').addClass('d-none');
+						$('#empresaTag').addClass('d-none');
+						$('#stepTagText').removeClass('d-none');
+						$('#stepTagArrow').addClass('d-none');
+						$('.exitoContent').removeClass('active');
+						$('#botonSiguiente').removeClass('d-none');
+					}, 3000);
+				});
 	}
 }
 
