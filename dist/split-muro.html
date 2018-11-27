@@ -102,7 +102,9 @@
 
 <body class="text-black-50">
 
-
+    <span class="fixed-bottom mb-4 ml-2 d-md-none d-sm-block">
+    <a class="btn-rounded p-3 z-depth-7 font-weight-bold text-white text-uppercase font-small bg-third" href="#ModalCotizador" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">Cotizar Split Muro <i class="fa fa-dollar" aria-hidden="true"></i></a>
+    </span>
     <!-- Modal Consultas -->
     <div class="modal fade" id="consultasForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -652,11 +654,11 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="mainMenu">
+                <div class="collapse navbar-collapse hide" id="mainMenu">
 
                     <ul class="navbar-nav mr-auto smooth-scroll">
                         <li class="nav-item">
-                            <a class="nav-link" href="http://declima.cl">Inicio<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#carousel-home">Inicio<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active-productos" href="http://declima.cl/split-muro.html" data-offset="90">Split Muro</a>
@@ -715,11 +717,11 @@
                 <!--Grid row-->
                 <div class="row">
                     <!--Grid column-->
-                    <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft d-flex flex-wrap align-content-center justify-content-lg-start justify-content-md-start justify-content-center" data-wow-delay="0.3s">
+                    <div class="smooth-scroll col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft d-flex flex-wrap align-content-center justify-content-lg-start justify-content-md-start justify-content-center" data-wow-delay="0.3s">
                         <h1 class="h1-responsive font-weight-bold mt-sm-5 w-100">Split Muro Inverter</h1>
                         <h6 class="mb-0 w-100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum.</h6>
                         <h6 class="mb-3 font-weight-bold w-100">Capacidad BTU: 9.000 • 12.000 • 18.000 • 24.000</h6>
-                        <a class="btn bg-third font-weight-bold btn-rounded btn-lg text-white waves-effect waves-light z-depth-7" href="#ModalCotizador" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">Cotizar Split Muro Inverter<i class="ml-2 fa fa-dollar" aria-hidden="true"></i></a>
+                        <a class="btn bg-third font-weight-bold btn-rounded btn-lg text-white waves-effect waves-light z-depth-7" href="#init" data-offset="90" data-toggle="init" data-target="#ModalCotizador">VER DETALLE</a>
                     </div>
                     <!--Grid column-->
                     <!--Grid column-->
@@ -740,10 +742,10 @@
     <main class="container-fluid px-0">
 
         <!-- FEATURES -->
-        <div class="container-fluid py-5" id="init">
+        <div class="container-fluid py-5">
             <div class="container">
                 <!-- Section: Features v.1 -->
-                <section class="text-center my-5">
+                <section class="text-center my-5" id="init">
 
                     <!-- Section heading -->
                     <h1 class="h1-responsive font-weight-bold my-5 text-primary">Descripción Split Muro Inverter</h1>
@@ -996,156 +998,178 @@
         <!-- ESPECIFICACIONES -->
         <div class="container-fluid py-5 cloudy-knoxville-gradient">
             <div class="container">
-                <section class="my-5">
+                <section class="mt-5 mb-0">
                     <!-- Section heading -->
                     <h1 class="h1-responsive font-weight-bold text-center my-5 text-primary">Especificaciones Split Muro Inverter</h1>
                     <!-- Section description -->
                     <p class="lead text-black-50 text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                     </p>
 
-                    <div class="table-responsive text-nowrap table-hover mb-4">
-                        <div class="d-flex justify-content-start align-items-center mb-3">
-                            <span class="ml-0 text-center z-depth-7  btn-white btn-lg btn-floating"><i class="flaticon-011-air-conditioner d-flex justify-content-center align-content-center w-100 text-primary"></i></span>
-                            <h4 class="text-primary m-0">Unidad Interior</h4>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs md-tabs nav-justified primary-color" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#panelInt" role="tab">
+                                <i class="flaticon-011-air-conditioner pr-2 m-0"></i>Unidad Interior</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panelExt" role="tab">
+                                <i class="flaticon-004-air-conditioner-3 pr-2 m-0"></i>Unidad Exterior</a>
+                        </li>
+                    </ul>
+                    <!-- Nav tabs -->
+
+                    <!-- Tab panels -->
+                    <div class="tab-content">
+                        <!-- Tab panels 1 -->
+                        <div class="table-responsive text-nowrap table-hover mb-4 tab-pane fade in show active" id="panelInt" role="tabpanel">
+                            <div class="d-flex justify-content-center align-items-center mb-3">
+                                <span class="ml-0 text-center z-depth-7  btn-white btn-lg btn-floating waves-effect waves-light">
+                                    <i class="flaticon-011-air-conditioner d-flex justify-content-center align-content-center w-100 text-primary"></i>
+                                </span>
+                            </div>
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-primary">BTU</th>
+                                        <th scope="col" class="text-primary">Modelo</th>
+                                        <th scope="col" class="text-primary">Modo</th>
+                                        <th scope="col" class="text-primary">RPM</th>
+                                        <th scope="col" class="text-primary">T. Frío ºC</th>
+                                        <th scope="col" class="text-primary">T. Calor ºC</th>
+                                        <th scope="col" class="text-primary">Peso Neto</th>
+                                        <th scope="col" class="text-primary">Ancho</th>
+                                        <th scope="col" class="text-primary">Profundidad</th>
+                                        <th scope="col" class="text-primary">Alto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="number-type text-primary">9.000</th>
+                                        <td>MOAB01-09HN1</td>
+                                        <td>Frío / Calor</td>
+                                        <td>850 / 770</td>
+                                        <td>-7 / 24</td>
+                                        <td>18 / 43</td>
+                                        <td>26 kg</td>
+                                        <td>770 mm</td>
+                                        <td>300 mm</td>
+                                        <td>555 mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="number-type text-primary">12.000</th>
+                                        <td>MOAB01-12HN1</td>
+                                        <td>Frío / Calor</td>
+                                        <td>850 / 770</td>
+                                        <td>-7 / 24</td>
+                                        <td>18 / 43</td>
+                                        <td>26 kg</td>
+                                        <td>770 mm</td>
+                                        <td>300 mm</td>
+                                        <td>555 mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="number-type text-primary">18.000</th>
+                                        <td>MOAB01-18HN1</td>
+                                        <td>Frío / Calor</td>
+                                        <td>850 / 770</td>
+                                        <td>-7 / 24</td>
+                                        <td>18 / 43</td>
+                                        <td>26 kg</td>
+                                        <td>770 mm</td>
+                                        <td>300 mm</td>
+                                        <td>555 mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="number-type text-primary">24.000</th>
+                                        <td>MOAB01-24HN1</td>
+                                        <td>Frío / Calor</td>
+                                        <td>850 / 770</td>
+                                        <td>-7 / 24</td>
+                                        <td>18 / 43</td>
+                                        <td>26 kg</td>
+                                        <td>770 mm</td>
+                                        <td>300 mm</td>
+                                        <td>555 mm</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col" class="text-primary">BTU</th>
-                                    <th scope="col" class="text-primary">Modelo</th>
-                                    <th scope="col" class="text-primary">Modo</th>
-                                    <th scope="col" class="text-primary">RPM</th>
-                                    <th scope="col" class="text-primary">T. Frío ºC</th>
-                                    <th scope="col" class="text-primary">T. Calor ºC</th>
-                                    <th scope="col" class="text-primary">Peso Neto</th>
-                                    <th scope="col" class="text-primary">Ancho</th>
-                                    <th scope="col" class="text-primary">Profundidad</th>
-                                    <th scope="col" class="text-primary">Alto</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row" class="number-type text-primary">9.000</th>
-                                    <td>MOAB01-09HN1</td>
-                                    <td>Frío / Calor</td>
-                                    <td>850 / 770</td>
-                                    <td>-7 / 24</td>
-                                    <td>18 / 43</td>
-                                    <td>26 kg</td>
-                                    <td>770 mm</td>
-                                    <td>300 mm</td>
-                                    <td>555 mm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="number-type text-primary">12.000</th>
-                                    <td>MOAB01-12HN1</td>
-                                    <td>Frío / Calor</td>
-                                    <td>850 / 770</td>
-                                    <td>-7 / 24</td>
-                                    <td>18 / 43</td>
-                                    <td>26 kg</td>
-                                    <td>770 mm</td>
-                                    <td>300 mm</td>
-                                    <td>555 mm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="number-type text-primary">18.000</th>
-                                    <td>MOAB01-18HN1</td>
-                                    <td>Frío / Calor</td>
-                                    <td>850 / 770</td>
-                                    <td>-7 / 24</td>
-                                    <td>18 / 43</td>
-                                    <td>26 kg</td>
-                                    <td>770 mm</td>
-                                    <td>300 mm</td>
-                                    <td>555 mm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="number-type text-primary">24.000</th>
-                                    <td>MOAB01-24HN1</td>
-                                    <td>Frío / Calor</td>
-                                    <td>850 / 770</td>
-                                    <td>-7 / 24</td>
-                                    <td>18 / 43</td>
-                                    <td>26 kg</td>
-                                    <td>770 mm</td>
-                                    <td>300 mm</td>
-                                    <td>555 mm</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="table-responsive text-nowrap table-hover">
-                        <div class="d-flex justify-content-start align-items-center mb-3">
-                            <span class="ml-0 text-center z-depth-7 btn-white btn-lg btn-floating"><i class="flaticon-004-air-conditioner-3 d-flex justify-content-center align-content-center w-100 text-primary"></i></span>
-                            <h4 class="text-primary m-0">Unidad Exterior</h4>
+
+                        <!-- Tab panels 2 -->
+                        <div class="table-responsive text-nowrap table-hover tab-pane fade" id="panelExt" role="tabpanel">
+                            <div class="d-flex justify-content-center align-items-center mb-3">
+                                <span class="ml-0 text-center z-depth-7  btn-white btn-lg btn-floating waves-effect waves-light">
+                                                <i class="flaticon-004-air-conditioner-3 d-flex justify-content-center align-content-center w-100 text-primary"></i>
+                                        </span>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-primary">BTU</th>
+                                        <th scope="col" class="text-primary">Modelo</th>
+                                        <th scope="col" class="text-primary">Modo</th>
+                                        <th scope="col" class="text-primary">RPM</th>
+                                        <th scope="col" class="text-primary">T. Frío ºC</th>
+                                        <th scope="col" class="text-primary">T. Calor ºC</th>
+                                        <th scope="col" class="text-primary">Peso Neto</th>
+                                        <th scope="col" class="text-primary">Ancho</th>
+                                        <th scope="col" class="text-primary">Profundidad</th>
+                                        <th scope="col" class="text-primary">Alto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="number-type text-primary">9.000</th>
+                                        <td>MOAB01-09HN1</td>
+                                        <td>Frío / Calor</td>
+                                        <td>850 / 770</td>
+                                        <td>-7 / 24</td>
+                                        <td>18 / 43</td>
+                                        <td>26 kg</td>
+                                        <td>770 mm</td>
+                                        <td>300 mm</td>
+                                        <td>555 mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="number-type text-primary">12.000</th>
+                                        <td>MOAB01-12HN1</td>
+                                        <td>Frío / Calor</td>
+                                        <td>850 / 770</td>
+                                        <td>-7 / 24</td>
+                                        <td>18 / 43</td>
+                                        <td>26 kg</td>
+                                        <td>770 mm</td>
+                                        <td>300 mm</td>
+                                        <td>555 mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="number-type text-primary">18.000</th>
+                                        <td>MOAB01-18HN1</td>
+                                        <td>Frío / Calor</td>
+                                        <td>850 / 770</td>
+                                        <td>-7 / 24</td>
+                                        <td>18 / 43</td>
+                                        <td>26 kg</td>
+                                        <td>770 mm</td>
+                                        <td>300 mm</td>
+                                        <td>555 mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="number-type text-primary">24.000</th>
+                                        <td>MOAB01-24HN1</td>
+                                        <td>Frío / Calor</td>
+                                        <td>850 / 770</td>
+                                        <td>-7 / 24</td>
+                                        <td>18 / 43</td>
+                                        <td>26 kg</td>
+                                        <td>770 mm</td>
+                                        <td>300 mm</td>
+                                        <td>555 mm</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col" class="text-primary">BTU</th>
-                                    <th scope="col" class="text-primary">Modelo</th>
-                                    <th scope="col" class="text-primary">Modo</th>
-                                    <th scope="col" class="text-primary">RPM</th>
-                                    <th scope="col" class="text-primary">T. Frío ºC</th>
-                                    <th scope="col" class="text-primary">T. Calor ºC</th>
-                                    <th scope="col" class="text-primary">Peso Neto</th>
-                                    <th scope="col" class="text-primary">Ancho</th>
-                                    <th scope="col" class="text-primary">Profundidad</th>
-                                    <th scope="col" class="text-primary">Alto</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row" class="number-type text-primary">9.000</th>
-                                    <td>MOAB01-09HN1</td>
-                                    <td>Frío / Calor</td>
-                                    <td>850 / 770</td>
-                                    <td>-7 / 24</td>
-                                    <td>18 / 43</td>
-                                    <td>26 kg</td>
-                                    <td>770 mm</td>
-                                    <td>300 mm</td>
-                                    <td>555 mm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="number-type text-primary">12.000</th>
-                                    <td>MOAB01-12HN1</td>
-                                    <td>Frío / Calor</td>
-                                    <td>850 / 770</td>
-                                    <td>-7 / 24</td>
-                                    <td>18 / 43</td>
-                                    <td>26 kg</td>
-                                    <td>770 mm</td>
-                                    <td>300 mm</td>
-                                    <td>555 mm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="number-type text-primary">18.000</th>
-                                    <td>MOAB01-18HN1</td>
-                                    <td>Frío / Calor</td>
-                                    <td>850 / 770</td>
-                                    <td>-7 / 24</td>
-                                    <td>18 / 43</td>
-                                    <td>26 kg</td>
-                                    <td>770 mm</td>
-                                    <td>300 mm</td>
-                                    <td>555 mm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="number-type text-primary">24.000</th>
-                                    <td>MOAB01-24HN1</td>
-                                    <td>Frío / Calor</td>
-                                    <td>850 / 770</td>
-                                    <td>-7 / 24</td>
-                                    <td>18 / 43</td>
-                                    <td>26 kg</td>
-                                    <td>770 mm</td>
-                                    <td>300 mm</td>
-                                    <td>555 mm</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
 
                 </section>
@@ -1153,7 +1177,159 @@
         </div>
         <!-- ESPECIFICACIONES -->
 
-        <!-- COTIZAR -->
+        <!-- PRODUCTOS -->
+        <div class="container-fluid">
+            <div class="container">
+                <section class="mb-5 py-5">
+
+                    <!-- Section heading -->
+                    <h2 id="equiposView" class="h1-responsive font-weight-bold text-center my-5 text-primary">Productos Relacionados</h2>
+
+                    <div class="row">
+
+                        <div class="d-flex justify-content-center flex-wrap align-content-start">
+                            <!-- Grid Split Ducto -->
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <!-- Card -->
+                                <div class="card card-cascade narrower z-depth-0 border-light card-ecommerce hoverable">
+                                    <!--Card image-->
+                                    <div class="view view-cascade overlay z-depth-0 mx-0 rounded-0 position-relative mt-0">
+                                        <div class="content-atributos d-flex justify-content-center w-100 position-absolute">
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="top" title="Equipos recidenciales">home</i></a>
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-secondary material-icons" data-toggle="tooltip" data-placement="top" title="Modo frío - calor">brightness_4</i></a>
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-third material-icons" data-toggle="tooltip" data-placement="top" title="Equipos con wifi">wifi</i></a>
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-warning material-icons" data-toggle="tooltip" data-placement="top" title="No emite ruido">volume_off</i></a>
+                                        </div>
+                                        <img class="card-img-top border-light border-bottom" src="img/split.jpg" alt="">
+                                        <a href="#!">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                    </div>
+                                    <!--/.Card image-->
+                                    <!-- Card content -->
+                                    <div class="card-body card-body-cascade text-left">
+                                        <!-- Category & Title -->
+                                        <a href="#!" class="text-black-50">
+                                            <h6 class="mb-0 font-small">Midea</h6>
+                                        </a>
+                                        <h4 class="card-title">
+                                            <strong>
+                                            <a href="#!" class="text-primary h6 font-weight-bold title-producto-home">Split Ducto Inverter</a>
+                                        </strong>
+                                        </h4>
+                                        <!-- Card footer -->
+                                        <div class="card-footer px-0">
+                                            <a href="#!" class="float-left font-weight-bold small text-black-50 btn btn-sm btn-outline-primary z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0 waves-effect">
+                                                <strong class="ver-mas-product">VER MÁS</strong>
+                                            </a>
+                                            <a href="#ModalCotizador" class="float-right font-weight-bold small text-black-50 btn btn-sm bg-third white-text z-depth-7 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
+                                                <strong class="cotizar-product">COTIZAR</strong>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <!-- Card content -->
+                                </div>
+                                <!-- Card -->
+                            </div>
+
+                            <!-- Grid Split Cassette -->
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <!-- Card -->
+                                <div class="card card-cascade narrower z-depth-0 border-light card-ecommerce hoverable">
+                                    <!--Card image-->
+                                    <div class="view view-cascade overlay z-depth-0 mx-0 rounded-0 position-relative mt-0">
+                                        <div class="content-atributos d-flex justify-content-center w-100 position-absolute">
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="top" title="Equipos recidenciales">home</i></a>
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-secondary material-icons" data-toggle="tooltip" data-placement="top" title="Modo frío - calor">brightness_4</i></a>
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-third material-icons" data-toggle="tooltip" data-placement="top" title="Equipos con wifi">wifi</i></a>
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-warning material-icons" data-toggle="tooltip" data-placement="top" title="No emite ruido">volume_off</i></a>
+                                        </div>
+                                        <img class="card-img-top border-light border-bottom" src="img/split.jpg" alt="">
+                                        <a href="#!">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                    </div>
+                                    <!--/.Card image-->
+                                    <!-- Card content -->
+                                    <div class="card-body card-body-cascade text-left">
+                                        <!-- Category & Title -->
+                                        <a href="#!" class="text-black-50">
+                                            <h6 class="mb-0 font-small">Carrier - Midea</h6>
+                                        </a>
+                                        <h4 class="card-title">
+                                            <strong>
+                                            <a href="#!" class="text-primary h6 font-weight-bold title-producto-home">Split Cassette Inverter</a>
+                                        </strong>
+                                        </h4>
+                                        <!-- Card footer -->
+                                        <div class="card-footer px-0">
+                                            <a href="#!" class="float-left font-weight-bold small text-black-50 btn btn-sm btn-outline-primary z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0 waves-effect">
+                                                <strong class="ver-mas-product">VER MÁS</strong>
+                                            </a>
+                                            <a href="#ModalCotizador" class="float-right font-weight-bold small text-black-50 btn btn-sm bg-third white-text z-depth-7 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
+                                                <strong class="cotizar-product">COTIZAR</strong>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Card content -->
+                                </div>
+                                <!-- Card -->
+                            </div>
+
+                            <!-- Grid Piso Cielo -->
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <!-- Card -->
+                                <div class="card card-cascade narrower z-depth-0 border-light card-ecommerce hoverable">
+                                    <!--Card image-->
+                                    <div class="view view-cascade overlay z-depth-0 mx-0 rounded-0 position-relative mt-0">
+                                        <div class="content-atributos d-flex justify-content-center w-100 position-absolute">
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-primary material-icons" data-toggle="tooltip" data-placement="top" title="Equipos recidenciales">home</i></a>
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-secondary material-icons" data-toggle="tooltip" data-placement="top" title="Modo frío - calor">brightness_4</i></a>
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-third material-icons" data-toggle="tooltip" data-placement="top" title="Equipos con wifi">wifi</i></a>
+                                            <a class="btn-floating btn-sm bg-white z-depth-8 mb-3" type="button" role="button"><i class="text-warning material-icons" data-toggle="tooltip" data-placement="top" title="No emite ruido">volume_off</i></a>
+                                        </div>
+                                        <img class="card-img-top border-light border-bottom" src="img/split.jpg" alt="">
+                                        <a href="#!">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                    </div>
+                                    <!--/.Card image-->
+                                    <!-- Card content -->
+                                    <div class="card-body card-body-cascade text-left">
+                                        <!-- Category & Title -->
+                                        <a href="#!" class="text-black-50">
+                                            <h6 class="mb-0 font-small">Toshiba - Midea</h6>
+                                        </a>
+                                        <h4 class="card-title">
+                                            <strong>
+                                            <a href="#!" class="text-primary h6 font-weight-bold title-producto-home">Piso Cielo Inverter</a>
+                                        </strong>
+                                        </h4>
+                                        <!-- Card footer -->
+                                        <div class="card-footer px-0">
+                                            <a href="#!" class="float-left font-weight-bold small text-black-50 btn btn-sm btn-outline-primary z-depth-0 btn-rounded px-4 px-md-4 px-lg-4 mx-0 waves-effect">
+                                                <strong class="ver-mas-product">VER MÁS</strong>
+                                            </a>
+                                            <a href="#ModalCotizador" class="float-right font-weight-bold small text-black-50 btn btn-sm bg-third white-text z-depth-7 btn-rounded px-4 px-md-4 px-lg-4 mx-0" data-offset="90" data-toggle="modal" data-target="#ModalCotizador">
+                                                <strong class="cotizar-product">COTIZAR</strong>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Card content -->
+                                </div>
+                                <!-- Card -->
+                            </div>
+                            <!-- Grid Split Muro-->
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!--PRODUCTOS-->
+
+        <!-- CALL TO ACTION -->
         <div class="container-fluid p-0">
             <!-- Jumbotron -->
             <div class="card card-image z-depth-0" style="background-image: url(img/slider-1.jpg);">
@@ -1170,7 +1346,7 @@
             </div>
             <!-- Jumbotron -->
         </div>
-        <!-- ESPECIFICACIONES -->
+        <!-- CALL TO ACTION-->
 
         <!-- CONTACTO -->
         <div class="container-fluid grey lighten-5 m-0 pb-4">
@@ -1449,15 +1625,6 @@
         }
         // object-fit polyfill run
         objectFitImages();
-
-        /* init Jarallax */
-        jarallax(document.querySelectorAll('.jarallax'));
-
-        jarallax(document.querySelectorAll('.jarallax-keep-img'), {
-            keepImg: true,
-        });
-        /* Collapse */
-        $('.collapse').collapse()
     </script>
 </body>
 
