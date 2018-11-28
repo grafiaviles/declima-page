@@ -17519,10 +17519,12 @@ body,
     top: -2px;
     vertical-align: middle; }
 
-.a.text-primary:focus,
-a.text-primary:hover,
 .btn-white {
   color: #00587A !important; }
+
+.btn-third {
+  background: #80c80e !important;
+  color: #fff !important; }
 
 .text-third {
   color: #80c80e !important; }
@@ -17658,8 +17660,8 @@ ul.stepper .step.wrong:before {
 
 .carousel .carousel-control-next-icon,
 .carousel .carousel-control-prev-icon {
-  width: 30px;
-  height: 30px; }
+  width: 40px;
+  height: 40px; }
   @media screen and (max-width: 480px) {
     .carousel .carousel-control-next-icon,
     .carousel .carousel-control-prev-icon {
