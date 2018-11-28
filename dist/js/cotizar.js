@@ -258,7 +258,7 @@ enviaCotizacion = function(e) {
 									$('#stepTagArrow').addClass('d-none');
 									$('.exitoContent').removeClass('active');
 									$('#botonSiguiente').removeClass('d-none');
-								}, 3000);
+								}, 5000);
 							}
 							else
 							{
@@ -306,7 +306,7 @@ enviaCotizacion = function(e) {
 									$('#stepTagArrow').addClass('d-none');
 									$('.exitoContent').removeClass('active');
 									$('#botonSiguiente').removeClass('d-none');
-								}, 3000);
+								}, 5000);
 							}
 				})
 				.fail(function(){
