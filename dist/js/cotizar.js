@@ -150,7 +150,6 @@ enviaCotizacion = function(e) {
 		let data = new Object();
 		var tipoServ = new Object();
 		var tipoProd = new Object();
-		var tipoCap = new Object();
 		var radioInst = new Object();
 		var comentarios = new Object();
 		var capacidades = new Array();
@@ -166,6 +165,7 @@ enviaCotizacion = function(e) {
 		});
 		$.each($('.tipoCapacidad'), function(k, v) {
 			if (v.checked) {
+				var tipoCap = new Object();
 				tipoCap.capacidad = v.value;
 				tipoCap.cantidad = $('.cant-cap-' + v.id).text();
 				capacidades.push(tipoCap);
@@ -187,7 +187,6 @@ enviaCotizacion = function(e) {
 		});
 		data.tipoServicio = tipoServ;
 		data.tipoProducto = tipoProd;
-		data.tipoCapacidad = tipoCap;
 		data.radioInstalacion = radioInst;
 		data.comentario = comentarios;
 		data.formulario = form;
