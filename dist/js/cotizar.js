@@ -151,6 +151,7 @@ enviaCotizacion = function(e) {
 		var tipoServ = new Object();
 		var tipoProd = new Object();
 		var radioInst = new Object();
+		var instalacion = new Object();
 		var comentarios = new Object();
 		var capacidades = new Array();
 		$.each($('.tipoServicio'), function(k, v) {
@@ -173,7 +174,8 @@ enviaCotizacion = function(e) {
 		});
 		$.each($('.radioInstalacion'), function(k, v) {
 			if (v.checked && v.id == 'conInstalacion') {
-				radioInst.instalacion = 1;
+				radioInst.instala = 1;
+				radioInst.direccionIns = $('#direccionInstalacion').val();
 			}
 		});
 		if ($('#comentario').val() != '') {
@@ -187,7 +189,7 @@ enviaCotizacion = function(e) {
 		});
 		data.tipoServicio = tipoServ;
 		data.tipoProducto = tipoProd;
-		data.radioInstalacion = radioInst;
+		data.instalacion = radioInst;
 		data.comentario = comentarios;
 		data.formulario = form;
 		data.capacidades = capacidades;
