@@ -118,40 +118,82 @@
                 <div class="modal-body mx-4 py-0">
                     <!--Body-->
                     <form action="#" id="formConsulta" class="needs-validation animated fadeIn" novalidate>
-                    <div class="md-form mb-4">
-                        <input type="text" id="nombre-consulta" name="nombre" class="form-control form-control-sm validate mb-1" minlength="5" required>
-                        <div class="invalid-feedback">Por favor indique nombre y apellido de contacto.</div>
-                        <div class="valid-feedback text-third">Correcto</div>
-                        <label for="nombre-consulta">Nombre y apellido</label>
-                    </div>
-                    <div class="md-form mb-4">
-                        <input type="email" id="email-consulta" name="correo" class="form-control form-control-sm validate mb-1" minlength="5" required>
-                        <div class="invalid-feedback">Por favor indique un correo válido.</div>
-                        <div class="valid-feedback text-third">Correcto</div>
-                        <label for="email-consulta">Email</label>
-                    </div>
 
-                    <div class="md-form mb-4">
-                        <input type="text" id="asunto-consulta" name="asunto" class="form-control form-control-sm validate mb-1" minlength="3" required>
-                        <div class="invalid-feedback">Por favor indique un asunto.</div>
-                        <div class="valid-feedback text-third">Correcto</div>
-                        <label for="asunto-consulta">Asunto</label>
-                    </div>
+                        <!--Panel Exito y Error-->
+                        <div class="pb-3 exitoContent d-none" id="exito">
+                            <!--Body-->
+                            <div class="modal-body">
+                                <!-- contenid-exito -->
+                                <div class="px-4 content-exito mensExito d-none">
+                                    <img src="img/cotizar/success.png" width="80" alt="" class="animated fadeInUp img-fluid d-block m-auto">
+                                    <div class="text-center mt-3 animated fadeInUp">
+                                        <h5 class="text-third font-weight-bold h5-responsive">¡Perfecto, solicitud enviada!</h5>
+                                        <p class="text-black-50">Nuestros ejecutivos te contactarán a la brevedad muchas gracias.</p>
+                                    </div>
+                                </div>
+                                <!-- contenid-error -->
+                                <div class="px-4 content-error mensError">
+                                    <div class="text-center mt-3 animated fadeInUp">
+                                        <i class="fa fa-frown-o display-3 red-text text-center" aria-hidden="true"></i>
+                                        <h5 class="red-text font-weight-bold h5-responsive">Lo sentimos hubo un error</h5>
+                                        <p class="text-black-50">Favor vuelve a intentarlo más tarde.</p>
+                                    </div>
+                                </div>
+                                <!--Cargador-->
+                                <div class="loaderGif w-100 d-none align-content-center justify-content-center flex-wrap">
+                                    <div class="preloader-wrapper active d-block m-auto">
+                                        <div class="spinner-layer spinner-primary-color-only">
+                                            <div class="circle-clipper left">
+                                                <div class="circle"></div>
+                                            </div>
+                                            <div class="gap-patch">
+                                                <div class="circle"></div>
+                                            </div>
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="col-12 text-black-50 text-center font-small mt-2">Enviando cotización...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.Panel Exito y Error-->
 
-                    <div class="md-form mb-3">
-                        <textarea type="text" id="comentario-consulta" class="md-textarea form-control" rows="3" name="comentario-consulta" required></textarea>
-                        <div class="invalid-feedback">Por favor un teléfono válido.</div>
-                        <div class="valid-feedback text-third">Correcto</div>
-                        <label for="comentario-consulta">Escríbe aquí tu consulta...</label>
-                    </div>
-                    <div class="form-group pb-1">
-                        <input class="form-check-input" name="acepta_condiciones" type="checkbox" id="consultas-checkbox">
-                        <label for="consultas-checkbox" class="grey-dark-text form-check-label font-small">Acepto recibir información vía email.</label>
-                    </div>
+                        <div class="md-form mb-4">
+                            <input type="text" id="nombre-consulta" name="nombre" class="form-control form-control-sm validate mb-1" minlength="5" required>
+                            <div class="invalid-feedback">Por favor indique nombre y apellido de contacto.</div>
+                            <div class="valid-feedback text-third">Correcto</div>
+                            <label for="nombre-consulta">Nombre y apellido</label>
+                        </div>
+                        <div class="md-form mb-4">
+                            <input type="email" id="email-consulta" name="correo" class="form-control form-control-sm validate mb-1" minlength="5" required>
+                            <div class="invalid-feedback">Por favor indique un correo válido.</div>
+                            <div class="valid-feedback text-third">Correcto</div>
+                            <label for="email-consulta">Email</label>
+                        </div>
 
-                    <div class="text-center mb-4">
-                        <button type="button" class="btn bg-third btn-block btn-rounded z-depth-1a font-weight-bold disabled" id="enviarConsulta">ENVIAR</button>
-                    </div>
+                        <div class="md-form mb-4">
+                            <input type="text" id="asunto-consulta" name="asunto" class="form-control form-control-sm validate mb-1" minlength="3" required>
+                            <div class="invalid-feedback">Por favor indique un asunto.</div>
+                            <div class="valid-feedback text-third">Correcto</div>
+                            <label for="asunto-consulta">Asunto</label>
+                        </div>
+
+                        <div class="md-form mb-3">
+                            <textarea type="text" id="comentario-consulta" class="md-textarea form-control" rows="3" name="comentario-consulta" required></textarea>
+                            <div class="invalid-feedback">Por favor un teléfono válido.</div>
+                            <div class="valid-feedback text-third">Correcto</div>
+                            <label for="comentario-consulta">Escríbe aquí tu consulta...</label>
+                        </div>
+                        <div class="form-group pb-1">
+                            <input class="form-check-input" name="acepta_condiciones" type="checkbox" id="consultas-checkbox">
+                            <label for="consultas-checkbox" class="grey-dark-text form-check-label font-small">Acepto recibir información vía email.</label>
+                        </div>
+
+                        <div class="text-center mb-4">
+                            <button type="button" class="btn bg-third btn-block btn-rounded z-depth-1a font-weight-bold disabled" id="enviarConsulta">ENVIAR</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -165,6 +207,7 @@
         <div class="modal-dialog" role="document">
             <!--Content-->
             <div class="modal-content form-elegant">
+
                 <!--Header-->
                 <div class="modal-header text-center bg-primary z-depth-0">
                     <h5 class="modal-title w-100  font-weight-bold mt-0 mb-0 white-text h5-responsive" id="myModalLabel"><strong>RECLAMOS</strong></h5>
@@ -174,43 +217,85 @@
                 </div>
                 <!--Body-->
                 <form action="#" id="formReclamo" class="needs-validation animated fadeIn" novalidate>
-                <div class="modal-body mx-4 py-0">
-                    <!--Body-->
-                    <div class="md-form mb-4">
-                        <input type="text" id="nombre-reclamo" class="form-control form-control-sm validate mb-1" name="nombre-reclamo" minlength="5" required>
-                        <div class="invalid-feedback">Por favor indique nombre y apellido de contacto.</div>
-                        <div class="valid-feedback text-third">Correcto</div>
-                        <label for="nombre-reclamo">Nombre y apellido</label>
-                    </div>
-                    <div class="md-form mb-4">
-                        <input type="email" id="email-reclamo" class="form-control form-control-sm validate mb-1" name="email-reclamo" minlength="5" required>
-                        <div class="invalid-feedback">Por favor indique un correo válido.</div>
-                        <div class="valid-feedback text-third">Correcto</div>
-                        <label for="email-reclamo">Email</label>
-                    </div>
 
-                    <div class="md-form mb-4">
-                        <input type="text" id="asunto-reclamo" class="form-control form-control-sm validate mb-1" name="asunto-reclamo" minlength="3" required>
-                        <div class="invalid-feedback">Por favor indique un asunto.</div>
-                        <div class="valid-feedback text-third">Correcto</div>
-                        <label for="asunto-reclamo">Asunto</label>
+                    <!--Panel Exito y Error-->
+                    <div class="pb-3 exitoContent d-none" id="exito">
+                        <!--Body-->
+                        <div class="modal-body">
+                            <!-- contenid-exito -->
+                            <div class="px-4 content-exito mensExito d-none">
+                                <img src="img/cotizar/success.png" width="80" alt="" class="animated fadeInUp img-fluid d-block m-auto">
+                                <div class="text-center mt-3 animated fadeInUp">
+                                    <h5 class="text-third font-weight-bold h5-responsive">¡Perfecto, solicitud enviada!</h5>
+                                    <p class="text-black-50">Nuestros ejecutivos te contactarán a la brevedad muchas gracias.</p>
+                                </div>
+                            </div>
+                            <!-- contenid-error -->
+                            <div class="px-4 content-error mensError d-none">
+                                <div class="text-center mt-3 animated fadeInUp">
+                                    <i class="fa fa-frown-o display-3 red-text text-center" aria-hidden="true"></i>
+                                    <h5 class="red-text font-weight-bold h5-responsive">Lo sentimos hubo un error</h5>
+                                    <p class="text-black-50">Favor vuelve a intentarlo más tarde.</p>
+                                </div>
+                            </div>
+                            <!--Cargador-->
+                            <div class="loaderGif w-100 d-none align-content-center justify-content-center flex-wrap">
+                                <div class="preloader-wrapper active d-block m-auto">
+                                    <div class="spinner-layer spinner-primary-color-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="col-12 text-black-50 text-center font-small mt-2">Enviando cotización...</p>
+                            </div>
+                        </div>
                     </div>
+                    <!--/.Panel Exito y Error-->
 
-                    <div class="md-form mb-3">
-                        <textarea type="text" id="comentario-reclamo" class="md-textarea form-control" rows="3" name="comentario-reclamo" required></textarea>
-                        <div class="invalid-feedback">Por favor un teléfono válido.</div>
-                        <div class="valid-feedback text-third">Correcto</div>
-                        <label for="comentario-reclamo">Escríbe aquí tu reclamo...</label>
-                    </div>
-                    <div class="form-group pb-1">
-                        <input class="form-check-input" type="checkbox" id="reclamos-checkbox">
-                        <label for="reclamos-checkbox" class="grey-dark-text form-check-label font-small">Acepto recibir información vía email.</label>
-                    </div>
+                    <div class="modal-body mx-4 py-0">
+                        <!--Body-->
+                        <div class="md-form mb-4">
+                            <input type="text" id="nombre-reclamo" class="form-control form-control-sm validate mb-1" name="nombre-reclamo" minlength="5" required>
+                            <div class="invalid-feedback">Por favor indique nombre y apellido de contacto.</div>
+                            <div class="valid-feedback text-third">Correcto</div>
+                            <label for="nombre-reclamo">Nombre y apellido</label>
+                        </div>
+                        <div class="md-form mb-4">
+                            <input type="email" id="email-reclamo" class="form-control form-control-sm validate mb-1" name="email-reclamo" minlength="5" required>
+                            <div class="invalid-feedback">Por favor indique un correo válido.</div>
+                            <div class="valid-feedback text-third">Correcto</div>
+                            <label for="email-reclamo">Email</label>
+                        </div>
 
-                    <div class="text-center mb-4">
-                        <button type="button" class="btn bg-third btn-block btn-rounded z-depth-1a font-weight-bold disabled" id="enviarReclamo">ENVIAR</button>
+                        <div class="md-form mb-4">
+                            <input type="text" id="asunto-reclamo" class="form-control form-control-sm validate mb-1" name="asunto-reclamo" minlength="3" required>
+                            <div class="invalid-feedback">Por favor indique un asunto.</div>
+                            <div class="valid-feedback text-third">Correcto</div>
+                            <label for="asunto-reclamo">Asunto</label>
+                        </div>
+
+                        <div class="md-form mb-3">
+                            <textarea type="text" id="comentario-reclamo" class="md-textarea form-control" rows="3" name="comentario-reclamo" required></textarea>
+                            <div class="invalid-feedback">Por favor un teléfono válido.</div>
+                            <div class="valid-feedback text-third">Correcto</div>
+                            <label for="comentario-reclamo">Escríbe aquí tu reclamo...</label>
+                        </div>
+                        <div class="form-group pb-1">
+                            <input class="form-check-input" type="checkbox" id="reclamos-checkbox">
+                            <label for="reclamos-checkbox" class="grey-dark-text form-check-label font-small">Acepto recibir información vía email.</label>
+                        </div>
+
+                        <div class="text-center mb-4">
+                            <button type="button" class="btn bg-third btn-block btn-rounded z-depth-1a font-weight-bold disabled" id="enviarReclamo">ENVIAR</button>
+                        </div>
                     </div>
-                </div>
                 </form>
             </div>
             <!--/.Content-->
@@ -250,7 +335,7 @@
                     <!-- Tab panels -->
                     <div class="tab-content py-0">
 
-                        <!--Panel Exito-->
+                        <!--/.Panel Exito y Error-->
                         <div class="tab-pane mt-5 exitoContent" id="exito" role="tabpanel">
                             <!--Body-->
                             <div class="modal-body">
@@ -264,8 +349,8 @@
                                 </div>
                                 <!-- contenid-error -->
                                 <div class="content-error d-none mensError">
-                                    <img src="img/cotizar/success.png" width="80" alt="" class="animated fadeInUp img-fluid d-block m-auto">
                                     <div class="text-center mt-3 animated fadeInUp">
+                                        <i class="fa fa-frown-o display-3 red-text text-center" aria-hidden="true"></i>
                                         <h5 class="red-text font-weight-bold h5-responsive">Lo sentimos hubo un problema con nuestro servidor</h5>
                                         <p class="text-black-50">Favor vuelve a intentarlo más tarde.</p>
                                     </div>
@@ -289,7 +374,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--/.Panel Exito-->
+                        <!--/.Panel Exito y Error-->
 
                         <!--Panel Persona-->
                         <div class="tab-pane mt-2 personaContent" id="persona" role="tabpanel">
@@ -455,7 +540,7 @@
                                             </li>
                                             <!-- Step 3 Capacidad y Cantidad-->
                                             <li class="step" id="seleccionaCap">
-                                                <div class="step-title waves-effect waves-dark text-primary titulosStep pb-3" flag="1">Selecciona alcance y más...</div>
+                                                <div class="step-title waves-effect waves-dark text-primary titulosStep pb-3" flag="1">Selecciona alcance y cantidad</div>
                                                 <div class="step-new-content">
 
                                                     <!-- SPLIT MURO -->
@@ -464,7 +549,7 @@
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="9">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input tipoCapacidad" id="9000" value="1" name="btu" required>
-                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="9000" data-toggle="tooltip" data-placement="right" title="9.000 BTU">Hasta 15 m<sup>2</sup></label>
+                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="9000" data-toggle="tooltip" data-placement="right" title="9K BTU">Cubre hasta 15 m<sup>2</sup></label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-text-black-50 waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="9000"><i class="align-self-center material-icons font-small">remove</i></span>
@@ -478,7 +563,7 @@
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="12">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input tipoCapacidad" id="12000" value="2" name="btu" required>
-                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="12000" data-toggle="tooltip" data-placement="right" title="12.000 BTU">Hasta 20 m<sup>2</sup></label>
+                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="12000" data-toggle="tooltip" data-placement="right" title="12K BTU">Cubre hasta 20 m<sup>2</sup></label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-text-black-50 waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="12.000"><i class="align-self-center material-icons font-small">remove</i></span>
@@ -492,7 +577,7 @@
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="18">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input tipoCapacidad" id="18000" value="3" name="btu" required>
-                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="18000" data-toggle="tooltip" data-placement="right" title="18.000 BTU">Hasta 30 m<sup>2</sup></label>
+                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="18000" data-toggle="tooltip" data-placement="right" title="18K BTU">Cubre hasta 30 m<sup>2</sup></label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-text-black-50 waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="18000"><i class="align-self-center material-icons font-small">remove</i></span>
@@ -506,7 +591,7 @@
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="24">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input tipoCapacidad" id="24000" value="4" name="btu" required>
-                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="24000" data-toggle="tooltip" data-placement="right" title="24.000 BTU">Hasta 40 m<sup>2</sup></label>
+                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="24000" data-toggle="tooltip" data-placement="right" title="24K BTU">Cubre hasta 40 m<sup>2</sup></label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-text-black-50 waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="24000"><i class="align-self-center material-icons font-small">remove</i></span>
@@ -520,7 +605,7 @@
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="36">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="36000" value="5" name="btu" required>
-                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="36000" data-toggle="tooltip" data-placement="right" title="36.000 BTU">Hasta 60 m<sup>2</sup></label>
+                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="36000" data-toggle="tooltip" data-placement="right" title="36K BTU">Cubre hasta 60 m<sup>2</sup></label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-text-black-50 waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="36000"><i class="align-self-center material-icons font-small">remove</i></span>
@@ -534,7 +619,7 @@
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="36">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="48000" value="6" name="btu" required>
-                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="48000" data-toggle="tooltip" data-placement="right" title="48.000 BTU">Hasta 80 m<sup>2</sup></label>
+                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="48000" data-toggle="tooltip" data-placement="right" title="48K BTU">Cubre hasta 80 m<sup>2</sup></label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-text-black-50 waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="48000"><i class="align-self-center material-icons font-small">remove</i></span>
@@ -548,7 +633,7 @@
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="60">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="60000" value="7" name="btu" required>
-                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="60000" data-toggle="tooltip" data-placement="right" title="60.000 BTU">Hasta 100 m<sup>2</sup></label>
+                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="60000" data-toggle="tooltip" data-placement="right" title="60K BTU">Cubre hasta 100 m<sup>2</sup></label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-text-black-50 waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="60000"><i class="align-self-center material-icons font-small">remove</i></span>
@@ -562,7 +647,7 @@
                                                         <div class="form-check form-check-inline col-lg-12 mr-0 mb-2 p-0 d-none contentCapacidad" cap="90">
                                                             <div class="col-8 p-0">
                                                                 <input type="checkbox" class="form-check-input" id="90000" value="8" name="btu" required>
-                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="90000" data-toggle="tooltip" data-placement="right" title="90.000 BTU">Hasta 150 m<sup>2</sup></label>
+                                                                <label class="form-check-label font-small dark-text-black-50 number-type pr-2" for="90000" data-toggle="tooltip" data-placement="right" title="90K BTU">Cubre hasta 150 m<sup>2</sup></label>
                                                             </div>
                                                             <div class="col-4 justify-content-around d-flex align-content-center p-0 cont-calc-cantidad">
                                                                 <span class="justify-content-center dark-text-black-50 waves-effect waves-dark restar d-flex align-content-center text-center col-3" dimen="90000"><i class="align-self-center material-icons font-small">remove</i></span>
