@@ -26,6 +26,9 @@ contactenos = function(e){
 			form.push(campos);
 		});
 		data.formulario = form;
+		$('#formConsulta').addClass('d-none');
+		$('#exitoConsulta').removeClass('d-none');
+		$('#gifCargaConsulta').removeClass('d-none');
 		$.ajax(
 				{
 					method : 'POST',
@@ -36,7 +39,28 @@ contactenos = function(e){
 					dataType : 'json'
 				})
 				.done(function(data, textStatus, jqXHR) {
+					$('#gifCargaConsulta').addClass('d-none');
+					$('#mensExitoConsulta').removeClass('d-none');
+					setTimeout(() =>{
+						$('.modal').modal('hide');
+						$('#mensExitoConsulta').addClass('d-none');
+						$('#mensErrorConsulta').addClass('d-none');
+						$('#exitoConsulta').addClass('d-none');
+						$('#formConsulta').removeClass('d-none');
+					}, 5000)
 					let tmp = 0;
+				})
+				.fail(function(){
+					$('#gifCargaConsulta').addClass('d-none');
+					$('#mensErrorConsulta').removeClass('d-none');
+					$('#mensExitoConsulta').addClass('d-none');
+					setTimeout(() =>{
+						$('.modal').modal('hide');
+						$('#mensExitoConsulta').addClass('d-none');
+						$('#mensErrorConsulta').addClass('d-none');
+						$('#exitoConsulta').addClass('d-none');
+						$('#formConsulta').removeClass('d-none');
+					}, 5000)
 				});
 	}
 }
