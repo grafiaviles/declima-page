@@ -42,6 +42,7 @@ reclamos = function(e){
 					$('#gifCargaReclamo').addClass('d-none');
 					$('#mensExitoReclamo').removeClass('d-none');
 					setTimeout(() =>{
+						$("#formReclamo").get(0).reset();
 						$('.modal').modal('hide');
 						$('#mensExitoReclamo').addClass('d-none');
 						$('#mensErrorReclamo').addClass('d-none');
@@ -55,6 +56,7 @@ reclamos = function(e){
 					$('#mensErrorReclamo').removeClass('d-none');
 					$('#mensExitoReclamo').addClass('d-none');
 					setTimeout(() =>{
+						$("#formReclamo").get(0).reset();
 						$('.modal').modal('hide');
 						$('#mensExitoReclamo').addClass('d-none');
 						$('#mensErrorReclamo').addClass('d-none');

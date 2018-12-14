@@ -42,6 +42,7 @@ contactenos = function(e){
 					$('#gifCargaConsulta').addClass('d-none');
 					$('#mensExitoConsulta').removeClass('d-none');
 					setTimeout(() =>{
+						$("#formConsulta").get(0).reset();
 						$('.modal').modal('hide');
 						$('#mensExitoConsulta').addClass('d-none');
 						$('#mensErrorConsulta').addClass('d-none');
@@ -55,6 +56,7 @@ contactenos = function(e){
 					$('#mensErrorConsulta').removeClass('d-none');
 					$('#mensExitoConsulta').addClass('d-none');
 					setTimeout(() =>{
+						$("#formConsulta").get(0).reset();
 						$('.modal').modal('hide');
 						$('#mensExitoConsulta').addClass('d-none');
 						$('#mensErrorConsulta').addClass('d-none');
