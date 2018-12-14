@@ -117,14 +117,11 @@
                 <!--Body-->
                 <div class="modal-body mx-4 py-0">
                     <!--Body-->
-                    <form action="#" id="formConsulta" class="needs-validation animated fadeIn" novalidate>
-
-                        <!--Panel Exito y Error-->
-                        <div class="pb-3 exitoContent d-none" id="exito">
+                    <div class="pb-3 exitoContent d-none" id="exitoConsulta">
                             <!--Body-->
                             <div class="modal-body">
                                 <!-- contenid-exito -->
-                                <div class="px-4 content-exito mensExito d-none">
+                                <div class="px-4 content-exito mensExito d-none" id="mensExitoConsulta">
                                     <img src="img/cotizar/success.png" width="80" alt="" class="animated fadeInUp img-fluid d-block m-auto">
                                     <div class="text-center mt-3 animated fadeInUp">
                                         <h5 class="text-third font-weight-bold h5-responsive">¡Perfecto, solicitud enviada!</h5>
@@ -132,7 +129,7 @@
                                     </div>
                                 </div>
                                 <!-- contenid-error -->
-                                <div class="px-4 content-error mensError">
+                                <div class="px-4 content-error d-none mensError" id="mensErrorConsulta">
                                     <div class="text-center mt-3 animated fadeInUp">
                                         <i class="fa fa-frown-o display-3 red-text text-center" aria-hidden="true"></i>
                                         <h5 class="red-text font-weight-bold h5-responsive">Lo sentimos hubo un error</h5>
@@ -140,7 +137,7 @@
                                     </div>
                                 </div>
                                 <!--Cargador-->
-                                <div class="loaderGif w-100 d-none align-content-center justify-content-center flex-wrap">
+                                <div class="loaderGif w-100 d-none align-content-center justify-content-center flex-wrap" id="gifCargaConsulta">
                                     <div class="preloader-wrapper active d-block m-auto">
                                         <div class="spinner-layer spinner-primary-color-only">
                                             <div class="circle-clipper left">
@@ -154,11 +151,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="col-12 text-black-50 text-center font-small mt-2">Enviando cotización...</p>
+                                    <p class="col-12 text-black-50 text-center font-small mt-2">Enviando consulta...</p>
                                 </div>
                             </div>
-                        </div>
-                        <!--/.Panel Exito y Error-->
+                    </div>
+                    <form action="#" id="formConsulta" class="needs-validation animated fadeIn" novalidate>
 
                         <div class="md-form mb-4">
                             <input type="text" id="nombre-consulta" name="nombre" class="form-control form-control-sm validate mb-1" minlength="5" required>
@@ -216,14 +213,12 @@
                         </button>
                 </div>
                 <!--Body-->
-                <form action="#" id="formReclamo" class="needs-validation animated fadeIn" novalidate>
-
-                    <!--Panel Exito y Error-->
-                    <div class="pb-3 exitoContent d-none" id="exito">
+                <!--Panel Exito y Error-->
+                    <div class="pb-3 exitoContent d-none" id="exitoReclamo">
                         <!--Body-->
                         <div class="modal-body">
                             <!-- contenid-exito -->
-                            <div class="px-4 content-exito mensExito d-none">
+                            <div class="px-4 content-exito mensExito d-none" id="mensExitoReclamo">
                                 <img src="img/cotizar/success.png" width="80" alt="" class="animated fadeInUp img-fluid d-block m-auto">
                                 <div class="text-center mt-3 animated fadeInUp">
                                     <h5 class="text-third font-weight-bold h5-responsive">¡Perfecto, solicitud enviada!</h5>
@@ -231,7 +226,7 @@
                                 </div>
                             </div>
                             <!-- contenid-error -->
-                            <div class="px-4 content-error mensError d-none">
+                            <div class="px-4 content-error mensError d-none" id="mensErrorReclamo">
                                 <div class="text-center mt-3 animated fadeInUp">
                                     <i class="fa fa-frown-o display-3 red-text text-center" aria-hidden="true"></i>
                                     <h5 class="red-text font-weight-bold h5-responsive">Lo sentimos hubo un error</h5>
@@ -239,7 +234,7 @@
                                 </div>
                             </div>
                             <!--Cargador-->
-                            <div class="loaderGif w-100 d-none align-content-center justify-content-center flex-wrap">
+                            <div class="loaderGif w-100 d-none align-content-center justify-content-center flex-wrap" id="gifCargaReclamo">
                                 <div class="preloader-wrapper active d-block m-auto">
                                     <div class="spinner-layer spinner-primary-color-only">
                                         <div class="circle-clipper left">
@@ -253,12 +248,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="col-12 text-black-50 text-center font-small mt-2">Enviando cotización...</p>
+                                <p class="col-12 text-black-50 text-center font-small mt-2">Enviando reclamo...</p>
                             </div>
                         </div>
                     </div>
                     <!--/.Panel Exito y Error-->
-
+                <form action="#" id="formReclamo" class="needs-validation animated fadeIn" novalidate>
                     <div class="modal-body mx-4 py-0">
                         <!--Body-->
                         <div class="md-form mb-4">

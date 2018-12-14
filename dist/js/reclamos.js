@@ -26,6 +26,9 @@ reclamos = function(e){
 			form.push(campos);
 		});
 		data.formulario = form;
+		$('#formReclamo').addClass('d-none');
+		$('#exitoReclamo').removeClass('d-none');
+		$('#gifCargaReclamo').removeClass('d-none');
 		$.ajax(
 				{
 					method : 'POST',
@@ -36,7 +39,28 @@ reclamos = function(e){
 					dataType : 'json'
 				})
 				.done(function(data, textStatus, jqXHR) {
+					$('#gifCargaReclamo').addClass('d-none');
+					$('#mensExitoReclamo').removeClass('d-none');
+					setTimeout(() =>{
+						$('.modal').modal('hide');
+						$('#mensExitoReclamo').addClass('d-none');
+						$('#mensErrorReclamo').addClass('d-none');
+						$('#exitoReclamo').addClass('d-none');
+						$('#formReclamo').removeClass('d-none');
+					}, 5000)
 					let tmp = 0;
-				});
+				})
+				.fail(function(){
+					$('#gifCargaReclamo').addClass('d-none');
+					$('#mensErrorReclamo').removeClass('d-none');
+					$('#mensExitoReclamo').addClass('d-none');
+					setTimeout(() =>{
+						$('.modal').modal('hide');
+						$('#mensExitoReclamo').addClass('d-none');
+						$('#mensErrorReclamo').addClass('d-none');
+						$('#exitoReclamo').addClass('d-none');
+						$('#formReclamo').removeClass('d-none');
+					}, 5000)
+				});;
 	}
 }
